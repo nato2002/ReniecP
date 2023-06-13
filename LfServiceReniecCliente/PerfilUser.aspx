@@ -67,7 +67,8 @@
             <asp:Label ID="Label2" runat="server" Font-Size="X-Small" ForeColor="White" Text="Registro Nacional de Identificación y Estado Civil® 2022-RENIEC"></asp:Label>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:LinkButton ID="LinkButton2" runat="server" Font-Size="X-Small" ForeColor="White" OnClick="LinkButton2_Click">Personas con Discapacidad</asp:LinkButton>
-            &nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;<asp:LinkButton ID="LinkButton3" runat="server">LinkButton</asp:LinkButton>
+&nbsp;
             <br />
         </asp:Panel>
     </form>
