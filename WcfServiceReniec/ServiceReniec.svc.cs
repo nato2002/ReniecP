@@ -167,5 +167,25 @@ namespace WcfServiceReniec
 
             return mensaje;
         }
+
+        public DataSet BuscarNombreSede(RegSede regdet)
+        {
+            DataSet DST = new DataSet();           
+            SqlDataAdapter DA = new SqlDataAdapter("BUSCAR_SEDE_NOMBRE", con);
+            DA.SelectCommand.CommandType = CommandType.StoredProcedure;
+            DA.SelectCommand.Parameters.Add("@BUSCAR",SqlDbType.VarChar).Value = regdet.Nombre;
+            DA.Fill(DST,"Sedes");
+            return DST;
+        }
+
+        public DataSet BuscarDireccionSede(RegSede regdet)
+        {
+            DataSet DST = new DataSet();
+            SqlDataAdapter DA = new SqlDataAdapter("BUSCAR_SEDE_DIRECCION", con);
+            DA.SelectCommand.CommandType = CommandType.StoredProcedure;
+            DA.SelectCommand.Parameters.Add("@BUSCAR", SqlDbType.VarChar).Value = regdet.Direccion;
+            DA.Fill(DST, "Sedes");
+            return DST;
+        }
     }
 }

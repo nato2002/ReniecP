@@ -13,7 +13,6 @@ namespace WcfServiceReniec
         string s_Nombre = string.Empty;
         string s_Direccion = string.Empty;
 
-
         [DataMember]
         public int RegId
         {

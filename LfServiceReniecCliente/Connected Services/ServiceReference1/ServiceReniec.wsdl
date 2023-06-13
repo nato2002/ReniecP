@@ -50,6 +50,18 @@
   <wsdl:message name="IServiceReniec_DeleteUserRegDetails_OutputMessage">
     <wsdl:part name="parameters" element="tns:DeleteUserRegDetailsResponse" />
   </wsdl:message>
+  <wsdl:message name="IServiceReniec_BuscarNombreSede_InputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarNombreSede" />
+  </wsdl:message>
+  <wsdl:message name="IServiceReniec_BuscarNombreSede_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarNombreSedeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceReniec_BuscarDireccionSede_InputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarDireccionSede" />
+  </wsdl:message>
+  <wsdl:message name="IServiceReniec_BuscarDireccionSede_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarDireccionSedeResponse" />
+  </wsdl:message>
   <wsdl:portType name="IServiceReniec">
     <wsdl:operation name="validaruser">
       <wsdl:input wsaw:Action="http://tempuri.org/IServiceReniec/validaruser" message="tns:IServiceReniec_validaruser_InputMessage" />
@@ -78,6 +90,14 @@
     <wsdl:operation name="DeleteUserRegDetails">
       <wsdl:input wsaw:Action="http://tempuri.org/IServiceReniec/DeleteUserRegDetails" message="tns:IServiceReniec_DeleteUserRegDetails_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IServiceReniec/DeleteUserRegDetailsResponse" message="tns:IServiceReniec_DeleteUserRegDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarNombreSede">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceReniec/BuscarNombreSede" message="tns:IServiceReniec_BuscarNombreSede_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceReniec/BuscarNombreSedeResponse" message="tns:IServiceReniec_BuscarNombreSede_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarDireccionSede">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceReniec/BuscarDireccionSede" message="tns:IServiceReniec_BuscarDireccionSede_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceReniec/BuscarDireccionSedeResponse" message="tns:IServiceReniec_BuscarDireccionSede_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IServiceReniec" type="tns:IServiceReniec">
@@ -138,6 +158,24 @@
     </wsdl:operation>
     <wsdl:operation name="DeleteUserRegDetails">
       <soap:operation soapAction="http://tempuri.org/IServiceReniec/DeleteUserRegDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarNombreSede">
+      <soap:operation soapAction="http://tempuri.org/IServiceReniec/BuscarNombreSede" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarDireccionSede">
+      <soap:operation soapAction="http://tempuri.org/IServiceReniec/BuscarDireccionSede" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

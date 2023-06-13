@@ -80,6 +80,7 @@
     <Content Include="Discapacidad.aspx" />
     <Content Include="img\borrar.png" />
     <Content Include="img\lapiz.png" />
+    <Content Include="ListaSedes.aspx" />
     <Content Include="PerfilUser.aspx" />
     <Content Include="Inicio.aspx" />
     <Content Include="RegistrarSedes.aspx" />
@@ -99,6 +100,13 @@
     </Compile>
     <Compile Include="Discapacidad.aspx.designer.cs">
       <DependentUpon>Discapacidad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ListaSedes.aspx.cs">
+      <DependentUpon>ListaSedes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListaSedes.aspx.designer.cs">
+      <DependentUpon>ListaSedes.aspx</DependentUpon>
     </Compile>
     <Compile Include="PerfilUser.aspx.cs">
       <DependentUpon>PerfilUser.aspx</DependentUpon>
@@ -153,6 +161,7 @@
     </None>
     <None Include="packages.config" />
     <Content Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <Content Include="Properties\DataSources\System.Data.DataTable.datasource" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

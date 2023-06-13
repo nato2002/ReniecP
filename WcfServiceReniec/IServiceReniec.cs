@@ -34,5 +34,11 @@ namespace WcfServiceReniec
         [OperationContract]
         bool DeleteUserRegDetails(RegSede regdet);
 
+        [OperationContract]
+        DataSet BuscarNombreSede(RegSede regdet);
+
+        [OperationContract]
+        DataSet BuscarDireccionSede(RegSede regdet);
+
     }
 }

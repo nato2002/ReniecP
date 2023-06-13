@@ -244,6 +244,18 @@ namespace LfServiceReniecCliente.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceReniec/DeleteUserRegDetails", ReplyAction="http://tempuri.org/IServiceReniec/DeleteUserRegDetailsResponse")]
         System.Threading.Tasks.Task<bool> DeleteUserRegDetailsAsync(LfServiceReniecCliente.ServiceReference1.RegSede regdet);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceReniec/BuscarNombreSede", ReplyAction="http://tempuri.org/IServiceReniec/BuscarNombreSedeResponse")]
+        System.Data.DataSet BuscarNombreSede(LfServiceReniecCliente.ServiceReference1.RegSede regdet);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceReniec/BuscarNombreSede", ReplyAction="http://tempuri.org/IServiceReniec/BuscarNombreSedeResponse")]
+        System.Threading.Tasks.Task<System.Data.DataSet> BuscarNombreSedeAsync(LfServiceReniecCliente.ServiceReference1.RegSede regdet);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceReniec/BuscarDireccionSede", ReplyAction="http://tempuri.org/IServiceReniec/BuscarDireccionSedeResponse")]
+        System.Data.DataSet BuscarDireccionSede(LfServiceReniecCliente.ServiceReference1.RegSede regdet);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceReniec/BuscarDireccionSede", ReplyAction="http://tempuri.org/IServiceReniec/BuscarDireccionSedeResponse")]
+        System.Threading.Tasks.Task<System.Data.DataSet> BuscarDireccionSedeAsync(LfServiceReniecCliente.ServiceReference1.RegSede regdet);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -327,6 +339,22 @@ namespace LfServiceReniecCliente.ServiceReference1 {
         
         public System.Threading.Tasks.Task<bool> DeleteUserRegDetailsAsync(LfServiceReniecCliente.ServiceReference1.RegSede regdet) {
             return base.Channel.DeleteUserRegDetailsAsync(regdet);
+        }
+        
+        public System.Data.DataSet BuscarNombreSede(LfServiceReniecCliente.ServiceReference1.RegSede regdet) {
+            return base.Channel.BuscarNombreSede(regdet);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> BuscarNombreSedeAsync(LfServiceReniecCliente.ServiceReference1.RegSede regdet) {
+            return base.Channel.BuscarNombreSedeAsync(regdet);
+        }
+        
+        public System.Data.DataSet BuscarDireccionSede(LfServiceReniecCliente.ServiceReference1.RegSede regdet) {
+            return base.Channel.BuscarDireccionSede(regdet);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> BuscarDireccionSedeAsync(LfServiceReniecCliente.ServiceReference1.RegSede regdet) {
+            return base.Channel.BuscarDireccionSedeAsync(regdet);
         }
     }
 }
