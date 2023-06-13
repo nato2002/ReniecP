@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33723.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfServiceReniec", "WcfServiceReniec\WcfServiceReniec.csproj", "{4403A637-CF1F-443E-A89D-0977F23B59B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LfServiceReniecCliente", "LfServiceReniecCliente\LfServiceReniecCliente.csproj", "{349B53A8-C53D-4531-9396-959FAD911062}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4403A637-CF1F-443E-A89D-0977F23B59B6} = {4403A637-CF1F-443E-A89D-0977F23B59B6}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4403A637-CF1F-443E-A89D-0977F23B59B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4403A637-CF1F-443E-A89D-0977F23B59B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4403A637-CF1F-443E-A89D-0977F23B59B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4403A637-CF1F-443E-A89D-0977F23B59B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{349B53A8-C53D-4531-9396-959FAD911062}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{349B53A8-C53D-4531-9396-959FAD911062}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{349B53A8-C53D-4531-9396-959FAD911062}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{349B53A8-C53D-4531-9396-959FAD911062}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {304155F4-B0B2-41AC-AFBE-AD96F162F345}
+	EndGlobalSection
+EndGlobal
