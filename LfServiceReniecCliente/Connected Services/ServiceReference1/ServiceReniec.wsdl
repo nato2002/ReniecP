@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" name="ServiceReniec" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:50778/ServiceReniec.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:50778/ServiceReniec.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:50778/ServiceReniec.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WcfServiceReniec" />
+      <xsd:import schemaLocation="http://localhost:50778/ServiceReniec.svc?xsd=xsd3" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IServiceReniec_validaruser_InputMessage">
+    <wsdl:part name="parameters" element="tns:validaruser" />
+  </wsdl:message>
+  <wsdl:message name="IServiceReniec_validaruser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:validaruserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceReniec_RegistrartUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrartUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IServiceReniec_RegistrartUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrartUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceReniec_InsertUserRegDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertUserRegDetails" />
+  </wsdl:message>
+  <wsdl:message name="IServiceReniec_InsertUserRegDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertUserRegDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceReniec_GetUserRegDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserRegDetails" />
+  </wsdl:message>
+  <wsdl:message name="IServiceReniec_GetUserRegDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserRegDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceReniec_FetchUpdatedRecords_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchUpdatedRecords" />
+  </wsdl:message>
+  <wsdl:message name="IServiceReniec_FetchUpdatedRecords_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchUpdatedRecordsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceReniec_UpdateUserRegDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserRegDetails" />
+  </wsdl:message>
+  <wsdl:message name="IServiceReniec_UpdateUserRegDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserRegDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceReniec_DeleteUserRegDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUserRegDetails" />
+  </wsdl:message>
+  <wsdl:message name="IServiceReniec_DeleteUserRegDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUserRegDetailsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IServiceReniec">
+    <wsdl:operation name="validaruser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceReniec/validaruser" message="tns:IServiceReniec_validaruser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceReniec/validaruserResponse" message="tns:IServiceReniec_validaruser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistrartUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceReniec/RegistrartUsuario" message="tns:IServiceReniec_RegistrartUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceReniec/RegistrartUsuarioResponse" message="tns:IServiceReniec_RegistrartUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertUserRegDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceReniec/InsertUserRegDetails" message="tns:IServiceReniec_InsertUserRegDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceReniec/InsertUserRegDetailsResponse" message="tns:IServiceReniec_InsertUserRegDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserRegDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceReniec/GetUserRegDetails" message="tns:IServiceReniec_GetUserRegDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceReniec/GetUserRegDetailsResponse" message="tns:IServiceReniec_GetUserRegDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchUpdatedRecords">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceReniec/FetchUpdatedRecords" message="tns:IServiceReniec_FetchUpdatedRecords_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceReniec/FetchUpdatedRecordsResponse" message="tns:IServiceReniec_FetchUpdatedRecords_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserRegDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceReniec/UpdateUserRegDetails" message="tns:IServiceReniec_UpdateUserRegDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceReniec/UpdateUserRegDetailsResponse" message="tns:IServiceReniec_UpdateUserRegDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUserRegDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceReniec/DeleteUserRegDetails" message="tns:IServiceReniec_DeleteUserRegDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceReniec/DeleteUserRegDetailsResponse" message="tns:IServiceReniec_DeleteUserRegDetails_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IServiceReniec" type="tns:IServiceReniec">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="validaruser">
+      <soap:operation soapAction="http://tempuri.org/IServiceReniec/validaruser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrartUsuario">
+      <soap:operation soapAction="http://tempuri.org/IServiceReniec/RegistrartUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertUserRegDetails">
+      <soap:operation soapAction="http://tempuri.org/IServiceReniec/InsertUserRegDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserRegDetails">
+      <soap:operation soapAction="http://tempuri.org/IServiceReniec/GetUserRegDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchUpdatedRecords">
+      <soap:operation soapAction="http://tempuri.org/IServiceReniec/FetchUpdatedRecords" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserRegDetails">
+      <soap:operation soapAction="http://tempuri.org/IServiceReniec/UpdateUserRegDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUserRegDetails">
+      <soap:operation soapAction="http://tempuri.org/IServiceReniec/DeleteUserRegDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServiceReniec">
+    <wsdl:port name="BasicHttpBinding_IServiceReniec" binding="tns:BasicHttpBinding_IServiceReniec">
+      <soap:address location="http://localhost:50778/ServiceReniec.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

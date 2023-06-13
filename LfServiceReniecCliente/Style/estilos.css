@@ -1,0 +1,44 @@
+﻿body {
+    margin:0;
+    padding:0;
+}
+
+header {
+    overflow: auto;
+    background-color: #004370;
+}
+
+img{
+    float:left;
+    margin: 1em 1em;
+}
+
+.titulo{
+    color:white;
+    display:inline;
+    margin-top:0;
+    text-decoration:underline;
+    font-family:Arial;
+}
+
+.subtitulo {
+    margin-left: 69%;
+    color: white;
+    font-family: Arial;
+}
+
+.seccion-PanelDatos {
+    display:flex;
+    border-style: solid;
+    margin: 2em 10em;
+    padding: 2em 2em;
+    column-count:2;
+    align-items:center;
+}
+
+.btnCerrar{
+    border-style:none;
+    margin-left: 50%;
+    width:10em; 
+    height:3em;
+}
