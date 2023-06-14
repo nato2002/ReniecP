@@ -26,7 +26,7 @@ namespace WcfServiceReniec
         DataSet GetUserRegDetails();
 
         [OperationContract]
-        DataSet FetchUpdatedRecords(RegSede regdet);
+        DataSet FetchUpdatedRecords(RegSede reg det);
 
         [OperationContract]
         string UpdateUserRegDetails(RegSede regdet);
