@@ -6,15 +6,15 @@ using System.Runtime.Serialization;
 
 namespace WcfServiceReniec
 {
-    [DataContract]
-    public class ConsultaLogin
-    {
-        string id= string.Empty;
-        string nombres= string.Empty;
-        string apellidos = string.Empty;
-        string email= string.Empty;
-        string contrasenna= string.Empty;
-
+        [DataContract]
+        public class ConsultaLogin
+        {
+            string id= string.Empty;
+            string nombres= string.Empty;
+            string apellidos = string.Empty;
+            string email= string.Empty;
+            string contrasenna= string.Empty;
+        
         public ConsultaLogin(string email, string contrasenna)
         {
             this.email = email;

@@ -34,6 +34,10 @@ namespace WcfServiceReniec
         [OperationContract]
         bool DeleteUserRegDetails(RegSede regdet);
         [OperationContract]
-        string ProcesoTramite(Tramite tramite);
+        string Tramite(Tramite tramite);
+        [OperationContract]
+        List<String> VerProcesoTramite(Tramite tramite);
+        [OperationContract]
+        string ColocarProceso(Tramite tramite);
     }
 }

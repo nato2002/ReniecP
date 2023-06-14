@@ -168,12 +168,80 @@ namespace WcfServiceReniec
             return mensaje;
         }
 
-        public string ProcesoTramite(Tramite tramite)
+        public string Tramite(Tramite tramite)
         {
-            return "";
-            /*string mensaje = string.Empty;
+            string Message;
+            List<String> Datos = new List<String>();
             con.Open();
-            SqlCommand cmd = new SqlCommand("");*/
+            SqlCommand cmd = new SqlCommand("Tramite", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@TipoT", tramite.Tipotramite);
+            cmd.Parameters.AddWithValue("@DNI", tramite.Dni);
+            cmd.Parameters.AddWithValue("@NOMBRES", tramite.Nombres);
+            cmd.Parameters.AddWithValue("@APELLIDOS", tramite.Apellidos);
+            cmd.Parameters.AddWithValue("@LocalT", tramite.Localtramite);
+            cmd.Parameters.AddWithValue("@LocalE", tramite.Localentrega);
+            int result = cmd.ExecuteNonQuery();
+            if (result == 1)
+            {
+                Message = "Tu Tramite Se realizo correctamente";
+
+            }
+            else
+            {
+                Message = "No Pudo Procesar su Tramite, intente nuevamente";
+            }
+            con.Close();
+            return Message;
+        }
+
+        public List<String> VerProcesoTramite(Tramite tramite)
+        {
+            List<String> Datos = new List<String>();
+            con.Open();
+            SqlCommand cmd = new SqlCommand("VerEstadoTramite", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@DNI", tramite.Dni);
+            cmd.ExecuteNonQuery();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable tb = new DataTable();
+            da.Fill(tb);
+            for (int i = 0; i < tb.Rows.Count; i++)
+            {
+                Datos.Add(tb.Rows[i]["ID_Tramite"].ToString());
+                Datos.Add(tb.Rows[i]["DNI"].ToString());
+                Datos.Add(tb.Rows[i]["TipoTramite"].ToString());
+                Datos.Add(tb.Rows[i]["Fecha_Tramite"].ToString());
+                Datos.Add(tb.Rows[i]["LocalTramite"].ToString());
+                Datos.Add(tb.Rows[i]["LocalEntrega"].ToString());
+                Datos.Add(tb.Rows[i]["EstadoTramite"].ToString());
+            }
+            con.Close();
+            return Datos;
+        }
+
+        public string ColocarProceso(Tramite tramite)
+        {
+            string Message;
+
+            con.Open();
+            SqlCommand cmd = new SqlCommand("ColocarProceso", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@IdTramite", tramite.Idtramite);
+            cmd.Parameters.AddWithValue("@IdTipoTra", tramite.Tipotramite);
+            cmd.Parameters.AddWithValue("@EstadoTramite", tramite.Estadotramite);
+            int result = cmd.ExecuteNonQuery();
+            if (result == 1)
+            {
+                Message = "Se Modifico El estado del Tramite";
+
+            }
+            else
+            {
+                Message = "No Pudo Modificar el estado del tramite";
+            }
+            con.Close();
+            return Message;
         }
     }
 }
