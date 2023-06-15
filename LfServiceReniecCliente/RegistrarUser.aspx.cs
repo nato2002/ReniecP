@@ -41,5 +41,10 @@ namespace LfServiceReniecCliente
         {
             Response.Redirect("Discapacidad.aspx");
         }
+
+        protected System.Void LinkButton1_Click(System.Object sender, System.EventArgs e)
+        {
+
+        }
     }
 }
