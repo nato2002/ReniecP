@@ -14,7 +14,7 @@ namespace WcfServiceReniec
     // NOTA: para iniciar el Cliente de prueba WCF para probar este servicio, seleccione ServiceReniec.svc o ServiceReniec.svc.cs en el Explorador de soluciones e inicie la depuración.
     public class ServiceReniec : IServiceReniec
     {
-        SqlConnection con = new SqlConnection("Data Source=DESKTOP-E593S88\\SQLEXPRESS; Initial Catalog=RENIEC; Integrated Security=True");
+        SqlConnection con = new SqlConnection("Data Source=DESKTOP-87IQ4MT\\SQLEXPRESS; Initial Catalog=RENIEC; Integrated Security=True");
 
         public bool DeleteUserRegDetails(RegSede regdet)
         {
@@ -167,13 +167,12 @@ namespace WcfServiceReniec
 
             return mensaje;
         }
-
         public string Tramite(Tramite tramite)
         {
             string Message;
             List<String> Datos = new List<String>();
             con.Open();
-            SqlCommand cmd = new SqlCommand("Tramite", con);
+            SqlCommand cmd = new SqlCommand("RealizarTramite", con);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@TipoT", tramite.Tipotramite);
             cmd.Parameters.AddWithValue("@DNI", tramite.Dni);
@@ -242,6 +241,13 @@ namespace WcfServiceReniec
             }
             con.Close();
             return Message;
+        }
+        public string Get(string dni)
+        {
+            ApiConsultaDni api = new ApiConsultaDni();
+            string Message = "";
+            dynamic r = api.Get("https://dniruc.apisperu.com/api/v1/dni/"+dni+"?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImRpYXpyb2RyaWdvZGNAZ21haWwuY29tIn0.hQoAQUcRj2yp9aWfXYPu8Eg40bxnRJnp3HACNMQBZL8");
+            return Message = r.nombres.ToString();
         }
     }
 }
