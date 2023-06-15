@@ -16,7 +16,7 @@ namespace WcfServiceReniec
         public dynamic Get(string url)
         {
             HttpWebRequest myWebRequest = (HttpWebRequest)WebRequest.Create(url);
-            myWebRequest.UserAgent = "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:23.0) Gecko/20100101 Firefox/23.0 ";
+            myWebRequest.UserAgent = "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:23.0) Gecko/20100101 Firefox/23.0";
             //myWebRequest.CookieContainer = myCookie;
             myWebRequest.Credentials = CredentialCache.DefaultCredentials;
             myWebRequest.Proxy = null;
