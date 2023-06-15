@@ -170,7 +170,7 @@
                                                 <ItemTemplate>
                                                     <asp:ImageButton ID="imgDel" runat="server" CausesValidation="false" CommandArgument='<%#Eval("id") %>'
                                                         CommandName="Delete"  ImageUrl="~/img/borrar.png"
-                                                        ToolTip="Delete" OnClientClick="return confirm('Esta seguro de Eliminar la Sede?')"  OnCommand="imgDel_Command1"   />
+                                                        ToolTip="Delete" OnClientClick="return confirm('Esta seguro de Eliminar la Sede?')"  OnCommand="imgDel_Command1"  />
                                                 </ItemTemplate>
 
 <HeaderStyle HorizontalAlign="Center" Width="130px"></HeaderStyle>

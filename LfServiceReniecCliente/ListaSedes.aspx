@@ -87,7 +87,7 @@
             <tr>
                 <td class="auto-style11">
                     <asp:Button ID="btnSubmit" runat="server" Text="Buscar"
-                         Height="40px" Width="143px" BackColor="#0066FF" Font-Bold="True" ForeColor="White" Font-Size="Medium" OnClick="btnSubmit_Click" />
+                         Height="40px" Width="143px" BackColor="#0066FF" Font-Bold="True" ForeColor="White" Font-Size="Medium" OnClick="btnSubmit_Click" BorderStyle="Outset" />
                     <asp:Button ID="btnCancel" runat="server" Text="Cancel"
                          Height="40px" Width="143px" BackColor="#CC0000" Font-Bold="True" ForeColor="White"  Font-Size="Medium" OnClick="btnCancel_Click" />
                     </td>
