@@ -9,7 +9,7 @@ namespace WcfServiceReniec
     [DataContract]
     public class ConsultaLogin
     {
-        string id= string.Empty;
+        int id = 0;
         string nombres= string.Empty;
         string apellidos = string.Empty;
         string email= string.Empty;
@@ -31,7 +31,7 @@ namespace WcfServiceReniec
         }
 
         [DataMember]
-        public string Id
+        public int Id
         {
             get { return id; }
             set { id = value; }
