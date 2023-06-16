@@ -79,10 +79,13 @@
     </None>
     <Content Include="Discapacidad.aspx" />
     <Content Include="img\borrar.png" />
+    <Content Include="img\boton.png" />
     <Content Include="img\lapiz.png" />
+    <Content Include="img\logo.png" />
     <Content Include="ListaSedes.aspx" />
     <Content Include="PerfilUser.aspx" />
     <Content Include="Inicio.aspx" />
+    <Content Include="PSReniec.Consultas\RegTramitesGenerales.aspx" />
     <Content Include="RegistrarSedes.aspx" />
     <Content Include="RegistrarUser.aspx" />
     <Content Include="LogIn.aspx" />
@@ -116,6 +119,13 @@
       <DependentUpon>PerfilUser.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PSReniec.Consultas\RegTramitesGenerales.aspx.cs">
+      <DependentUpon>RegTramitesGenerales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PSReniec.Consultas\RegTramitesGenerales.aspx.designer.cs">
+      <DependentUpon>RegTramitesGenerales.aspx</DependentUpon>
+    </Compile>
     <Compile Include="RegistrarSedes.aspx.cs">
       <DependentUpon>RegistrarSedes.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -175,6 +185,7 @@
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\ServiceReference1\" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
