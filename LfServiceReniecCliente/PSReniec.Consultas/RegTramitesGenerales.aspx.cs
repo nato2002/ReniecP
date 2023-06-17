@@ -33,7 +33,7 @@ namespace LfServiceReniecCliente.PSReniec.Consultas
         protected void btnlimpiar_Click(object sender, EventArgs e)
         {
             txtid.Text = string.Empty;
-            DropDownList1.ClearSelection();
+            cboestado.ClearSelection();
             BindRegRecordsInGrid();
         }
     }
