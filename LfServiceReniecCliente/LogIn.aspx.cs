@@ -38,12 +38,16 @@ namespace LfServiceReniecCliente
             {
                 obje.Usuario = ds.Tables[0].Rows[0][6].ToString();
                 obje.Contrasenna = ds.Tables[0].Rows[0][7].ToString();
-                MessageBox.Show("Bienvenido");
+
+                obje.Nombres = ds.Tables[0].Rows[0][1].ToString();
+                obje.Apellidos = ds.Tables[0].Rows[0][2].ToString();
+                obje.Cargo = ds.Tables[0].Rows[0][7].ToString();
+                MessageBox.Show("Bienvenido(a) "+ obje.Nombres +" "+obje.Apellidos +": " + obje.Cargo);
                 Response.Redirect("Inicio.aspx");
             }
             else
             {
-                MessageBox.Show("Error");
+                MessageBox.Show("Error, usuario o contraseña incorrectos");
             }
         }
     
