@@ -7,6 +7,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace WcfServiceReniec
 {
@@ -185,6 +186,42 @@ namespace WcfServiceReniec
             DA.SelectCommand.CommandType = CommandType.StoredProcedure;
             DA.SelectCommand.Parameters.Add("@BUSCAR", SqlDbType.VarChar).Value = regdet.Direccion;
             DA.Fill(DST, "Sedes");
+            return DST;
+        }
+
+        //Registro Tramites
+        public DataSet GetRegSolDetails()
+        {
+            if (con.State == ConnectionState.Closed)
+            {
+                con.Open();
+            }
+            SqlCommand cmd = new SqlCommand("Select * from Sol_Pasaporte", con);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            cmd.ExecuteNonQuery();
+            con.Close();
+            return ds;
+        }
+
+        public DataSet BuscarSolicitudID(RegSolicitud regdetsol)
+        {
+            DataSet DST = new DataSet();
+            SqlDataAdapter DA = new SqlDataAdapter("buscarIDSol", con);
+            DA.SelectCommand.CommandType = CommandType.StoredProcedure;
+            DA.SelectCommand.Parameters.Add("@BUSCAR", SqlDbType.Int).Value = regdetsol.SolicitudId;
+            DA.Fill(DST, "Sol_Pasaporte");
+            return DST;
+        }
+
+        public DataSet BuscarEstadoSolicitud(RegSolicitud regdetsol)
+        {
+            DataSet DST = new DataSet();
+            SqlDataAdapter DA = new SqlDataAdapter("listarEstado", con);
+            DA.SelectCommand.CommandType = CommandType.StoredProcedure;
+            DA.SelectCommand.Parameters.Add("@BUSCAR", SqlDbType.Int).Value = regdetsol.Estado;
+            DA.Fill(DST, "Sol_Pasaporte");
             return DST;
         }
     }

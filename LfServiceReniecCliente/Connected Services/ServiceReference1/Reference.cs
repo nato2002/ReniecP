@@ -11,8 +11,8 @@
 namespace LfServiceReniecCliente.ServiceReference1 {
     using System.Runtime.Serialization;
     using System;
-    
-    
+    using System.Data;
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="ConsultaLogin", Namespace="http://schemas.datacontract.org/2004/07/WcfServiceReniec")]
@@ -256,6 +256,7 @@ namespace LfServiceReniecCliente.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceReniec/BuscarDireccionSede", ReplyAction="http://tempuri.org/IServiceReniec/BuscarDireccionSedeResponse")]
         System.Threading.Tasks.Task<System.Data.DataSet> BuscarDireccionSedeAsync(LfServiceReniecCliente.ServiceReference1.RegSede regdet);
+        System.Data.DataSet GetRegSolDetails();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -355,6 +356,11 @@ namespace LfServiceReniecCliente.ServiceReference1 {
         
         public System.Threading.Tasks.Task<System.Data.DataSet> BuscarDireccionSedeAsync(LfServiceReniecCliente.ServiceReference1.RegSede regdet) {
             return base.Channel.BuscarDireccionSedeAsync(regdet);
+        }
+
+        public System.Data.DataSet GetRegSolDetails()
+        {
+            return base.Channel.GetRegSolDetails();
         }
     }
 }
