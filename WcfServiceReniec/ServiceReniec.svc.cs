@@ -117,11 +117,15 @@ namespace WcfServiceReniec
             string Message;
             
             con.Open();
-            SqlCommand cmd = new SqlCommand("insert into usuario values(@nombres,@apellidos,@email,@contrasenna)", con);
-            cmd.Parameters.AddWithValue("@nombres", userInfo.Nombres);
-            cmd.Parameters.AddWithValue("@apellidos", userInfo.Apellidos);
-            cmd.Parameters.AddWithValue("@email", userInfo.Email);
-            cmd.Parameters.AddWithValue("@contrasenna", userInfo.Contrasenna);
+            SqlCommand cmd = new SqlCommand("sp_RegistrarUsuario", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@Nombres", userInfo.Nombres);
+            cmd.Parameters.AddWithValue("@Apellidos", userInfo.Apellidos);
+            cmd.Parameters.AddWithValue("@Email", userInfo.Email);
+            cmd.Parameters.AddWithValue("@Telefono", userInfo.Telefono);
+            cmd.Parameters.AddWithValue("@Usuario", userInfo.Usuario);
+            cmd.Parameters.AddWithValue("@Clave", userInfo.Contrasenna);
+            cmd.Parameters.AddWithValue("@Cargo", userInfo.Cargo);
             int result = cmd.ExecuteNonQuery();
             if (result == 1)
             {
@@ -136,36 +140,27 @@ namespace WcfServiceReniec
             return Message;
         }
 
-        public string validaruser(ConsultaLogin loginfo)
+        public DataSet validaruser(ConsultaLogin loginfo)
         {
-            String mensaje = "";
-
-            List<String> userPasword = new List<String>();
             con.Open();
-            SqlCommand cmd = new SqlCommand("select * from usuario where email=@email and contrasenna=@contrasenna", con);
-            cmd.Parameters.AddWithValue("@email", loginfo.Email);
-            cmd.Parameters.AddWithValue("@contrasenna", loginfo.Contrasenna);
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataTable tb = new DataTable();
-            da.Fill(tb);
-            if (tb.Rows.Count > 0)
-            {
-                mensaje = "Usuario Encontrado";
-                for (int i = 0; i < tb.Rows.Count; i++)
-                {
-                    string email = tb.Rows[i]["email"].ToString();
-                    string contra = tb.Rows[i]["contrasenna"].ToString();
-                    userPasword.Add(email);
-                    userPasword.Add(contra);
-                }
-            }
-            else
-            {
-                mensaje = "Usuario no Encontrado";
-            }
-            con.Close();
+            //SqlCommand cmd = new SqlCommand("select * from usuario where nomuser=@usuario and clave=@clave", con);
+            //cmd.CommandType = CommandType.Text;
+            //cmd.Parameters.AddWithValue("@usuario", loginfo.Usuario);
+            //cmd.Parameters.AddWithValue("@clave", loginfo.Contrasenna);
+            //SqlDataAdapter da = new SqlDataAdapter(cmd);
+            //DataTable dt = new DataTable();
+            //da.Fill(dt);
+            //return dt;
 
-            return mensaje;
+            SqlCommand cmd = new SqlCommand("select * from usuario where nomuser=@usuario and clave=@clave", con);
+            cmd.Parameters.AddWithValue("@usuario", loginfo.Usuario);
+            cmd.Parameters.AddWithValue("@clave", loginfo.Contrasenna);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            cmd.ExecuteNonQuery();
+            con.Close();
+            return ds;
         }
 
         public DataSet BuscarNombreSede(RegSede regdet)

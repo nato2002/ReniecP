@@ -14,7 +14,7 @@ namespace WcfServiceReniec
     {
         //Login
         [OperationContract]
-        string validaruser(ConsultaLogin loginfo);
+        DataSet validaruser(ConsultaLogin loginfo);
         [OperationContract]
         string RegistrartUsuario(ConsultaLogin userInfo);
 

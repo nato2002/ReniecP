@@ -26,6 +26,9 @@ namespace LfServiceReniecCliente.ServiceReference1 {
         private string ApellidosField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CargoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string ContrasennaField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -36,6 +39,12 @@ namespace LfServiceReniecCliente.ServiceReference1 {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string NombresField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int TelefonoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UsuarioField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -56,6 +65,19 @@ namespace LfServiceReniecCliente.ServiceReference1 {
                 if ((object.ReferenceEquals(this.ApellidosField, value) != true)) {
                     this.ApellidosField = value;
                     this.RaisePropertyChanged("Apellidos");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Cargo {
+            get {
+                return this.CargoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CargoField, value) != true)) {
+                    this.CargoField = value;
+                    this.RaisePropertyChanged("Cargo");
                 }
             }
         }
@@ -108,6 +130,32 @@ namespace LfServiceReniecCliente.ServiceReference1 {
                 if ((object.ReferenceEquals(this.NombresField, value) != true)) {
                     this.NombresField = value;
                     this.RaisePropertyChanged("Nombres");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Telefono {
+            get {
+                return this.TelefonoField;
+            }
+            set {
+                if ((this.TelefonoField.Equals(value) != true)) {
+                    this.TelefonoField = value;
+                    this.RaisePropertyChanged("Telefono");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Usuario {
+            get {
+                return this.UsuarioField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UsuarioField, value) != true)) {
+                    this.UsuarioField = value;
+                    this.RaisePropertyChanged("Usuario");
                 }
             }
         }
@@ -204,10 +252,10 @@ namespace LfServiceReniecCliente.ServiceReference1 {
     public interface IServiceReniec {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceReniec/validaruser", ReplyAction="http://tempuri.org/IServiceReniec/validaruserResponse")]
-        string validaruser(LfServiceReniecCliente.ServiceReference1.ConsultaLogin loginfo);
+        System.Data.DataSet validaruser(LfServiceReniecCliente.ServiceReference1.ConsultaLogin loginfo);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceReniec/validaruser", ReplyAction="http://tempuri.org/IServiceReniec/validaruserResponse")]
-        System.Threading.Tasks.Task<string> validaruserAsync(LfServiceReniecCliente.ServiceReference1.ConsultaLogin loginfo);
+        System.Threading.Tasks.Task<System.Data.DataSet> validaruserAsync(LfServiceReniecCliente.ServiceReference1.ConsultaLogin loginfo);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceReniec/RegistrartUsuario", ReplyAction="http://tempuri.org/IServiceReniec/RegistrartUsuarioResponse")]
         string RegistrartUsuario(LfServiceReniecCliente.ServiceReference1.ConsultaLogin userInfo);
@@ -285,11 +333,11 @@ namespace LfServiceReniecCliente.ServiceReference1 {
                 base(binding, remoteAddress) {
         }
         
-        public string validaruser(LfServiceReniecCliente.ServiceReference1.ConsultaLogin loginfo) {
+        public System.Data.DataSet validaruser(LfServiceReniecCliente.ServiceReference1.ConsultaLogin loginfo) {
             return base.Channel.validaruser(loginfo);
         }
         
-        public System.Threading.Tasks.Task<string> validaruserAsync(LfServiceReniecCliente.ServiceReference1.ConsultaLogin loginfo) {
+        public System.Threading.Tasks.Task<System.Data.DataSet> validaruserAsync(LfServiceReniecCliente.ServiceReference1.ConsultaLogin loginfo) {
             return base.Channel.validaruserAsync(loginfo);
         }
         

@@ -27,7 +27,10 @@ namespace LfServiceReniecCliente
             userConsult.Nombres = txtnombres.Text;
             userConsult.Apellidos = txtapellidos.Text;
             userConsult.Email = txtcorreo.Text;
+            userConsult.Telefono = Convert.ToInt32(txttelefono.Text);
+            userConsult.Usuario = txtuser.Text;
             userConsult.Contrasenna = txtcontra.Text;
+            userConsult.Cargo = dpcargo.Text;
             string resultado = objServiceClientobjServic.RegistrartUsuario(userConsult);
             Response.Redirect("Login.aspx");
         }
