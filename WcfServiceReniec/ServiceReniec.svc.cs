@@ -7,6 +7,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace WcfServiceReniec
 {
@@ -117,15 +118,11 @@ namespace WcfServiceReniec
             string Message;
             
             con.Open();
-            SqlCommand cmd = new SqlCommand("sp_RegistrarUsuario", con);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@Nombres", userInfo.Nombres);
-            cmd.Parameters.AddWithValue("@Apellidos", userInfo.Apellidos);
-            cmd.Parameters.AddWithValue("@Email", userInfo.Email);
-            cmd.Parameters.AddWithValue("@Telefono", userInfo.Telefono);
-            cmd.Parameters.AddWithValue("@Usuario", userInfo.Usuario);
-            cmd.Parameters.AddWithValue("@Clave", userInfo.Contrasenna);
-            cmd.Parameters.AddWithValue("@Cargo", userInfo.Cargo);
+            SqlCommand cmd = new SqlCommand("insert into usuario values(@nombres,@apellidos,@email,@contrasenna)", con);
+            cmd.Parameters.AddWithValue("@nombres", userInfo.Nombres);
+            cmd.Parameters.AddWithValue("@apellidos", userInfo.Apellidos);
+            cmd.Parameters.AddWithValue("@email", userInfo.Email);
+            cmd.Parameters.AddWithValue("@contrasenna", userInfo.Contrasenna);
             int result = cmd.ExecuteNonQuery();
             if (result == 1)
             {
@@ -140,27 +137,36 @@ namespace WcfServiceReniec
             return Message;
         }
 
-        public DataSet validaruser(ConsultaLogin loginfo)
+        public string validaruser(ConsultaLogin loginfo)
         {
-            con.Open();
-            //SqlCommand cmd = new SqlCommand("select * from usuario where nomuser=@usuario and clave=@clave", con);
-            //cmd.CommandType = CommandType.Text;
-            //cmd.Parameters.AddWithValue("@usuario", loginfo.Usuario);
-            //cmd.Parameters.AddWithValue("@clave", loginfo.Contrasenna);
-            //SqlDataAdapter da = new SqlDataAdapter(cmd);
-            //DataTable dt = new DataTable();
-            //da.Fill(dt);
-            //return dt;
+            String mensaje = "";
 
-            SqlCommand cmd = new SqlCommand("select * from usuario where nomuser=@usuario and clave=@clave", con);
-            cmd.Parameters.AddWithValue("@usuario", loginfo.Usuario);
-            cmd.Parameters.AddWithValue("@clave", loginfo.Contrasenna);
+            List<String> userPasword = new List<String>();
+            con.Open();
+            SqlCommand cmd = new SqlCommand("select * from usuario where email=@email and contrasenna=@contrasenna", con);
+            cmd.Parameters.AddWithValue("@email", loginfo.Email);
+            cmd.Parameters.AddWithValue("@contrasenna", loginfo.Contrasenna);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataSet ds = new DataSet();
-            da.Fill(ds);
-            cmd.ExecuteNonQuery();
+            DataTable tb = new DataTable();
+            da.Fill(tb);
+            if (tb.Rows.Count > 0)
+            {
+                mensaje = "Usuario Encontrado";
+                for (int i = 0; i < tb.Rows.Count; i++)
+                {
+                    string email = tb.Rows[i]["email"].ToString();
+                    string contra = tb.Rows[i]["contrasenna"].ToString();
+                    userPasword.Add(email);
+                    userPasword.Add(contra);
+                }
+            }
+            else
+            {
+                mensaje = "Usuario no Encontrado";
+            }
             con.Close();
-            return ds;
+
+            return mensaje;
         }
 
         public DataSet BuscarNombreSede(RegSede regdet)
@@ -180,6 +186,42 @@ namespace WcfServiceReniec
             DA.SelectCommand.CommandType = CommandType.StoredProcedure;
             DA.SelectCommand.Parameters.Add("@BUSCAR", SqlDbType.VarChar).Value = regdet.Direccion;
             DA.Fill(DST, "Sedes");
+            return DST;
+        }
+
+        //Registro Tramites
+        public DataSet GetRegSolDetails()
+        {
+            if (con.State == ConnectionState.Closed)
+            {
+                con.Open();
+            }
+            SqlCommand cmd = new SqlCommand("Select * from Sol_Pasaporte", con);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            cmd.ExecuteNonQuery();
+            con.Close();
+            return ds;
+        }
+
+        public DataSet BuscarSolicitudID(RegSolicitud regdetsol)
+        {
+            DataSet DST = new DataSet();
+            SqlDataAdapter DA = new SqlDataAdapter("buscarIDSol", con);
+            DA.SelectCommand.CommandType = CommandType.StoredProcedure;
+            DA.SelectCommand.Parameters.Add("@BUSCAR", SqlDbType.Int).Value = regdetsol.SolicitudId;
+            DA.Fill(DST, "Sol_Pasaporte");
+            return DST;
+        }
+
+        public DataSet BuscarEstadoSolicitud(RegSolicitud regdetsol)
+        {
+            DataSet DST = new DataSet();
+            SqlDataAdapter DA = new SqlDataAdapter("listarEstado", con);
+            DA.SelectCommand.CommandType = CommandType.StoredProcedure;
+            DA.SelectCommand.Parameters.Add("@BUSCAR", SqlDbType.Int).Value = regdetsol.Estado;
+            DA.Fill(DST, "Sol_Pasaporte");
             return DST;
         }
     }
