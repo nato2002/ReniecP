@@ -185,12 +185,15 @@
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\ServiceReference1\" />
   </ItemGroup>
+<<<<<<< HEAD
   <ItemGroup>
     <ProjectReference Include="..\WcfServiceReniec\WcfServiceReniec.csproj">
       <Project>{4403A637-CF1F-443E-A89D-0977F23B59B6}</Project>
       <Name>WcfServiceReniec</Name>
     </ProjectReference>
   </ItemGroup>
+=======
+>>>>>>> da83bb7068c6b5e47c7710f8b139836407cda481
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
