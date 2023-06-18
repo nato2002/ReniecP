@@ -60,13 +60,13 @@ namespace LfServiceReniecCliente.PSReniec.Consultas
         protected global::System.Web.UI.WebControls.Label Label2;
 
         /// <summary>
-        /// Control btnlistar.
+        /// Control Image2.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image btnlistar;
+        protected global::System.Web.UI.WebControls.Image Image2;
 
         /// <summary>
         /// Control Panel2.
@@ -123,13 +123,13 @@ namespace LfServiceReniecCliente.PSReniec.Consultas
         protected global::System.Web.UI.WebControls.DropDownList cboestado;
 
         /// <summary>
-        /// Control btnconsultar.
+        /// Control Button1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnconsultar;
+        protected global::System.Web.UI.WebControls.Button Button1;
 
         /// <summary>
         /// Control btnlimpiar.

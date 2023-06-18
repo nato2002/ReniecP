@@ -36,41 +36,5 @@ namespace LfServiceReniecCliente.PSReniec.Consultas
             cboestado.ClearSelection();
             BindRegRecordsInGrid();
         }
-
-        protected void btnconsultar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void buscar()
-        {
-            try
-            {
-                if (txtid.Text == "")
-                {
-                    string estado = cboestado.Text;
-
-                    RegSolicitud regdetsol = new RegSolicitud();
-                    regdetsol.Estado = estado;
-
-                    DataSet resultado = obj.BuscarEstadoSolicitud(regdetsol);
-
-                }
-                else if (cboestado.Text == "--Elegir Estado--")
-                {
-                    int solicitudId = int.Parse(txtid.Text);
-                    RegSolicitud regdetsol = new RegSolicitud();
-                    regdetsol.SolicitudId = solicitudId;
-
-                    DataSet resultado = obj.BuscarSolicitudID(regdetsol);
-
-                }
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("El registro de solicitud no fue encontrado: " + ex.Message, "Busqueda y Listado Solicitud", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-        }
     }
 }
