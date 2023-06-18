@@ -12,7 +12,7 @@ namespace WcfServiceReniec
         int s_Solid;
         int s_Ciudadanoid;
         DateTime s_fecha;
-        int estado;
+        string estado;
 
         [DataMember]
         public int SolicitudId 
@@ -34,7 +34,7 @@ namespace WcfServiceReniec
         }
 
         [DataMember]
-        public int Estado
+        public string Estado
         { 
             get => estado; 
             set => estado = value; 

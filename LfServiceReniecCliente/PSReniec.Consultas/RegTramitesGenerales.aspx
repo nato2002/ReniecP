@@ -90,7 +90,7 @@
                 <td class="auto-style15">
                     &nbsp;</td>
                 <td class="auto-style14">
-                    <asp:Image ID="Image2" runat="server" Height="61px" ImageUrl="~/img/boton.png" Width="315px" />
+                    <asp:Image ID="btnlistar" runat="server" Height="61px" ImageUrl="~/img/boton.png" Width="315px" />
                 </td>
             </tr>
             <tr>
@@ -121,10 +121,13 @@
                 <td class="auto-style9">
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:TextBox ID="txtid" runat="server" Width="189px" Height="25px"></asp:TextBox>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:DropDownList ID="cboestado" runat="server" Font-Size="Large" Height="32px" Width="213px">
+                        <asp:ListItem>--ELEGIR ESTADO--</asp:ListItem>
+                        <asp:ListItem>ACEPTADO</asp:ListItem>
+                        <asp:ListItem>RECHAZADO</asp:ListItem>
                     </asp:DropDownList>
                 </td>
                 <td class="auto-style16">
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="Button1" runat="server" Text="🔍︎ Consultar" Width="188px" BackColor="#990000" Font-Names="Arial Black" Font-Size="Medium" ForeColor="White" Height="28px" />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="btnconsultar" runat="server" Text="🔍︎ Consultar" Width="188px" BackColor="#990000" Font-Names="Arial Black" Font-Size="Medium" ForeColor="White" Height="28px" OnClick="btnconsultar_Click" />
                 </td>
                 <td class="auto-style11">
                     <asp:Button ID="btnlimpiar" runat="server" Text="X Limpiar" Width="188px" Height="28px" BackColor="#003399" Font-Names="Arial Black" Font-Size="Large" ForeColor="White" OnClick="btnlimpiar_Click"/>
