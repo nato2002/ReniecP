@@ -13,26 +13,21 @@ namespace WcfServiceReniec
         string nombres= string.Empty;
         string apellidos = string.Empty;
         string email= string.Empty;
-        int telefono = 0;
-        string usuario= string.Empty;
         string contrasenna= string.Empty;
-        string cargo= string.Empty;
 
-        public ConsultaLogin(string usuario, string contrasenna)
+        public ConsultaLogin(string email, string contrasenna)
         {
-            this.usuario = usuario;
+            this.email = email;
             this.contrasenna = contrasenna;
         }
 
-        public ConsultaLogin(string nombres, string apellidos, string email, int telefono, string usuario, string contrasenna, string cargo)
+        public ConsultaLogin( string nombres, string apellidos, string email, string contrasenna)
         {
+
             this.nombres = nombres;
             this.apellidos = apellidos;
             this.email = email;
-            this.telefono = telefono;
-            this.usuario = usuario;
             this.contrasenna = contrasenna;
-            this.cargo = cargo;
         }
 
         [DataMember]
@@ -60,28 +55,10 @@ namespace WcfServiceReniec
             set { email = value; }
         }
         [DataMember]
-        public int Telefono
-        {
-            get { return telefono; }
-            set { telefono = value; }
-        }
-        [DataMember]
-        public string Usuario
-        {
-            get { return usuario; }
-            set { usuario = value; }
-        }
-        [DataMember]
         public string Contrasenna
         {
             get { return contrasenna; }
             set { contrasenna = value; }
-        }
-        [DataMember]
-        public string Cargo
-        {
-            get { return cargo; }
-            set { cargo = value; }
         }
 
 

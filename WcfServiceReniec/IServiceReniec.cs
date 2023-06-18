@@ -14,7 +14,7 @@ namespace WcfServiceReniec
     {
         //Login
         [OperationContract]
-        DataSet validaruser(ConsultaLogin loginfo);
+        string validaruser(ConsultaLogin loginfo);
         [OperationContract]
         string RegistrartUsuario(ConsultaLogin userInfo);
 
@@ -39,6 +39,15 @@ namespace WcfServiceReniec
 
         [OperationContract]
         DataSet BuscarDireccionSede(RegSede regdet);
+
+        [OperationContract]
+        DataSet BuscarSolicitudID(RegSolicitud regdetsol);
+
+        [OperationContract]
+        DataSet BuscarEstadoSolicitud(RegSolicitud regdetsol);
+
+        [OperationContract]
+        DataSet GetRegSolDetails();
 
     }
 }
