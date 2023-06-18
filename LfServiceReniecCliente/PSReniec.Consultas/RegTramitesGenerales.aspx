@@ -114,7 +114,8 @@
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Label ID="Label6" runat="server" Font-Names="Arial Narrow" Font-Size="Large" Text="Estado de solicitud"></asp:Label>
                 </td>
                 <td class="auto-style16">
-                    &nbsp;</td>
+                    <asp:Button ID="Button1" runat="server" Text="🔍︎ Consultar" Width="188px" BackColor="#990000" Font-Names="Arial Black" Font-Size="Medium" ForeColor="White" Height="28px" />
+                </td>
                 <td class="auto-style11">&nbsp;</td>
             </tr>
             <tr>
@@ -124,8 +125,7 @@
                     </asp:DropDownList>
                 </td>
                 <td class="auto-style16">
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="Button1" runat="server" Text="🔍︎ Consultar" Width="188px" BackColor="#990000" Font-Names="Arial Black" Font-Size="Medium" ForeColor="White" Height="28px" />
-                </td>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
                 <td class="auto-style11">
                     <asp:Button ID="Button2" runat="server" Text="X Limpiar" Width="188px" Height="28px" BackColor="#003399" Font-Names="Arial Black" Font-Size="Large" ForeColor="White"/>
                 </td>
