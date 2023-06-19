@@ -183,19 +183,41 @@ namespace WcfServiceReniec
             return DST;
         }
 
+        //Registro Tramites
+
         public DataSet BuscarSolicitudID(RegSolicitud regdetsol)
         {
-            throw new NotImplementedException();
+            DataSet DST = new DataSet();
+            SqlDataAdapter DA = new SqlDataAdapter("buscarIDSol", con);
+            DA.SelectCommand.CommandType = CommandType.StoredProcedure;
+            DA.SelectCommand.Parameters.Add("@BUSCAR", SqlDbType.Int).Value = regdetsol.SolicitudId;
+            DA.Fill(DST, "Sol_Pasaporte");
+            return DST;
         }
 
         public DataSet BuscarEstadoSolicitud(RegSolicitud regdetsol)
         {
-            throw new NotImplementedException();
+            DataSet DST = new DataSet();
+            SqlDataAdapter DA = new SqlDataAdapter("listarEstado", con);
+            DA.SelectCommand.CommandType = CommandType.StoredProcedure;
+            DA.SelectCommand.Parameters.Add("@BUSCAR", SqlDbType.Int).Value = regdetsol.Estado;
+            DA.Fill(DST, "Sol_Pasaporte");
+            return DST;
         }
 
         public DataSet GetRegSolDetails()
         {
-            throw new NotImplementedException();
+            if (con.State == ConnectionState.Closed)
+            {
+                con.Open();
+            }
+            SqlCommand cmd = new SqlCommand("Select * from Sol_Pasaporte", con);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            cmd.ExecuteNonQuery();
+            con.Close();
+            return ds;
         }
     }
 }
