@@ -9,9 +9,22 @@ namespace LfServiceReniecCliente.PSReniec.Consultas
 {
     public partial class RegTramitesGenerales : System.Web.UI.Page
     {
+        ServiceReference1.ServiceReniecClient obj = new ServiceReference1.ServiceReniecClient();
+
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!Page.IsPostBack)
+            {
+                BindRegRecordsInGrid();
+            }
+        }
 
+        private void BindRegRecordsInGrid()
+        {
+            DataSet ds = new DataSet();
+            ds = obj.GetRegSolDetails();
+            GridView1.DataSource = ds;
+            GridView1.DataBind();
         }
 
         protected void btnconsultar_Click(object sender, EventArgs e)
@@ -48,6 +61,13 @@ namespace LfServiceReniecCliente.PSReniec.Consultas
             {
                 MessageBox.Show("El registro de solicitud no fue encontrado: " + ex.Message, "Busqueda y Listado Solicitud", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
+        }
+
+        protected System.Void Button2_Click(System.Object sender, System.EventArgs e)
+        {
+            txtid.Text = string.Empty;
+            cboestado.ClearSelection();
+            BindRegRecordsInGrid();
         }
     }
 }

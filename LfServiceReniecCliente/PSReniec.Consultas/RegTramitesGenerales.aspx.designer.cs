@@ -123,15 +123,6 @@ namespace LfServiceReniecCliente.PSReniec.Consultas
         protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
 
         /// <summary>
-        /// Control Button1.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
-
-        /// <summary>
         /// Control txtid.
         /// </summary>
         /// <remarks>
@@ -159,13 +150,13 @@ namespace LfServiceReniecCliente.PSReniec.Consultas
         protected global::System.Web.UI.WebControls.Button btnconsultar;
 
         /// <summary>
-        /// Control Button2.
+        /// Control btnlimpiar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button2;
+        protected global::System.Web.UI.WebControls.Button btnlimpiar;
 
         /// <summary>
         /// Control GridView1.
