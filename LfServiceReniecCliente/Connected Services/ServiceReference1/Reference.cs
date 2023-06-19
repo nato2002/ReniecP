@@ -11,8 +11,14 @@
 namespace LfServiceReniecCliente.ServiceReference1 {
     using System.Runtime.Serialization;
     using System;
+<<<<<<< HEAD
     
     
+=======
+    using System.Data;
+    using WcfServiceReniec;
+
+>>>>>>> parent of 38feec5 (Revert "df")
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="ConsultaLogin", Namespace="http://schemas.datacontract.org/2004/07/WcfServiceReniec")]
