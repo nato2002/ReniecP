@@ -66,7 +66,7 @@ namespace LfServiceReniecCliente.PSReniec.Consultas
         protected System.Void Button2_Click(System.Object sender, System.EventArgs e)
         {
             txtid.Text = string.Empty;
-            cboestado.ClearSelection();
+            DropDownList1.ClearSelection();
             BindRegRecordsInGrid();
         }
     }
