@@ -40,5 +40,14 @@ namespace WcfServiceReniec
         [OperationContract]
         DataSet BuscarDireccionSede(RegSede regdet);
 
+        [OperationContract]
+        DataSet BuscarSolicitudID(RegSolicitud regdetsol);
+
+        [OperationContract]
+        DataSet BuscarEstadoSolicitud(RegSolicitud regdetsol);
+
+        [OperationContract]
+        DataSet GetRegSolDetails();
+
     }
 }

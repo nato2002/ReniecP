@@ -182,5 +182,20 @@ namespace WcfServiceReniec
             DA.Fill(DST, "Sedes");
             return DST;
         }
+
+        public DataSet BuscarSolicitudID(RegSolicitud regdetsol)
+        {
+            throw new NotImplementedException();
+        }
+
+        public DataSet BuscarEstadoSolicitud(RegSolicitud regdetsol)
+        {
+            throw new NotImplementedException();
+        }
+
+        public DataSet GetRegSolDetails()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
