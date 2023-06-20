@@ -14,7 +14,7 @@ namespace WcfServiceReniec
     // NOTA: para iniciar el Cliente de prueba WCF para probar este servicio, seleccione ServiceReniec.svc o ServiceReniec.svc.cs en el Explorador de soluciones e inicie la depuración.
     public class ServiceReniec : IServiceReniec
     {
-        SqlConnection con = new SqlConnection("Data Source=DESKTOP-87IQ4MT\\SQLEXPRESS; Initial Catalog=RENIEC; Integrated Security=True");
+        SqlConnection con = new SqlConnection("Server=serveproyectos.database.windows.net; Database=RENIEC; User Id=admin01; Password=Admin123;");
 
         public bool DeleteUserRegDetails(RegSede regdet)
         {
@@ -184,7 +184,6 @@ namespace WcfServiceReniec
             if (result == 1)
             {
                 Message = "Tu Tramite Se realizo correctamente";
-
             }
             else
             {

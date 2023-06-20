@@ -116,11 +116,13 @@
     <Content Include="Discapacidad.aspx" />
     <Content Include="img\borrar.png" />
     <Content Include="img\borrarx.png" />
+    <Content Include="img\fondo.png" />
     <Content Include="img\lapiz.png" />
     <Content Include="img\renieclogo.png" />
     <Content Include="PerfilUser.aspx" />
     <Content Include="Inicio.aspx" />
     <Content Include="ProcesoTramite.aspx" />
+    <Content Include="RealizarTramite.aspx" />
     <Content Include="RegistrarSedes.aspx" />
     <Content Include="RegistrarUser.aspx" />
     <Content Include="LogIn.aspx" />
@@ -155,6 +157,13 @@
       <DependentUpon>ProcesoTramite.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RealizarTramite.aspx.cs">
+      <DependentUpon>RealizarTramite.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RealizarTramite.aspx.designer.cs">
+      <DependentUpon>RealizarTramite.aspx</DependentUpon>
+    </Compile>
     <Compile Include="RegistrarSedes.aspx.cs">
       <DependentUpon>RegistrarSedes.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

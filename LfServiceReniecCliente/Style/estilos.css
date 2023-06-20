@@ -1,44 +1,72 @@
-﻿body {
-    margin:0;
-    padding:0;
+﻿* {
+    margin: 0;
+    padding: 0;
 }
 
-header {
-    overflow: auto;
+form {
+    background-image: url(../img/fondo.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+
+img {
+    margin: 2em 2em;
+}
+
+.cabeza {
     background-color: #004370;
-}
-
-img{
-    float:left;
-    margin: 1em 1em;
-}
-
-.titulo{
-    color:white;
-    display:inline;
-    margin-top:0;
-    text-decoration:underline;
-    font-family:Arial;
-}
-
-.subtitulo {
-    margin-left: 69%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     color: white;
-    font-family: Arial;
+}
+#btnRealizar{
+    order:5;
+}
+h3 {
+    padding-top: 3em;
+    padding-right: 1em;
+    text-align: center;
 }
 
-.seccion-PanelDatos {
-    display:flex;
-    border-style: solid;
-    margin: 2em 10em;
-    padding: 2em 2em;
-    column-count:2;
-    align-items:center;
+.seccion-tramite {
+    margin: 2em 2em;
+    background-color: rgb(154, 173, 185,0.8);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
-.btnCerrar{
-    border-style:none;
-    margin-left: 50%;
-    width:10em; 
-    height:3em;
+p {
+    padding: 3em;
+    font-weight: bold;
+    flex-basis: 33%;
+}
+
+.form-control {
+    width: 20em;
+}
+
+.form-select {
+    width: 20em;
+}
+
+.pie-pagina {
+    display: flex;
+    background-color: rgb(228, 228, 228);
+    height: auto;
+}
+
+a {
+    margin: 3em;
+    text-decoration: none;
+    color: black;
+}
+
+.btn {
+    height: 5em;
 }
