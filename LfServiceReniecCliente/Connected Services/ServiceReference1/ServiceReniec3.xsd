@@ -21,4 +21,13 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="RegSede" nillable="true" type="tns:RegSede" />
+  <xs:complexType name="RegSolicitud">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Ciudadanoid" type="xs:int" />
+      <xs:element minOccurs="0" name="Estado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="S_fecha" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="SolicitudId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RegSolicitud" nillable="true" type="tns:RegSolicitud" />
 </xs:schema>

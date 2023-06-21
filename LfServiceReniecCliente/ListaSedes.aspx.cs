@@ -1,4 +1,4 @@
-﻿using LfServiceReniecCliente.ServiceReference1;
+﻿//using LfServiceReniecCliente.ServiceReference1;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -12,7 +12,7 @@ namespace LfServiceReniecCliente
 {
     public partial class ListaSedes : System.Web.UI.Page
     {
-        ServiceReference1.ServiceReniecClient obj = new ServiceReference1.ServiceReniecClient();
+        //ServiceReference1.ServiceReniecClient obj = new ServiceReference1.ServiceReniecClient();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Page.IsPostBack)
@@ -22,10 +22,10 @@ namespace LfServiceReniecCliente
         }
         private void BindRegRecordsInGrid()
         {
-            DataSet ds = new DataSet();
-            ds = obj.GetUserRegDetails();
-            grdWcfTest.DataSource = ds;
-            grdWcfTest.DataBind();
+            //DataSet ds = new DataSet();
+            //ds = obj.GetUserRegDetails();
+            //grdWcfTest.DataSource = ds;
+            //grdWcfTest.DataBind();
         }
 
         protected void btnSubmit_Click(object sender, EventArgs e)
@@ -51,32 +51,32 @@ namespace LfServiceReniecCliente
 
         private void buscar()
         {
-            try
-            {
-                if (DropDownList1.Text == "Nombre")
-                {
+            //try
+            //{
+            //    if (DropDownList1.Text == "Nombre")
+            //    {
 
-                    RegSede regSede = new RegSede();
-                    regSede.Nombre = txtnombre.Text;
-                    grdWcfTest.DataSource = obj.BuscarNombreSede(regSede).Tables[0];
-                    grdWcfTest.DataBind();
+            //        RegSede regSede = new RegSede();
+            //        regSede.Nombre = txtnombre.Text;
+            //        grdWcfTest.DataSource = obj.BuscarNombreSede(regSede).Tables[0];
+            //        grdWcfTest.DataBind();
 
-                }
-                else if (DropDownList1.Text == "Direccion")
-                {
-                    RegSede regSede = new RegSede();
-                    regSede.Direccion = txtnombre.Text;
-                    grdWcfTest.DataSource = obj.BuscarDireccionSede(regSede).Tables[0];
-                    grdWcfTest.DataBind();
+            //    }
+            //    else if (DropDownList1.Text == "Direccion")
+            //    {
+            //        RegSede regSede = new RegSede();
+            //        regSede.Direccion = txtnombre.Text;
+            //        grdWcfTest.DataSource = obj.BuscarDireccionSede(regSede).Tables[0];
+            //        grdWcfTest.DataBind();
 
-                }
+            //    }
 
-            }
-            catch (Exception ex)
-            {
+            //}
+            //catch (Exception ex)
+            //{
 
-                MessageBox.Show("El producto no fue encontrado por: " + ex.Message, "Buscar Producto", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
+            //    MessageBox.Show("El producto no fue encontrado por: " + ex.Message, "Buscar Producto", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            //}
         }
 
             protected void btnCancel_Click(object sender, EventArgs e)

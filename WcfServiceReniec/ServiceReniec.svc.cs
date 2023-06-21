@@ -14,7 +14,7 @@ namespace WcfServiceReniec
     // NOTA: para iniciar el Cliente de prueba WCF para probar este servicio, seleccione ServiceReniec.svc o ServiceReniec.svc.cs en el Explorador de soluciones e inicie la depuración.
     public class ServiceReniec : IServiceReniec
     {
-        SqlConnection con = new SqlConnection("Data Source=DESKTOP-E593S88\\SQLEXPRESS; Initial Catalog=RENIEC; Integrated Security=True");
+        SqlConnection con = new SqlConnection("Data Source=serveproyectos.database.windows.net; Initial Catalog=RENIEC;User ID=admin01;Password=Admin123");
 
         public bool DeleteUserRegDetails(RegSede regdet)
         {
@@ -211,7 +211,7 @@ namespace WcfServiceReniec
             {
                 con.Open();
             }
-            SqlCommand cmd = new SqlCommand("Select * from Sol_Pasaporte", con);
+            SqlCommand cmd = new SqlCommand("Select * from Solicitud", con);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataSet ds = new DataSet();
             da.Fill(ds);

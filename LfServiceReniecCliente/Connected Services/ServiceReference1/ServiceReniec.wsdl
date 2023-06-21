@@ -62,6 +62,24 @@
   <wsdl:message name="IServiceReniec_BuscarDireccionSede_OutputMessage">
     <wsdl:part name="parameters" element="tns:BuscarDireccionSedeResponse" />
   </wsdl:message>
+  <wsdl:message name="IServiceReniec_BuscarSolicitudID_InputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarSolicitudID" />
+  </wsdl:message>
+  <wsdl:message name="IServiceReniec_BuscarSolicitudID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarSolicitudIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceReniec_BuscarEstadoSolicitud_InputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarEstadoSolicitud" />
+  </wsdl:message>
+  <wsdl:message name="IServiceReniec_BuscarEstadoSolicitud_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarEstadoSolicitudResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceReniec_GetRegSolDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRegSolDetails" />
+  </wsdl:message>
+  <wsdl:message name="IServiceReniec_GetRegSolDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRegSolDetailsResponse" />
+  </wsdl:message>
   <wsdl:portType name="IServiceReniec">
     <wsdl:operation name="validaruser">
       <wsdl:input wsaw:Action="http://tempuri.org/IServiceReniec/validaruser" message="tns:IServiceReniec_validaruser_InputMessage" />
@@ -98,6 +116,18 @@
     <wsdl:operation name="BuscarDireccionSede">
       <wsdl:input wsaw:Action="http://tempuri.org/IServiceReniec/BuscarDireccionSede" message="tns:IServiceReniec_BuscarDireccionSede_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IServiceReniec/BuscarDireccionSedeResponse" message="tns:IServiceReniec_BuscarDireccionSede_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarSolicitudID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceReniec/BuscarSolicitudID" message="tns:IServiceReniec_BuscarSolicitudID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceReniec/BuscarSolicitudIDResponse" message="tns:IServiceReniec_BuscarSolicitudID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarEstadoSolicitud">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceReniec/BuscarEstadoSolicitud" message="tns:IServiceReniec_BuscarEstadoSolicitud_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceReniec/BuscarEstadoSolicitudResponse" message="tns:IServiceReniec_BuscarEstadoSolicitud_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRegSolDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceReniec/GetRegSolDetails" message="tns:IServiceReniec_GetRegSolDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceReniec/GetRegSolDetailsResponse" message="tns:IServiceReniec_GetRegSolDetails_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IServiceReniec" type="tns:IServiceReniec">
@@ -176,6 +206,33 @@
     </wsdl:operation>
     <wsdl:operation name="BuscarDireccionSede">
       <soap:operation soapAction="http://tempuri.org/IServiceReniec/BuscarDireccionSede" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarSolicitudID">
+      <soap:operation soapAction="http://tempuri.org/IServiceReniec/BuscarSolicitudID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarEstadoSolicitud">
+      <soap:operation soapAction="http://tempuri.org/IServiceReniec/BuscarEstadoSolicitud" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRegSolDetails">
+      <soap:operation soapAction="http://tempuri.org/IServiceReniec/GetRegSolDetails" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

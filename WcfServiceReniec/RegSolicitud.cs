@@ -6,7 +6,6 @@ using System.Web;
 
 namespace WcfServiceReniec
 {
-<<<<<<< HEAD
         [DataContract]
         public class RegSolicitud
         {
@@ -14,15 +13,6 @@ namespace WcfServiceReniec
             int s_Ciudadanoid;
             DateTime s_fecha;
             string estado;
-=======
-    [DataContract]
-    public class RegSolicitud
-    {
-        int s_Solid;
-        int s_Ciudadanoid;
-        DateTime s_fecha;
-        string estado;
->>>>>>> parent of 38feec5 (Revert "df")
 
             [DataMember]
             public int SolicitudId
@@ -43,20 +33,13 @@ namespace WcfServiceReniec
                 set => s_fecha = value;
             }
 
-<<<<<<< HEAD
+
             [DataMember]
             public string Estado
             {
                 get => estado;
                 set => estado = value;
             }
-=======
-        [DataMember]
-        public string Estado
-        { 
-            get => estado; 
-            set => estado = value; 
+
         }
->>>>>>> parent of 38feec5 (Revert "df")
     }
-}

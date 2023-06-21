@@ -4,6 +4,10 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data.SqlClient;
+using System.Data;
+using LfServiceReniecCliente.ServiceReference1;
+using System.Windows.Forms;
 
 namespace LfServiceReniecCliente.PSReniec.Consultas
 {
@@ -34,6 +38,7 @@ namespace LfServiceReniecCliente.PSReniec.Consultas
 
         private void buscar()
         {
+            ServiceReference1.ServiceReniecClient obj = new ServiceReference1.ServiceReniecClient();
             try
             {
                 if (txtid.Text == "")
@@ -63,7 +68,7 @@ namespace LfServiceReniecCliente.PSReniec.Consultas
             }
         }
 
-        protected System.Void Button2_Click(System.Object sender, System.EventArgs e)
+        protected void Button2_Click(System.Object sender, System.EventArgs e)
         {
             txtid.Text = string.Empty;
             DropDownList1.ClearSelection();

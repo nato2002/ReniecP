@@ -31,8 +31,8 @@ namespace LfServiceReniecCliente
             ConsultaLogin obje = new ConsultaLogin();
             DataSet ds = new DataSet();
             //DataTable dt = new DataTable();
-            obje.Usuario=txtcorreo.Text;
-            obje.Contrasenna=txtcontra.Text;
+            obje.Usuario = txtcorreo.Text;
+            obje.Contrasenna = txtcontra.Text;
             ds = obj.validaruser(obje);
             if (ds.Tables[0].Rows.Count > 0)
             {
@@ -42,7 +42,7 @@ namespace LfServiceReniecCliente
                 obje.Nombres = ds.Tables[0].Rows[0][1].ToString();
                 obje.Apellidos = ds.Tables[0].Rows[0][2].ToString();
                 obje.Cargo = ds.Tables[0].Rows[0][7].ToString();
-                MessageBox.Show("Bienvenido(a) "+ obje.Nombres +" "+obje.Apellidos +": " + obje.Cargo);
+                MessageBox.Show("Bienvenido(a) " + obje.Nombres + " " + obje.Apellidos + ": " + obje.Cargo);
                 Response.Redirect("Inicio.aspx");
             }
             else

@@ -11,14 +11,8 @@
 namespace LfServiceReniecCliente.ServiceReference1 {
     using System.Runtime.Serialization;
     using System;
-<<<<<<< HEAD
     
     
-=======
-    using System.Data;
-    using WcfServiceReniec;
-
->>>>>>> parent of 38feec5 (Revert "df")
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="ConsultaLogin", Namespace="http://schemas.datacontract.org/2004/07/WcfServiceReniec")]
@@ -253,6 +247,99 @@ namespace LfServiceReniecCliente.ServiceReference1 {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="RegSolicitud", Namespace="http://schemas.datacontract.org/2004/07/WcfServiceReniec")]
+    [System.SerializableAttribute()]
+    public partial class RegSolicitud : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int CiudadanoidField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string EstadoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime S_fechaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int SolicitudIdField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Ciudadanoid {
+            get {
+                return this.CiudadanoidField;
+            }
+            set {
+                if ((this.CiudadanoidField.Equals(value) != true)) {
+                    this.CiudadanoidField = value;
+                    this.RaisePropertyChanged("Ciudadanoid");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Estado {
+            get {
+                return this.EstadoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EstadoField, value) != true)) {
+                    this.EstadoField = value;
+                    this.RaisePropertyChanged("Estado");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime S_fecha {
+            get {
+                return this.S_fechaField;
+            }
+            set {
+                if ((this.S_fechaField.Equals(value) != true)) {
+                    this.S_fechaField = value;
+                    this.RaisePropertyChanged("S_fecha");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int SolicitudId {
+            get {
+                return this.SolicitudIdField;
+            }
+            set {
+                if ((this.SolicitudIdField.Equals(value) != true)) {
+                    this.SolicitudIdField = value;
+                    this.RaisePropertyChanged("SolicitudId");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.IServiceReniec")]
     public interface IServiceReniec {
@@ -310,6 +397,24 @@ namespace LfServiceReniecCliente.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceReniec/BuscarDireccionSede", ReplyAction="http://tempuri.org/IServiceReniec/BuscarDireccionSedeResponse")]
         System.Threading.Tasks.Task<System.Data.DataSet> BuscarDireccionSedeAsync(LfServiceReniecCliente.ServiceReference1.RegSede regdet);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceReniec/BuscarSolicitudID", ReplyAction="http://tempuri.org/IServiceReniec/BuscarSolicitudIDResponse")]
+        System.Data.DataSet BuscarSolicitudID(LfServiceReniecCliente.ServiceReference1.RegSolicitud regdetsol);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceReniec/BuscarSolicitudID", ReplyAction="http://tempuri.org/IServiceReniec/BuscarSolicitudIDResponse")]
+        System.Threading.Tasks.Task<System.Data.DataSet> BuscarSolicitudIDAsync(LfServiceReniecCliente.ServiceReference1.RegSolicitud regdetsol);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceReniec/BuscarEstadoSolicitud", ReplyAction="http://tempuri.org/IServiceReniec/BuscarEstadoSolicitudResponse")]
+        System.Data.DataSet BuscarEstadoSolicitud(LfServiceReniecCliente.ServiceReference1.RegSolicitud regdetsol);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceReniec/BuscarEstadoSolicitud", ReplyAction="http://tempuri.org/IServiceReniec/BuscarEstadoSolicitudResponse")]
+        System.Threading.Tasks.Task<System.Data.DataSet> BuscarEstadoSolicitudAsync(LfServiceReniecCliente.ServiceReference1.RegSolicitud regdetsol);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceReniec/GetRegSolDetails", ReplyAction="http://tempuri.org/IServiceReniec/GetRegSolDetailsResponse")]
+        System.Data.DataSet GetRegSolDetails();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceReniec/GetRegSolDetails", ReplyAction="http://tempuri.org/IServiceReniec/GetRegSolDetailsResponse")]
+        System.Threading.Tasks.Task<System.Data.DataSet> GetRegSolDetailsAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -409,6 +514,30 @@ namespace LfServiceReniecCliente.ServiceReference1 {
         
         public System.Threading.Tasks.Task<System.Data.DataSet> BuscarDireccionSedeAsync(LfServiceReniecCliente.ServiceReference1.RegSede regdet) {
             return base.Channel.BuscarDireccionSedeAsync(regdet);
+        }
+        
+        public System.Data.DataSet BuscarSolicitudID(LfServiceReniecCliente.ServiceReference1.RegSolicitud regdetsol) {
+            return base.Channel.BuscarSolicitudID(regdetsol);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> BuscarSolicitudIDAsync(LfServiceReniecCliente.ServiceReference1.RegSolicitud regdetsol) {
+            return base.Channel.BuscarSolicitudIDAsync(regdetsol);
+        }
+        
+        public System.Data.DataSet BuscarEstadoSolicitud(LfServiceReniecCliente.ServiceReference1.RegSolicitud regdetsol) {
+            return base.Channel.BuscarEstadoSolicitud(regdetsol);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> BuscarEstadoSolicitudAsync(LfServiceReniecCliente.ServiceReference1.RegSolicitud regdetsol) {
+            return base.Channel.BuscarEstadoSolicitudAsync(regdetsol);
+        }
+        
+        public System.Data.DataSet GetRegSolDetails() {
+            return base.Channel.GetRegSolDetails();
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> GetRegSolDetailsAsync() {
+            return base.Channel.GetRegSolDetailsAsync();
         }
     }
 }
