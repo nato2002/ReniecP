@@ -51,6 +51,6 @@ namespace WcfServiceReniec
         DataSet GetRegSolDetails();
 
         [OperationContract]
-        void CargarEstadosSolicitud(DropDownList ddlEstadoSolicitud);
+        void CargarEstadosSolicitud(out string[] estadosSolicitud);
     }
 }

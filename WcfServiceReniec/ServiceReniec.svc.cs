@@ -221,25 +221,28 @@ namespace WcfServiceReniec
             return ds;
         }
 
-        public void CargarEstadosSolicitud(DropDownList ddlEstadoSolicitud)
+        public void CargarEstadosSolicitud(out string[] estadosSolicitud)
         {
-            if (con.State == ConnectionState.Closed)
-            {
-                con.Open();
-            }
-            SqlCommand cmd = new SqlCommand("Select EstadoSolicitud from EstadoSolicitud", con);
-            SqlDataReader reader = cmd.ExecuteReader();
+                if (con.State == ConnectionState.Closed)
+                {
+                    con.Open();
+                }
+                SqlCommand cmd = new SqlCommand("SELECT EstadoSolicitud FROM EstadoSolicitud", con);
+                SqlDataReader reader = cmd.ExecuteReader();
 
-            ddlEstadoSolicitud.Items.Clear(); 
+                List<string> estadosList = new List<string>();
 
-            while (reader.Read())
-            {
-                string estadoSolicitud = reader["EstadoSolicitud"].ToString();
-                ddlEstadoSolicitud.Items.Add(estadoSolicitud);
-            }
+                while (reader.Read())
+                {
+                    string estadoSolicitud = reader["EstadoSolicitud"].ToString();
+                    estadosList.Add(estadoSolicitud);
+                }
 
-            reader.Close();
-            con.Close();
+                reader.Close();
+                con.Close();
+
+                estadosSolicitud = estadosList.ToArray();
+            
         }
     }
 }
