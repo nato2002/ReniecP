@@ -21,7 +21,7 @@ namespace LfServiceReniecCliente.PSReniec.Consultas
             if (!Page.IsPostBack)
             {
                 BindRegRecordsInGrid();
-                obj.CargarEstadosSolicitud(cboestado);
+                LlenarDDL();
             }
         }
 
@@ -37,6 +37,12 @@ namespace LfServiceReniecCliente.PSReniec.Consultas
         {
             buscar();
         }
+
+        private void LlenarDDL()
+        {
+            obj.CargarEstadosSolicitud(cboestado);
+        }
+
 
         private void buscar()
         {
