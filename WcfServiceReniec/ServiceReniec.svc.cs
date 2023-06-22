@@ -212,11 +212,14 @@ namespace WcfServiceReniec
             {
                 con.Open();
             }
-            SqlCommand cmd = new SqlCommand("Select * from Solicitud", con);
+
+            SqlCommand cmd = new SqlCommand("ListarSolicitudes", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataSet ds = new DataSet();
             da.Fill(ds, "Solicitud");
-            cmd.ExecuteNonQuery();
+
             con.Close();
             return ds;
         }
@@ -245,32 +248,27 @@ namespace WcfServiceReniec
         }
 
 
-        public List<RegEstado> EstadoSolicitud()
+        public string[] EstadoSolicitud()
         {
             if (con.State == ConnectionState.Closed)
             {
                 con.Open();
             }
-
-            List<RegEstado> estados = new List<RegEstado>();
-
-            SqlCommand cmd = new SqlCommand("SELECT ID_EstadoSolicitud, EstadoSolicitud FROM EstadoSolicitud", con);
+            SqlCommand cmd = new SqlCommand("SELECT EstadoSolicitud FROM EstadoSolicitud", con);
             SqlDataReader reader = cmd.ExecuteReader();
+
+            List<string> estadosList = new List<string>();
 
             while (reader.Read())
             {
-                RegEstado estado = new RegEstado
-                {
-                    ID_EstadoSolicitud = (int)reader["ID_EstadoSolicitud"],
-                    EstadoSolicitud = (int)reader["EstadoSolicitud"]
-                };
-                estados.Add(estado);
+                string estadoSolicitud = reader["EstadoSolicitud"].ToString();
+                estadosList.Add(estadoSolicitud);
             }
 
             reader.Close();
             con.Close();
 
-            return estados;
+            return estadosList.ToArray();
         }
     }
 }

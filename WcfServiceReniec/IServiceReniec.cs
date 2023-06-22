@@ -51,6 +51,6 @@ namespace WcfServiceReniec
         DataSet GetRegSolDetails();
 
         [OperationContract]
-        List<RegEstado> EstadoSolicitud();
+        string[] EstadoSolicitud();
     }
 }

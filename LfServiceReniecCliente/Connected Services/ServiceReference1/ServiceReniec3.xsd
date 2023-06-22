@@ -38,7 +38,7 @@
   <xs:element name="ArrayOfRegEstado" nillable="true" type="tns:ArrayOfRegEstado" />
   <xs:complexType name="RegEstado">
     <xs:sequence>
-      <xs:element minOccurs="0" name="EstadoSolicitud" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EstadoSolicitud" type="xs:int" />
       <xs:element minOccurs="0" name="ID_EstadoSolicitud" type="xs:int" />
     </xs:sequence>
   </xs:complexType>

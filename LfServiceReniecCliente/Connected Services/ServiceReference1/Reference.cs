@@ -371,7 +371,7 @@ namespace LfServiceReniecCliente.ServiceReference1 {
                 return this.EstadoSolicitudField;
             }
             set {
-                if ((object.ReferenceEquals(this.EstadoSolicitudField, value) != true)) {
+                if ((this.EstadoSolicitudField.Equals(value) != true)) {
                     this.EstadoSolicitudField = value;
                     this.RaisePropertyChanged("EstadoSolicitud");
                 }

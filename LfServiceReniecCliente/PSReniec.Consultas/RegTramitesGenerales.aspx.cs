@@ -29,7 +29,7 @@ namespace LfServiceReniecCliente.PSReniec.Consultas
         {
             DataSet ds = new DataSet();
             ds = obj.GetRegSolDetails();
-            GridView1.DataSource = ds.Tables[0]; ;
+            GridView1.DataSource = ds.Tables["Solicitud"]; ;
             GridView1.DataBind();
         }
 
@@ -38,17 +38,18 @@ namespace LfServiceReniecCliente.PSReniec.Consultas
             buscar();
         }
 
+
         private void LlenarDDL()
         {
-            RegEstado[] estadosArray = obj.EstadoSolicitud();
+            RegEstado[] estados = obj.EstadoSolicitud();
 
-            List<RegEstado> estados = new List<RegEstado>(estadosArray);
+            string[] estadosSolicitud = estados.Select(e => e.EstadoSolicitud).ToArray();
 
             cboestado.Items.Clear();
 
-            foreach (var estado in estados)
+            foreach (string estado in estadosSolicitud)
             {
-                cboestado.Items.Add(new ListItem(estado.EstadoSolicitud, estado.ID_EstadoSolicitud.ToString()));
+                cboestado.Items.Add(estado);
             }
         }
 
@@ -66,7 +67,6 @@ namespace LfServiceReniecCliente.PSReniec.Consultas
 
                     DataSet resultado = obj.BuscarEstadoSolicitud(regdetsol);
 
-                    // Mostrar los resultados en el GridView
                     GridView1.DataSource = resultado.Tables["Solicitud"];
                     GridView1.DataBind();
                 }

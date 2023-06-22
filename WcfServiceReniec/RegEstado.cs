@@ -10,7 +10,7 @@ namespace WcfServiceReniec
     public class RegEstado
     {
         int id_EstadoSolicitud;
-        int estadoSolicitud;
+        string estadoSolicitud;
 
         [DataMember]
         public int ID_EstadoSolicitud
@@ -20,7 +20,7 @@ namespace WcfServiceReniec
         }
 
         [DataMember]
-        public int EstadoSolicitud
+        public string EstadoSolicitud
         {
             get => estadoSolicitud;
             set => estadoSolicitud = value;
