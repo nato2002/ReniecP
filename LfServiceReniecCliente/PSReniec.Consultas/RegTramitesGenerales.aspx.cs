@@ -8,6 +8,7 @@ using System.Data.SqlClient;
 using System.Data;
 using LfServiceReniecCliente.ServiceReference1;
 using System.Windows.Forms;
+using System.Web.Services.Description;
 
 namespace LfServiceReniecCliente.PSReniec.Consultas
 {
@@ -20,6 +21,7 @@ namespace LfServiceReniecCliente.PSReniec.Consultas
             if (!Page.IsPostBack)
             {
                 BindRegRecordsInGrid();
+                obj.CargarEstadosSolicitud(DropDownList1);
             }
         }
 

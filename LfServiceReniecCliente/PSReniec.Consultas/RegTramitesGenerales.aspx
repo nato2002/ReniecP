@@ -14,13 +14,13 @@
             width: 72px;
         }
         .auto-style5 {
-            width: 627px;
+            width: 900px;
         }
         .auto-style8 {
             width: 100%;
         }
         .auto-style9 {
-            width: 627px;
+            width: 900px;
             height: 23px;
         }
         .auto-style11 {
@@ -33,9 +33,6 @@
         .auto-style13 {
             width: 93%;
         }
-        .auto-style14 {
-            width: 173px;
-        }
         .auto-style15 {
             width: 428px;
         }
@@ -45,6 +42,13 @@
         }
         .auto-style17 {
             width: 1349px;
+        }
+        .auto-style19 {
+            width: 243px;
+            height: 23px;
+        }
+        .auto-style20 {
+            width: 243px;
         }
     </style>
 </head>
@@ -76,12 +80,12 @@
             <tr>
                 <td class="auto-style5">&nbsp;</td>
                 <td class="auto-style15">&nbsp;</td>
-                <td class="auto-style14">&nbsp;</td>
+                <td class="auto-style20">&nbsp;</td>
             </tr>
             <tr>
                 <td class="auto-style5">&nbsp;</td>
                 <td class="auto-style15">&nbsp;</td>
-                <td class="auto-style14">&nbsp;</td>
+                <td class="auto-style20">&nbsp;</td>
             </tr>
             <tr>
                 <td class="auto-style5">
@@ -89,7 +93,7 @@
                 </td>
                 <td class="auto-style15">
                     &nbsp;</td>
-                <td class="auto-style14">
+                <td class="auto-style20">
                     <asp:Image ID="btnlistar" runat="server" Height="61px" ImageUrl="~/img/boton.png" Width="315px" />
                 </td>
             </tr>
@@ -100,31 +104,32 @@
                     </asp:Panel>
                 </td>
                 <td class="auto-style15">&nbsp;</td>
-                <td class="auto-style14">&nbsp;</td>
+                <td class="auto-style20">&nbsp;</td>
             </tr>
             <tr>
                 <td class="auto-style9">
                     </td>
                 <td class="auto-style16"></td>
-                <td class="auto-style11">&nbsp;</td>
+                <td class="auto-style19">&nbsp;</td>
             </tr>
             <tr>
                 <td class="auto-style9">
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Label ID="Label4" runat="server" Text="Código de solicitud" Font-Names="Arial Narrow" Font-Size="Large"></asp:Label>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Label ID="Label6" runat="server" Font-Names="Arial Narrow" Font-Size="Large" Text="Estado de solicitud"></asp:Label>
-                </td>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
                 <td class="auto-style16">
-                    &nbsp;</td>
-                <td class="auto-style11">&nbsp;</td>
+                    <asp:Label ID="Label6" runat="server" Font-Names="Arial Narrow" Font-Size="Large" Text="Estado de solicitud"></asp:Label>
+                </td>
+                <td class="auto-style19">&nbsp;</td>
             </tr>
             <tr>
                 <td class="auto-style9">
                     <asp:TextBox ID="TextBox1" runat="server" Width="189px" Height="25px"></asp:TextBox>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:DropDownList ID="DropDownList1" runat="server" Font-Size="Large" Height="32px" Width="213px">
-                    </asp:DropDownList>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
                 <td class="auto-style16">
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:DropDownList ID="DropDownList1" runat="server" Font-Size="Large" Height="32px" Width="213px" AutoPostBack="True">
+                    </asp:DropDownList>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
 =======
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:TextBox ID="txtid" runat="server" Width="189px" Height="25px"></asp:TextBox>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:DropDownList ID="cboestado" runat="server" Font-Size="Large" Height="32px" Width="213px">
@@ -133,7 +138,7 @@
                         <asp:ListItem>RECHAZADO</asp:ListItem>
                     </asp:DropDownList>
                 </td>
-                <td class="auto-style16">
+                <td class="auto-style19">
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="btnconsultar" runat="server" Text="🔍︎ Consultar" Width="188px" BackColor="#990000" Font-Names="Arial Black" Font-Size="Medium" ForeColor="White" Height="28px" OnClick="btnconsultar_Click" />
                 </td>
 >>>>>>> parent of 38feec5 (Revert "df")
@@ -145,7 +150,7 @@
                 <td class="auto-style9">
                     &nbsp;</td>
                 <td class="auto-style16">&nbsp;</td>
-                <td class="auto-style11">&nbsp;</td>
+                <td class="auto-style19">&nbsp;</td>
             </tr>
         </table>
         <asp:GridView ID="GridView1" runat="server" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" AutoGenerateColumns="False" Height="122px" Width="1329px">

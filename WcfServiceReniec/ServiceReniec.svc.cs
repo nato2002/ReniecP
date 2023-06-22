@@ -7,6 +7,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
+using System.Web.UI.WebControls;
 
 namespace WcfServiceReniec
 {
@@ -218,6 +219,27 @@ namespace WcfServiceReniec
             cmd.ExecuteNonQuery();
             con.Close();
             return ds;
+        }
+
+        public void CargarEstadosSolicitud(DropDownList ddlEstadoSolicitud)
+        {
+            if (con.State == ConnectionState.Closed)
+            {
+                con.Open();
+            }
+            SqlCommand cmd = new SqlCommand("Select EstadoSolicitud from EstadoSolicitud", con);
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            ddlEstadoSolicitud.Items.Clear(); 
+
+            while (reader.Read())
+            {
+                string estadoSolicitud = reader["EstadoSolicitud"].ToString();
+                ddlEstadoSolicitud.Items.Add(estadoSolicitud);
+            }
+
+            reader.Close();
+            con.Close();
         }
     }
 }

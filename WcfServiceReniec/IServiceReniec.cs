@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
+using System.Web.UI.WebControls;
 
 namespace WcfServiceReniec
 {
@@ -49,5 +50,7 @@ namespace WcfServiceReniec
         [OperationContract]
         DataSet GetRegSolDetails();
 
+        [OperationContract]
+        void CargarEstadosSolicitud(DropDownList ddlEstadoSolicitud);
     }
 }
