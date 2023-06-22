@@ -224,29 +224,6 @@ namespace WcfServiceReniec
             return ds;
         }
 
-        public string[] CargarEstadoSolicitud()
-        {
-            if (con.State == ConnectionState.Closed)
-            {
-                con.Open();
-            }
-            SqlCommand cmd = new SqlCommand("SELECT EstadoSolicitud FROM EstadoSolicitud", con);
-            SqlDataReader reader = cmd.ExecuteReader();
-
-            List<string> estadosList = new List<string>();
-
-            while (reader.Read())
-            {
-                string estadoSolicitud = reader["EstadoSolicitud"].ToString();
-                estadosList.Add(estadoSolicitud);
-            }
-
-            reader.Close();
-            con.Close();
-
-            return estadosList.ToArray();
-        }
-
 
         public string[] EstadoSolicitud()
         {
