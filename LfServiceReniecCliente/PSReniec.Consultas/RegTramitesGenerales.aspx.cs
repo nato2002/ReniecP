@@ -21,7 +21,7 @@ namespace LfServiceReniecCliente.PSReniec.Consultas
             if (!Page.IsPostBack)
             {
                 BindRegRecordsInGrid();
-                obj.CargarEstadosSolicitud(DropDownList1);
+                obj.CargarEstadosSolicitud(cboestado);
             }
         }
 

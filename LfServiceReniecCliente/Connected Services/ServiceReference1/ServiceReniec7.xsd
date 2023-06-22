@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/System.Web.UI" xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/System.Web.UI" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:50778/ServiceReniec.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/System" />
+  <xs:import schemaLocation="http://localhost:50778/ServiceReniec.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://localhost:50778/ServiceReniec.svc?xsd=xsd6" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://localhost:50778/ServiceReniec.svc?xsd=xsd10" namespace="http://schemas.datacontract.org/2004/07/System.Web" />
+  <xs:complexType name="Control">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AppRelativeTemplateSourceDirectory" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ClientIDMode" type="tns:ClientIDMode" />
+      <xs:element minOccurs="0" name="EnableTheming" type="xs:boolean" />
+      <xs:element minOccurs="0" name="EnableViewState" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Page" nillable="true" type="tns:Page" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="RenderingCompatibility" nillable="true" type="q1:Version" />
+      <xs:element minOccurs="0" name="Site" nillable="true" type="xs:anyType" />
+      <xs:element minOccurs="0" name="SkinID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TemplateControl" nillable="true" type="tns:TemplateControl" />
+      <xs:element minOccurs="0" name="ValidateRequestMode" type="tns:ValidateRequestMode" />
+      <xs:element minOccurs="0" name="ViewStateMode" type="tns:ViewStateMode" />
+      <xs:element minOccurs="0" name="Visible" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Control" nillable="true" type="tns:Control" />
+  <xs:simpleType name="ClientIDMode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Inherit" />
+      <xs:enumeration value="AutoID" />
+      <xs:enumeration value="Predictable" />
+      <xs:enumeration value="Static" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ClientIDMode" nillable="true" type="tns:ClientIDMode" />
+  <xs:complexType name="Page">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:TemplateControl">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AsyncTimeout" type="ser:duration" />
+          <xs:element minOccurs="0" name="AutoPostBackControl" nillable="true" type="tns:Control" />
+          <xs:element minOccurs="0" name="Buffer" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ClientTarget" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CodePage" type="xs:int" />
+          <xs:element minOccurs="0" name="ContentType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Culture" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EnableEventValidation" type="xs:boolean" />
+          <xs:element minOccurs="0" name="EnableViewStateMac" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ErrorPage" nillable="true" type="xs:string" />
+          <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Items" nillable="true" type="q2:ArrayOfKeyValueOfanyTypeanyType" />
+          <xs:element minOccurs="0" name="LCID" type="xs:int" />
+          <xs:element minOccurs="0" name="MaintainScrollPositionOnPostBack" type="xs:boolean" />
+          <xs:element minOccurs="0" name="MasterPageFile" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MaxPageStateFieldLength" type="xs:int" />
+          <xs:element minOccurs="0" name="MetaDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MetaKeywords" nillable="true" type="xs:string" />
+          <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ModelState" nillable="true" type="q3:ArrayOfKeyValueOfstringModelStatejXElW15a" />
+          <xs:element minOccurs="0" name="ResponseEncoding" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SkipFormActionValidation" type="xs:boolean" />
+          <xs:element minOccurs="0" name="SmartNavigation" type="xs:boolean" />
+          <xs:element minOccurs="0" name="StyleSheetTheme" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Theme" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TraceEnabled" type="xs:boolean" />
+          <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/System.Web" minOccurs="0" name="TraceModeValue" type="q4:TraceMode" />
+          <xs:element minOccurs="0" name="UICulture" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UnobtrusiveValidationMode" type="tns:UnobtrusiveValidationMode" />
+          <xs:element minOccurs="0" name="ViewStateEncryptionMode" type="tns:ViewStateEncryptionMode" />
+          <xs:element minOccurs="0" name="ViewStateUserKey" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Page" nillable="true" type="tns:Page" />
+  <xs:complexType name="TemplateControl">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Control">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AppRelativeVirtualPath" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TemplateControl" nillable="true" type="tns:TemplateControl" />
+  <xs:simpleType name="UnobtrusiveValidationMode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="WebForms" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="UnobtrusiveValidationMode" nillable="true" type="tns:UnobtrusiveValidationMode" />
+  <xs:simpleType name="ViewStateEncryptionMode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Auto" />
+      <xs:enumeration value="Always" />
+      <xs:enumeration value="Never" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ViewStateEncryptionMode" nillable="true" type="tns:ViewStateEncryptionMode" />
+  <xs:simpleType name="ValidateRequestMode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Inherit" />
+      <xs:enumeration value="Disabled" />
+      <xs:enumeration value="Enabled" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ValidateRequestMode" nillable="true" type="tns:ValidateRequestMode" />
+  <xs:simpleType name="ViewStateMode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Inherit" />
+      <xs:enumeration value="Enabled" />
+      <xs:enumeration value="Disabled" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ViewStateMode" nillable="true" type="tns:ViewStateMode" />
+</xs:schema>

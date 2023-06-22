@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/System.Web.ModelBinding" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/System.Web.ModelBinding" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:50778/ServiceReniec.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/System" />
+  <xs:import schemaLocation="http://localhost:50778/ServiceReniec.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/System.Globalization" />
+  <xs:complexType name="ModelState">
+    <xs:sequence>
+      <xs:element name="_errors" nillable="true" type="tns:ArrayOfModelError" />
+      <xs:element name="_x003C_Value_x003E_k__BackingField" nillable="true" type="tns:ValueProviderResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ModelState" nillable="true" type="tns:ModelState" />
+  <xs:complexType name="ArrayOfModelError">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ModelError" nillable="true" type="tns:ModelError" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfModelError" nillable="true" type="tns:ArrayOfModelError" />
+  <xs:complexType name="ModelError">
+    <xs:sequence>
+      <xs:element name="_x003C_ErrorMessage_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/System" name="_x003C_Exception_x003E_k__BackingField" nillable="true" type="q1:Exception" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ModelError" nillable="true" type="tns:ModelError" />
+  <xs:complexType name="ValueProviderResult">
+    <xs:sequence>
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/System.Globalization" name="_instanceCulture" nillable="true" type="q2:CultureInfo" />
+      <xs:element name="_x003C_AttemptedValue_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_RawValue_x003E_k__BackingField" nillable="true" type="xs:anyType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ValueProviderResult" nillable="true" type="tns:ValueProviderResult" />
+</xs:schema>

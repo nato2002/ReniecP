@@ -1,264 +1,208 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:import schemaLocation="http://localhost:50778/ServiceReniec.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WcfServiceReniec" />
-  <xs:element name="validaruser">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/WcfServiceReniec" minOccurs="0" name="loginfo" nillable="true" type="q1:ConsultaLogin" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="validaruserResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="validaruserResult" nillable="true">
-          <xs:complexType>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/System.Globalization" xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/System.Globalization" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:50778/ServiceReniec.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://localhost:50778/ServiceReniec.svc?xsd=xsd6" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="CultureInfo">
+    <xs:sequence>
+      <xs:element name="calendar" nillable="true" type="tns:Calendar" />
+      <xs:element name="compareInfo" nillable="true" type="tns:CompareInfo" />
+      <xs:element minOccurs="0" name="cultureID" type="xs:int" />
+      <xs:element name="dateTimeInfo" nillable="true" type="tns:DateTimeFormatInfo" />
+      <xs:element minOccurs="0" name="m_dataItem" type="xs:int" />
+      <xs:element name="m_isReadOnly" type="xs:boolean" />
+      <xs:element name="m_name" nillable="true" type="xs:string" />
+      <xs:element name="m_useUserOverride" type="xs:boolean" />
+      <xs:element name="numInfo" nillable="true" type="tns:NumberFormatInfo" />
+      <xs:element name="textInfo" nillable="true" type="tns:TextInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CultureInfo" nillable="true" type="tns:CultureInfo" />
+  <xs:complexType name="Calendar">
+    <xs:sequence>
+      <xs:element name="m_currentEraValue" type="xs:int" />
+      <xs:element minOccurs="0" name="m_isReadOnly" type="xs:boolean" />
+      <xs:element name="twoDigitYearMax" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Calendar" nillable="true" type="tns:Calendar" />
+  <xs:complexType name="CompareInfo">
+    <xs:sequence>
+      <xs:element name="culture" type="xs:int" />
+      <xs:element minOccurs="0" name="m_SortVersion" nillable="true" type="tns:SortVersion" />
+      <xs:element minOccurs="0" name="m_name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="win32LCID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CompareInfo" nillable="true" type="tns:CompareInfo" />
+  <xs:complexType name="SortVersion">
+    <xs:sequence>
+      <xs:element name="m_NlsVersion" type="xs:int" />
+      <xs:element name="m_SortId" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SortVersion" nillable="true" type="tns:SortVersion" />
+  <xs:complexType name="DateTimeFormatInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CultureID" type="xs:int" />
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" name="abbreviatedDayNames" nillable="true" type="q1:ArrayOfstring" />
+      <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" name="abbreviatedMonthNames" nillable="true" type="q2:ArrayOfstring" />
+      <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" name="allLongDatePatterns" nillable="true" type="q3:ArrayOfstring" />
+      <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" name="allLongTimePatterns" nillable="true" type="q4:ArrayOfstring" />
+      <xs:element xmlns:q5="http://schemas.microsoft.com/2003/10/Serialization/Arrays" name="allShortDatePatterns" nillable="true" type="q5:ArrayOfstring" />
+      <xs:element xmlns:q6="http://schemas.microsoft.com/2003/10/Serialization/Arrays" name="allShortTimePatterns" nillable="true" type="q6:ArrayOfstring" />
+      <xs:element xmlns:q7="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="allYearMonthPatterns" nillable="true" type="q7:ArrayOfstring" />
+      <xs:element name="amDesignator" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bUseCalendarInfo" type="xs:boolean" />
+      <xs:element name="calendar" nillable="true" type="tns:Calendar" />
+      <xs:element name="calendarWeekRule" type="xs:int" />
+      <xs:element minOccurs="0" name="dateSeparator" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="dateTimeOffsetPattern" nillable="true" type="xs:string" />
+      <xs:element xmlns:q8="http://schemas.microsoft.com/2003/10/Serialization/Arrays" name="dayNames" nillable="true" type="q8:ArrayOfstring" />
+      <xs:element name="firstDayOfWeek" type="xs:int" />
+      <xs:element minOccurs="0" name="formatFlags" type="tns:DateTimeFormatFlags" />
+      <xs:element minOccurs="0" name="fullDateTimePattern" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="generalLongTimePattern" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="generalShortTimePattern" nillable="true" type="xs:string" />
+      <xs:element xmlns:q9="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="genitiveMonthNames" nillable="true" type="q9:ArrayOfstring" />
+      <xs:element xmlns:q10="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="leapYearMonthNames" nillable="true" type="q10:ArrayOfstring" />
+      <xs:element name="longDatePattern" nillable="true" type="xs:string" />
+      <xs:element name="longTimePattern" nillable="true" type="xs:string" />
+      <xs:element xmlns:q11="http://schemas.microsoft.com/2003/10/Serialization/Arrays" name="m_abbrevEnglishEraNames" nillable="true" type="q11:ArrayOfstring" />
+      <xs:element xmlns:q12="http://schemas.microsoft.com/2003/10/Serialization/Arrays" name="m_abbrevEraNames" nillable="true" type="q12:ArrayOfstring" />
+      <xs:element xmlns:q13="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="m_dateWords" nillable="true" type="q13:ArrayOfstring" />
+      <xs:element xmlns:q14="http://schemas.microsoft.com/2003/10/Serialization/Arrays" name="m_eraNames" nillable="true" type="q14:ArrayOfstring" />
+      <xs:element xmlns:q15="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="m_genitiveAbbreviatedMonthNames" nillable="true" type="q15:ArrayOfstring" />
+      <xs:element minOccurs="0" name="m_isDefaultCalendar" type="xs:boolean" />
+      <xs:element name="m_isReadOnly" type="xs:boolean" />
+      <xs:element minOccurs="0" name="m_name" nillable="true" type="xs:string" />
+      <xs:element xmlns:q16="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="m_superShortDayNames" nillable="true" type="q16:ArrayOfstring" />
+      <xs:element minOccurs="0" name="m_useUserOverride" type="xs:boolean" />
+      <xs:element name="monthDayPattern" nillable="true" type="xs:string" />
+      <xs:element xmlns:q17="http://schemas.microsoft.com/2003/10/Serialization/Arrays" name="monthNames" nillable="true" type="q17:ArrayOfstring" />
+      <xs:element minOccurs="0" name="nDataItem" type="xs:int" />
+      <xs:element xmlns:q18="http://schemas.microsoft.com/2003/10/Serialization/Arrays" name="optionalCalendars" nillable="true" type="q18:ArrayOfint" />
+      <xs:element name="pmDesignator" nillable="true" type="xs:string" />
+      <xs:element name="shortDatePattern" nillable="true" type="xs:string" />
+      <xs:element name="shortTimePattern" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="timeSeparator" nillable="true" type="xs:string" />
+      <xs:element name="yearMonthPattern" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DateTimeFormatInfo" nillable="true" type="tns:DateTimeFormatInfo" />
+  <xs:simpleType name="DateTimeFormatFlags">
+    <xs:list>
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="None">
             <xs:annotation>
               <xs:appinfo>
-                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">0</EnumerationValue>
               </xs:appinfo>
             </xs:annotation>
-            <xs:sequence>
-              <xs:element ref="xs:schema" />
-              <xs:any />
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="RegistrartUsuario">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WcfServiceReniec" minOccurs="0" name="userInfo" nillable="true" type="q2:ConsultaLogin" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="RegistrartUsuarioResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="RegistrartUsuarioResult" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="InsertUserRegDetails">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WcfServiceReniec" minOccurs="0" name="regdet" nillable="true" type="q3:RegSede" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="InsertUserRegDetailsResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="InsertUserRegDetailsResult" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetUserRegDetails">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetUserRegDetailsResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="GetUserRegDetailsResult" nillable="true">
-          <xs:complexType>
+          </xs:enumeration>
+          <xs:enumeration value="UseGenitiveMonth">
             <xs:annotation>
               <xs:appinfo>
-                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
               </xs:appinfo>
             </xs:annotation>
-            <xs:sequence>
-              <xs:element ref="xs:schema" />
-              <xs:any />
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="FetchUpdatedRecords">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/WcfServiceReniec" minOccurs="0" name="regdet" nillable="true" type="q4:RegSede" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="FetchUpdatedRecordsResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="FetchUpdatedRecordsResult" nillable="true">
-          <xs:complexType>
+          </xs:enumeration>
+          <xs:enumeration value="UseLeapYearMonth">
             <xs:annotation>
               <xs:appinfo>
-                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
               </xs:appinfo>
             </xs:annotation>
-            <xs:sequence>
-              <xs:element ref="xs:schema" />
-              <xs:any />
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="UpdateUserRegDetails">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/WcfServiceReniec" minOccurs="0" name="regdet" nillable="true" type="q5:RegSede" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="UpdateUserRegDetailsResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="UpdateUserRegDetailsResult" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="DeleteUserRegDetails">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/WcfServiceReniec" minOccurs="0" name="regdet" nillable="true" type="q6:RegSede" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="DeleteUserRegDetailsResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="DeleteUserRegDetailsResult" type="xs:boolean" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="BuscarNombreSede">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/WcfServiceReniec" minOccurs="0" name="regdet" nillable="true" type="q7:RegSede" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="BuscarNombreSedeResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="BuscarNombreSedeResult" nillable="true">
-          <xs:complexType>
+          </xs:enumeration>
+          <xs:enumeration value="UseSpacesInMonthNames">
             <xs:annotation>
               <xs:appinfo>
-                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
               </xs:appinfo>
             </xs:annotation>
-            <xs:sequence>
-              <xs:element ref="xs:schema" />
-              <xs:any />
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="BuscarDireccionSede">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/WcfServiceReniec" minOccurs="0" name="regdet" nillable="true" type="q8:RegSede" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="BuscarDireccionSedeResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="BuscarDireccionSedeResult" nillable="true">
-          <xs:complexType>
+          </xs:enumeration>
+          <xs:enumeration value="UseHebrewRule">
             <xs:annotation>
               <xs:appinfo>
-                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">8</EnumerationValue>
               </xs:appinfo>
             </xs:annotation>
-            <xs:sequence>
-              <xs:element ref="xs:schema" />
-              <xs:any />
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="BuscarSolicitudID">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/WcfServiceReniec" minOccurs="0" name="regdetsol" nillable="true" type="q9:RegSolicitud" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="BuscarSolicitudIDResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="BuscarSolicitudIDResult" nillable="true">
-          <xs:complexType>
+          </xs:enumeration>
+          <xs:enumeration value="UseSpacesInDayNames">
             <xs:annotation>
               <xs:appinfo>
-                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">16</EnumerationValue>
               </xs:appinfo>
             </xs:annotation>
-            <xs:sequence>
-              <xs:element ref="xs:schema" />
-              <xs:any />
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="BuscarEstadoSolicitud">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/WcfServiceReniec" minOccurs="0" name="regdetsol" nillable="true" type="q10:RegSolicitud" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="BuscarEstadoSolicitudResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="BuscarEstadoSolicitudResult" nillable="true">
-          <xs:complexType>
+          </xs:enumeration>
+          <xs:enumeration value="UseDigitPrefixInTokens">
             <xs:annotation>
               <xs:appinfo>
-                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">32</EnumerationValue>
               </xs:appinfo>
             </xs:annotation>
-            <xs:sequence>
-              <xs:element ref="xs:schema" />
-              <xs:any />
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetRegSolDetails">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetRegSolDetailsResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="GetRegSolDetailsResult" nillable="true">
-          <xs:complexType>
+          </xs:enumeration>
+          <xs:enumeration value="NotInitialized">
             <xs:annotation>
               <xs:appinfo>
-                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-1</EnumerationValue>
               </xs:appinfo>
             </xs:annotation>
-            <xs:sequence>
-              <xs:element ref="xs:schema" />
-              <xs:any />
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
+          </xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:list>
+  </xs:simpleType>
+  <xs:element name="DateTimeFormatFlags" nillable="true" type="tns:DateTimeFormatFlags" />
+  <xs:complexType name="NumberFormatInfo">
+    <xs:sequence>
+      <xs:element name="ansiCurrencySymbol" nillable="true" type="xs:string" />
+      <xs:element name="currencyDecimalDigits" type="xs:int" />
+      <xs:element name="currencyDecimalSeparator" nillable="true" type="xs:string" />
+      <xs:element name="currencyGroupSeparator" nillable="true" type="xs:string" />
+      <xs:element xmlns:q19="http://schemas.microsoft.com/2003/10/Serialization/Arrays" name="currencyGroupSizes" nillable="true" type="q19:ArrayOfint" />
+      <xs:element name="currencyNegativePattern" type="xs:int" />
+      <xs:element name="currencyPositivePattern" type="xs:int" />
+      <xs:element name="currencySymbol" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="digitSubstitution" type="xs:int" />
+      <xs:element name="isReadOnly" type="xs:boolean" />
+      <xs:element minOccurs="0" name="m_dataItem" type="xs:int" />
+      <xs:element minOccurs="0" name="m_isInvariant" type="xs:boolean" />
+      <xs:element minOccurs="0" name="m_useUserOverride" type="xs:boolean" />
+      <xs:element name="nanSymbol" nillable="true" type="xs:string" />
+      <xs:element xmlns:q20="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="nativeDigits" nillable="true" type="q20:ArrayOfstring" />
+      <xs:element name="negativeInfinitySymbol" nillable="true" type="xs:string" />
+      <xs:element name="negativeSign" nillable="true" type="xs:string" />
+      <xs:element name="numberDecimalDigits" type="xs:int" />
+      <xs:element name="numberDecimalSeparator" nillable="true" type="xs:string" />
+      <xs:element name="numberGroupSeparator" nillable="true" type="xs:string" />
+      <xs:element xmlns:q21="http://schemas.microsoft.com/2003/10/Serialization/Arrays" name="numberGroupSizes" nillable="true" type="q21:ArrayOfint" />
+      <xs:element name="numberNegativePattern" type="xs:int" />
+      <xs:element name="perMilleSymbol" nillable="true" type="xs:string" />
+      <xs:element name="percentDecimalDigits" type="xs:int" />
+      <xs:element name="percentDecimalSeparator" nillable="true" type="xs:string" />
+      <xs:element name="percentGroupSeparator" nillable="true" type="xs:string" />
+      <xs:element xmlns:q22="http://schemas.microsoft.com/2003/10/Serialization/Arrays" name="percentGroupSizes" nillable="true" type="q22:ArrayOfint" />
+      <xs:element name="percentNegativePattern" type="xs:int" />
+      <xs:element name="percentPositivePattern" type="xs:int" />
+      <xs:element name="percentSymbol" nillable="true" type="xs:string" />
+      <xs:element name="positiveInfinitySymbol" nillable="true" type="xs:string" />
+      <xs:element name="positiveSign" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="validForParseAsCurrency" type="xs:boolean" />
+      <xs:element minOccurs="0" name="validForParseAsNumber" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="NumberFormatInfo" nillable="true" type="tns:NumberFormatInfo" />
+  <xs:complexType name="TextInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="customCultureName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="m_cultureName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="m_isReadOnly" type="xs:boolean" />
+      <xs:element minOccurs="0" name="m_listSeparator" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="m_nDataItem" type="xs:int" />
+      <xs:element minOccurs="0" name="m_useUserOverride" type="xs:boolean" />
+      <xs:element minOccurs="0" name="m_win32LangID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TextInfo" nillable="true" type="tns:TextInfo" />
 </xs:schema>
