@@ -40,6 +40,5 @@ namespace WcfServiceReniec
                 get => estado;
                 set => estado = value;
             }
-
-        }
     }
+}

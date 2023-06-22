@@ -340,6 +340,67 @@ namespace LfServiceReniecCliente.ServiceReference1 {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="RegEstado", Namespace="http://schemas.datacontract.org/2004/07/WcfServiceReniec")]
+    [System.SerializableAttribute()]
+    public partial class RegEstado : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string EstadoSolicitudField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int ID_EstadoSolicitudField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string EstadoSolicitud {
+            get {
+                return this.EstadoSolicitudField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EstadoSolicitudField, value) != true)) {
+                    this.EstadoSolicitudField = value;
+                    this.RaisePropertyChanged("EstadoSolicitud");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int ID_EstadoSolicitud {
+            get {
+                return this.ID_EstadoSolicitudField;
+            }
+            set {
+                if ((this.ID_EstadoSolicitudField.Equals(value) != true)) {
+                    this.ID_EstadoSolicitudField = value;
+                    this.RaisePropertyChanged("ID_EstadoSolicitud");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.IServiceReniec")]
     public interface IServiceReniec {
@@ -416,11 +477,11 @@ namespace LfServiceReniecCliente.ServiceReference1 {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceReniec/GetRegSolDetails", ReplyAction="http://tempuri.org/IServiceReniec/GetRegSolDetailsResponse")]
         System.Threading.Tasks.Task<System.Data.DataSet> GetRegSolDetailsAsync();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceReniec/CargarEstadoSolicitud", ReplyAction="http://tempuri.org/IServiceReniec/CargarEstadoSolicitudResponse")]
-        string[] CargarEstadoSolicitud();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceReniec/EstadoSolicitud", ReplyAction="http://tempuri.org/IServiceReniec/EstadoSolicitudResponse")]
+        LfServiceReniecCliente.ServiceReference1.RegEstado[] EstadoSolicitud();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceReniec/CargarEstadoSolicitud", ReplyAction="http://tempuri.org/IServiceReniec/CargarEstadoSolicitudResponse")]
-        System.Threading.Tasks.Task<string[]> CargarEstadoSolicitudAsync();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceReniec/EstadoSolicitud", ReplyAction="http://tempuri.org/IServiceReniec/EstadoSolicitudResponse")]
+        System.Threading.Tasks.Task<LfServiceReniecCliente.ServiceReference1.RegEstado[]> EstadoSolicitudAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -546,12 +607,12 @@ namespace LfServiceReniecCliente.ServiceReference1 {
             return base.Channel.GetRegSolDetailsAsync();
         }
         
-        public string[] CargarEstadoSolicitud() {
-            return base.Channel.CargarEstadoSolicitud();
+        public LfServiceReniecCliente.ServiceReference1.RegEstado[] EstadoSolicitud() {
+            return base.Channel.EstadoSolicitud();
         }
         
-        public System.Threading.Tasks.Task<string[]> CargarEstadoSolicitudAsync() {
-            return base.Channel.CargarEstadoSolicitudAsync();
+        public System.Threading.Tasks.Task<LfServiceReniecCliente.ServiceReference1.RegEstado[]> EstadoSolicitudAsync() {
+            return base.Channel.EstadoSolicitudAsync();
         }
     }
 }

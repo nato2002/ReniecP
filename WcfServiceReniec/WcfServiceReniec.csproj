@@ -68,6 +68,7 @@
     <Compile Include="ConsultaLogin.cs" />
     <Compile Include="IServiceReniec.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegEstado.cs" />
     <Compile Include="RegSede.cs" />
     <Compile Include="RegSolicitud.cs" />
     <Compile Include="ServiceReniec.svc.cs">

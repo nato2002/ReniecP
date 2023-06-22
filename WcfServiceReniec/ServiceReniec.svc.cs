@@ -243,5 +243,34 @@ namespace WcfServiceReniec
 
             return estadosList.ToArray();
         }
+
+
+        public List<RegEstado> EstadoSolicitud()
+        {
+            if (con.State == ConnectionState.Closed)
+            {
+                con.Open();
+            }
+
+            List<RegEstado> estados = new List<RegEstado>();
+
+            SqlCommand cmd = new SqlCommand("SELECT ID_EstadoSolicitud, EstadoSolicitud FROM EstadoSolicitud", con);
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                RegEstado estado = new RegEstado
+                {
+                    ID_EstadoSolicitud = (int)reader["ID_EstadoSolicitud"],
+                    EstadoSolicitud = reader["EstadoSolicitud"].ToString()
+                };
+                estados.Add(estado);
+            }
+
+            reader.Close();
+            con.Close();
+
+            return estados;
+        }
     }
 }
