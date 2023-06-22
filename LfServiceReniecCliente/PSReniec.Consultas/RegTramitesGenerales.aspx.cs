@@ -35,7 +35,7 @@ namespace LfServiceReniecCliente.PSReniec.Consultas
 
         protected void btnconsultar_Click(object sender, EventArgs e)
         {
-
+            buscar();
         }
 
         private void buscar()
@@ -73,7 +73,7 @@ namespace LfServiceReniecCliente.PSReniec.Consultas
         protected void Button2_Click(System.Object sender, System.EventArgs e)
         {
             txtid.Text = string.Empty;
-            DropDownList1.ClearSelection();
+            cboestado.ClearSelection();
             BindRegRecordsInGrid();
         }
     }

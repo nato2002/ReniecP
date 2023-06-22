@@ -50,6 +50,13 @@
         .auto-style20 {
             width: 243px;
         }
+        .auto-style21 {
+            width: 1188px;
+        }
+        .auto-style22 {
+            width: 1188px;
+            height: 23px;
+        }
     </style>
 </head>
 <body>
@@ -78,19 +85,23 @@
         </div>
         <table class="auto-style8">
             <tr>
+                <td class="auto-style21">&nbsp;</td>
                 <td class="auto-style5">&nbsp;</td>
                 <td class="auto-style15">&nbsp;</td>
                 <td class="auto-style20">&nbsp;</td>
             </tr>
             <tr>
+                <td class="auto-style21">&nbsp;</td>
                 <td class="auto-style5">&nbsp;</td>
                 <td class="auto-style15">&nbsp;</td>
                 <td class="auto-style20">&nbsp;</td>
             </tr>
             <tr>
-                <td class="auto-style5">
+                <td class="auto-style21">
                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Label ID="Label2" runat="server" Font-Names="Bahnschrift SemiBold" Font-Size="X-Large" Text="Bandeja de registros de solicitud de trámites"></asp:Label>
                 </td>
+                <td class="auto-style5">
+                      &nbsp;</td>
                 <td class="auto-style15">
                     &nbsp;</td>
                 <td class="auto-style20">
@@ -98,55 +109,55 @@
                 </td>
             </tr>
             <tr>
-                <td class="auto-style5">
+                <td class="auto-style21">
                     <asp:Panel ID="Panel2" runat="server" Width="296px">
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Label ID="Label3" runat="server" Font-Names="Arial" Text="Filtrar por estado:" Font-Size="Large"></asp:Label>
                     </asp:Panel>
                 </td>
+                <td class="auto-style5">
+                    &nbsp;</td>
                 <td class="auto-style15">&nbsp;</td>
                 <td class="auto-style20">&nbsp;</td>
             </tr>
             <tr>
-                <td class="auto-style9">
+                <td class="auto-style22">
                     </td>
+                <td class="auto-style9">
+                    &nbsp;</td>
                 <td class="auto-style16"></td>
                 <td class="auto-style19">&nbsp;</td>
             </tr>
             <tr>
-                <td class="auto-style9">
+                <td class="auto-style22">
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Label ID="Label4" runat="server" Text="Código de solicitud" Font-Names="Arial Narrow" Font-Size="Large"></asp:Label>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-                <td class="auto-style16">
+                <td class="auto-style9">
                     <asp:Label ID="Label6" runat="server" Font-Names="Arial Narrow" Font-Size="Large" Text="Estado de solicitud"></asp:Label>
                 </td>
+                <td class="auto-style16">
+                    &nbsp;</td>
                 <td class="auto-style19">&nbsp;</td>
             </tr>
             <tr>
-                <td class="auto-style9">
-                    <asp:TextBox ID="TextBox1" runat="server" Width="189px" Height="25px"></asp:TextBox>
+                <td class="auto-style22">
+                    <asp:TextBox ID="txtid" runat="server" Width="189px" Height="25px"></asp:TextBox>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-                <td class="auto-style16">
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:DropDownList ID="DropDownList1" runat="server" Font-Size="Large" Height="32px" Width="213px" AutoPostBack="True">
-                    </asp:DropDownList>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-=======
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:TextBox ID="txtid" runat="server" Width="189px" Height="25px"></asp:TextBox>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:DropDownList ID="cboestado" runat="server" Font-Size="Large" Height="32px" Width="213px">
-                        <asp:ListItem>--ELEGIR ESTADO--</asp:ListItem>
-                        <asp:ListItem>ACEPTADO</asp:ListItem>
-                        <asp:ListItem>RECHAZADO</asp:ListItem>
+                <td class="auto-style9">
+                    <asp:DropDownList ID="cboestado" runat="server" Height="16px" Width="198px">
                     </asp:DropDownList>
                 </td>
                 <td class="auto-style19">
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="btnconsultar" runat="server" Text="🔍︎ Consultar" Width="188px" BackColor="#990000" Font-Names="Arial Black" Font-Size="Medium" ForeColor="White" Height="28px" OnClick="btnconsultar_Click" />
                 </td>
->>>>>>> parent of 38feec5 (Revert "df")
+
                 <td class="auto-style11">
                     <asp:Button ID="btnlimpiar" runat="server" Text="X Limpiar" Width="188px" Height="28px" BackColor="#003399" Font-Names="Arial Black" Font-Size="Large" ForeColor="White" OnClick="Button2_Click"/>
                 </td>
             </tr>
             <tr>
+                <td class="auto-style22">
+                    &nbsp;</td>
                 <td class="auto-style9">
                     &nbsp;</td>
                 <td class="auto-style16">&nbsp;</td>
