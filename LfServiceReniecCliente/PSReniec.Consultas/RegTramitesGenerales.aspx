@@ -147,7 +147,8 @@
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:TextBox ID="txtid" runat="server" Width="189px" Height="25px"></asp:TextBox>
                     </td>
                 <td class="auto-style9">
-                    <asp:DropDownList ID="cboestado" runat="server" Height="16px" Width="198px">
+                    <asp:DropDownList ID="cboestado" runat="server" Height="16px" Width="198px" AutoPostBack="True">
+                        <asp:ListItem>--Elegir Estado--</asp:ListItem>
                     </asp:DropDownList>
                 </td>
                 <td class="auto-style19">
@@ -170,12 +171,12 @@
         <asp:Panel ID="Panel3" runat="server" Height="219px" Width="1265px">
             <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" Height="214px" Width="1139px">
                 <Columns>
-                    <asp:TemplateField HeaderText="ID SOLICITUD"></asp:TemplateField>
-                    <asp:TemplateField HeaderText="ID TRAMITE"></asp:TemplateField>
-                    <asp:TemplateField HeaderText="FECHA SOLICITUD"></asp:TemplateField>
-                    <asp:TemplateField HeaderText="DNI"></asp:TemplateField>
-                    <asp:TemplateField HeaderText="NOMBRE SOLICITANTE"></asp:TemplateField>
-                    <asp:TemplateField HeaderText="ESTADO"></asp:TemplateField>
+                    <asp:BoundField DataField="ID_Solicitud" HeaderText="ID SOLICITUD" />
+                    <asp:BoundField DataField="ID_Tramite" HeaderText="ID TRAMITE" />
+                    <asp:BoundField DataField="FecSolicitud" HeaderText="FECHA SOLICITUD" DataFormatString="{0:dd/MM/yyyy}" />
+                    <asp:BoundField DataField="DNIsolicitante" HeaderText="DNI" />
+                    <asp:BoundField DataField="NombreSolicitante" HeaderText="NOMBRE SOLICITANTE" />
+                    <asp:BoundField DataField="EstadoSolicitud" HeaderText="ESTADO" />
                     <asp:TemplateField HeaderText="VERIFICAR ESTADO">
                         <ItemTemplate>
                             <asp:CheckBox ID="CheckBox1" runat="server" />

@@ -29,7 +29,7 @@ namespace LfServiceReniecCliente.PSReniec.Consultas
         {
             DataSet ds = new DataSet();
             ds = obj.GetRegSolDetails();
-            GridView1.DataSource = ds;
+            GridView1.DataSource = ds.Tables[0]; ;
             GridView1.DataBind();
         }
 
@@ -46,7 +46,6 @@ namespace LfServiceReniecCliente.PSReniec.Consultas
 
         private void buscar()
         {
-            ServiceReference1.ServiceReniecClient obj = new ServiceReference1.ServiceReniecClient();
             try
             {
                 if (txtid.Text == "")
@@ -58,6 +57,9 @@ namespace LfServiceReniecCliente.PSReniec.Consultas
 
                     DataSet resultado = obj.BuscarEstadoSolicitud(regdetsol);
 
+                    // Mostrar los resultados en el GridView
+                    GridView1.DataSource = resultado.Tables["Solicitud"];
+                    GridView1.DataBind();
                 }
                 else if (cboestado.Text == "--Elegir Estado--")
                 {
@@ -67,13 +69,16 @@ namespace LfServiceReniecCliente.PSReniec.Consultas
 
                     DataSet resultado = obj.BuscarSolicitudID(regdetsol);
 
+                    // Mostrar los resultados en el GridView
+                    GridView1.DataSource = resultado.Tables["Solicitud"];
+                    GridView1.DataBind();
                 }
-
             }
             catch (Exception ex)
             {
                 MessageBox.Show("El registro de solicitud no fue encontrado: " + ex.Message, "Busqueda y Listado Solicitud", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
+
         }
 
         protected void Button2_Click(System.Object sender, System.EventArgs e)

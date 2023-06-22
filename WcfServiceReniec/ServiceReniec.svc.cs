@@ -192,7 +192,7 @@ namespace WcfServiceReniec
             SqlDataAdapter DA = new SqlDataAdapter("buscarIDSol", con);
             DA.SelectCommand.CommandType = CommandType.StoredProcedure;
             DA.SelectCommand.Parameters.Add("@BUSCAR", SqlDbType.Int).Value = regdetsol.SolicitudId;
-            DA.Fill(DST, "Sol_Pasaporte");
+            DA.Fill(DST, "Solicitud");
             return DST;
         }
 
@@ -202,7 +202,7 @@ namespace WcfServiceReniec
             SqlDataAdapter DA = new SqlDataAdapter("listarEstado", con);
             DA.SelectCommand.CommandType = CommandType.StoredProcedure;
             DA.SelectCommand.Parameters.Add("@BUSCAR", SqlDbType.Int).Value = regdetsol.Estado;
-            DA.Fill(DST, "Sol_Pasaporte");
+            DA.Fill(DST, "Solicitud");
             return DST;
         }
 
@@ -215,7 +215,7 @@ namespace WcfServiceReniec
             SqlCommand cmd = new SqlCommand("Select * from Solicitud", con);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataSet ds = new DataSet();
-            da.Fill(ds);
+            da.Fill(ds, "Solicitud");
             cmd.ExecuteNonQuery();
             con.Close();
             return ds;
