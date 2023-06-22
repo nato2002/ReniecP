@@ -262,7 +262,7 @@ namespace WcfServiceReniec
                 RegEstado estado = new RegEstado
                 {
                     ID_EstadoSolicitud = (int)reader["ID_EstadoSolicitud"],
-                    EstadoSolicitud = reader["EstadoSolicitud"].ToString()
+                    EstadoSolicitud = (int)reader["EstadoSolicitud"]
                 };
                 estados.Add(estado);
             }
