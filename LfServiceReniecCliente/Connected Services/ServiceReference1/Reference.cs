@@ -340,36 +340,6 @@ namespace LfServiceReniecCliente.ServiceReference1 {
         }
     }
     
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.FlagsAttribute()]
-    [System.Runtime.Serialization.DataContractAttribute(Name="DateTimeFormatFlags", Namespace="http://schemas.datacontract.org/2004/07/System.Globalization")]
-    public enum DateTimeFormatFlags : int {
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        None = 0,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        UseGenitiveMonth = 1,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        UseLeapYearMonth = 2,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        UseSpacesInMonthNames = 4,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        UseHebrewRule = 8,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        UseSpacesInDayNames = 16,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        UseDigitPrefixInTokens = 32,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        NotInitialized = -1,
-    }
-    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.IServiceReniec")]
     public interface IServiceReniec {
@@ -446,11 +416,11 @@ namespace LfServiceReniecCliente.ServiceReference1 {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceReniec/GetRegSolDetails", ReplyAction="http://tempuri.org/IServiceReniec/GetRegSolDetailsResponse")]
         System.Threading.Tasks.Task<System.Data.DataSet> GetRegSolDetailsAsync();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceReniec/CargarEstadosSolicitud", ReplyAction="http://tempuri.org/IServiceReniec/CargarEstadosSolicitudResponse")]
-        void CargarEstadosSolicitud(System.Web.UI.WebControls.DropDownList ddlEstadoSolicitud);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceReniec/CargarEstadoSolicitud", ReplyAction="http://tempuri.org/IServiceReniec/CargarEstadoSolicitudResponse")]
+        string[] CargarEstadoSolicitud();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceReniec/CargarEstadosSolicitud", ReplyAction="http://tempuri.org/IServiceReniec/CargarEstadosSolicitudResponse")]
-        System.Threading.Tasks.Task CargarEstadosSolicitudAsync(System.Web.UI.WebControls.DropDownList ddlEstadoSolicitud);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceReniec/CargarEstadoSolicitud", ReplyAction="http://tempuri.org/IServiceReniec/CargarEstadoSolicitudResponse")]
+        System.Threading.Tasks.Task<string[]> CargarEstadoSolicitudAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -576,12 +546,12 @@ namespace LfServiceReniecCliente.ServiceReference1 {
             return base.Channel.GetRegSolDetailsAsync();
         }
         
-        public void CargarEstadosSolicitud(System.Web.UI.WebControls.DropDownList ddlEstadoSolicitud) {
-            base.Channel.CargarEstadosSolicitud(ddlEstadoSolicitud);
+        public string[] CargarEstadoSolicitud() {
+            return base.Channel.CargarEstadoSolicitud();
         }
         
-        public System.Threading.Tasks.Task CargarEstadosSolicitudAsync(System.Web.UI.WebControls.DropDownList ddlEstadoSolicitud) {
-            return base.Channel.CargarEstadosSolicitudAsync(ddlEstadoSolicitud);
+        public System.Threading.Tasks.Task<string[]> CargarEstadoSolicitudAsync() {
+            return base.Channel.CargarEstadoSolicitudAsync();
         }
     }
 }

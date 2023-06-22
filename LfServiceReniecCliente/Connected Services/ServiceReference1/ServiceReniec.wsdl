@@ -6,14 +6,7 @@
       <xsd:import schemaLocation="http://localhost:50778/ServiceReniec.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
       <xsd:import schemaLocation="http://localhost:50778/ServiceReniec.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WcfServiceReniec" />
       <xsd:import schemaLocation="http://localhost:50778/ServiceReniec.svc?xsd=xsd3" />
-      <xsd:import schemaLocation="http://localhost:50778/ServiceReniec.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System.Web.UI.WebControls" />
-      <xsd:import schemaLocation="http://localhost:50778/ServiceReniec.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/System.Web.UI" />
-      <xsd:import schemaLocation="http://localhost:50778/ServiceReniec.svc?xsd=xsd6" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
-      <xsd:import schemaLocation="http://localhost:50778/ServiceReniec.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/System.Web.ModelBinding" />
-      <xsd:import schemaLocation="http://localhost:50778/ServiceReniec.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/System" />
-      <xsd:import schemaLocation="http://localhost:50778/ServiceReniec.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/System.Globalization" />
-      <xsd:import schemaLocation="http://localhost:50778/ServiceReniec.svc?xsd=xsd10" namespace="http://schemas.datacontract.org/2004/07/System.Web" />
-      <xsd:import schemaLocation="http://localhost:50778/ServiceReniec.svc?xsd=xsd11" namespace="http://schemas.datacontract.org/2004/07/System.Drawing" />
+      <xsd:import schemaLocation="http://localhost:50778/ServiceReniec.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="IServiceReniec_validaruser_InputMessage">
@@ -88,11 +81,11 @@
   <wsdl:message name="IServiceReniec_GetRegSolDetails_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetRegSolDetailsResponse" />
   </wsdl:message>
-  <wsdl:message name="IServiceReniec_CargarEstadosSolicitud_InputMessage">
-    <wsdl:part name="parameters" element="tns:CargarEstadosSolicitud" />
+  <wsdl:message name="IServiceReniec_CargarEstadoSolicitud_InputMessage">
+    <wsdl:part name="parameters" element="tns:CargarEstadoSolicitud" />
   </wsdl:message>
-  <wsdl:message name="IServiceReniec_CargarEstadosSolicitud_OutputMessage">
-    <wsdl:part name="parameters" element="tns:CargarEstadosSolicitudResponse" />
+  <wsdl:message name="IServiceReniec_CargarEstadoSolicitud_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CargarEstadoSolicitudResponse" />
   </wsdl:message>
   <wsdl:portType name="IServiceReniec">
     <wsdl:operation name="validaruser">
@@ -143,9 +136,9 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IServiceReniec/GetRegSolDetails" message="tns:IServiceReniec_GetRegSolDetails_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IServiceReniec/GetRegSolDetailsResponse" message="tns:IServiceReniec_GetRegSolDetails_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="CargarEstadosSolicitud">
-      <wsdl:input wsaw:Action="http://tempuri.org/IServiceReniec/CargarEstadosSolicitud" message="tns:IServiceReniec_CargarEstadosSolicitud_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IServiceReniec/CargarEstadosSolicitudResponse" message="tns:IServiceReniec_CargarEstadosSolicitud_OutputMessage" />
+    <wsdl:operation name="CargarEstadoSolicitud">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceReniec/CargarEstadoSolicitud" message="tns:IServiceReniec_CargarEstadoSolicitud_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceReniec/CargarEstadoSolicitudResponse" message="tns:IServiceReniec_CargarEstadoSolicitud_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IServiceReniec" type="tns:IServiceReniec">
@@ -258,8 +251,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="CargarEstadosSolicitud">
-      <soap:operation soapAction="http://tempuri.org/IServiceReniec/CargarEstadosSolicitud" style="document" />
+    <wsdl:operation name="CargarEstadoSolicitud">
+      <soap:operation soapAction="http://tempuri.org/IServiceReniec/CargarEstadoSolicitud" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

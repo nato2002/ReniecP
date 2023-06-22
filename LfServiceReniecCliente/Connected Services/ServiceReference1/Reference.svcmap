@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="275b4862-d400-4e60-8c08-50619b1b6207" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="567910fb-a524-42fb-a604-c699ee12ba43" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,20 +22,13 @@
     <MetadataSource Address="http://localhost:50778/ServiceReniec.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="ServiceReniec.disco" MetadataType="Disco" ID="0bb9bf69-9a3a-4067-a08b-a6ebe63b2762" SourceId="1" SourceUrl="http://localhost:50778/ServiceReniec.svc?disco" />
-    <MetadataFile FileName="ServiceReniec.xsd" MetadataType="Schema" ID="c5fd8c27-69b5-4eb3-b593-381e729e5152" SourceId="1" SourceUrl="http://localhost:50778/ServiceReniec.svc?xsd=xsd11" />
-    <MetadataFile FileName="ServiceReniec.wsdl" MetadataType="Wsdl" ID="8b40f739-f9ab-408c-b756-f7be00b03ec7" SourceId="1" SourceUrl="http://localhost:50778/ServiceReniec.svc?wsdl" />
-    <MetadataFile FileName="ServiceReniec1.xsd" MetadataType="Schema" ID="2e875ad4-d278-488c-827c-25707344e19a" SourceId="1" SourceUrl="http://localhost:50778/ServiceReniec.svc?xsd=xsd9" />
-    <MetadataFile FileName="ServiceReniec2.xsd" MetadataType="Schema" ID="3d1e618b-f150-40d0-a611-0a983f044810" SourceId="1" SourceUrl="http://localhost:50778/ServiceReniec.svc?xsd=xsd8" />
-    <MetadataFile FileName="ServiceReniec3.xsd" MetadataType="Schema" ID="3936e8cd-5e03-4e96-886a-ab880c07d501" SourceId="1" SourceUrl="http://localhost:50778/ServiceReniec.svc?xsd=xsd10" />
-    <MetadataFile FileName="ServiceReniec4.xsd" MetadataType="Schema" ID="045771c0-680c-4fe8-abec-8a46320b2d61" SourceId="1" SourceUrl="http://localhost:50778/ServiceReniec.svc?xsd=xsd0" />
-    <MetadataFile FileName="ServiceReniec5.xsd" MetadataType="Schema" ID="5409e5db-c52b-452d-9923-b7b1400c933e" SourceId="1" SourceUrl="http://localhost:50778/ServiceReniec.svc?xsd=xsd7" />
-    <MetadataFile FileName="ServiceReniec6.xsd" MetadataType="Schema" ID="f7524650-81d4-494e-a3f2-4d9a650b0611" SourceId="1" SourceUrl="http://localhost:50778/ServiceReniec.svc?xsd=xsd6" />
-    <MetadataFile FileName="ServiceReniec7.xsd" MetadataType="Schema" ID="bfb70c3d-2505-407d-bee1-d24fbacfca27" SourceId="1" SourceUrl="http://localhost:50778/ServiceReniec.svc?xsd=xsd5" />
-    <MetadataFile FileName="ServiceReniec8.xsd" MetadataType="Schema" ID="e0666687-6ca9-4a3f-8ce8-2d69f51bf67c" SourceId="1" SourceUrl="http://localhost:50778/ServiceReniec.svc?xsd=xsd4" />
-    <MetadataFile FileName="ServiceReniec9.xsd" MetadataType="Schema" ID="2f726b45-068b-4368-9a1f-4cb9eed87838" SourceId="1" SourceUrl="http://localhost:50778/ServiceReniec.svc?xsd=xsd3" />
-    <MetadataFile FileName="ServiceReniec10.xsd" MetadataType="Schema" ID="19fd1126-b4aa-4f75-9320-326312046413" SourceId="1" SourceUrl="http://localhost:50778/ServiceReniec.svc?xsd=xsd2" />
-    <MetadataFile FileName="ServiceReniec11.xsd" MetadataType="Schema" ID="56922e0c-c0e9-4422-942a-8f873c93635b" SourceId="1" SourceUrl="http://localhost:50778/ServiceReniec.svc?xsd=xsd1" />
+    <MetadataFile FileName="ServiceReniec.xsd" MetadataType="Schema" ID="c5643948-4bee-46ef-9496-6088023b7e51" SourceId="1" SourceUrl="http://localhost:50778/ServiceReniec.svc?xsd=xsd1" />
+    <MetadataFile FileName="ServiceReniec1.xsd" MetadataType="Schema" ID="04c333f2-8204-45ad-a1d1-9dcf6b506e45" SourceId="1" SourceUrl="http://localhost:50778/ServiceReniec.svc?xsd=xsd0" />
+    <MetadataFile FileName="ServiceReniec.disco" MetadataType="Disco" ID="f063891f-a20a-498e-9425-869000c14014" SourceId="1" SourceUrl="http://localhost:50778/ServiceReniec.svc?disco" />
+    <MetadataFile FileName="ServiceReniec.wsdl" MetadataType="Wsdl" ID="c8428741-e4b4-4585-b5c7-89a56558331a" SourceId="1" SourceUrl="http://localhost:50778/ServiceReniec.svc?wsdl" />
+    <MetadataFile FileName="ServiceReniec2.xsd" MetadataType="Schema" ID="35ae9758-d82f-4e93-a7f3-cbb36a488b3f" SourceId="1" SourceUrl="http://localhost:50778/ServiceReniec.svc?xsd=xsd4" />
+    <MetadataFile FileName="ServiceReniec3.xsd" MetadataType="Schema" ID="5ac026e9-cdde-45ba-9211-70a0231e29de" SourceId="1" SourceUrl="http://localhost:50778/ServiceReniec.svc?xsd=xsd3" />
+    <MetadataFile FileName="ServiceReniec4.xsd" MetadataType="Schema" ID="87f55887-2cdb-4f2d-810c-0294eae4bded" SourceId="1" SourceUrl="http://localhost:50778/ServiceReniec.svc?xsd=xsd2" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
