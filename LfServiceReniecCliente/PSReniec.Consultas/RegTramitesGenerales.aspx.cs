@@ -41,15 +41,15 @@ namespace LfServiceReniecCliente.PSReniec.Consultas
 
         private void LlenarDDL()
         {
-            RegEstado[] estados = obj.EstadoSolicitud();
+            //RegEstado[] estados = obj.EstadoSolicitud();
 
-            string[] estadosSolicitud = estados.Select(e => e.EstadoSolicitud).ToArray();
+            //string[] estadosSolicitud = estados.Select(e => e.EstadoSolicitud).ToArray();
 
             cboestado.Items.Clear();
 
-            foreach (string estado in estadosSolicitud)
+            //foreach (string estado in estadosSolicitud)
             {
-                cboestado.Items.Add(estado);
+              //  cboestado.Items.Add(estado);
             }
         }
 
