@@ -169,30 +169,32 @@
             </tr>
         </table>
         <asp:Panel ID="Panel3" runat="server" Height="219px" Width="1265px">
-            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" Height="214px" Width="1139px">
-                <Columns>
-                    <asp:BoundField DataField="ID_Solicitud" HeaderText="ID SOLICITUD" />
-                    <asp:BoundField DataField="ID_Tramite" HeaderText="ID TRAMITE" />
-                    <asp:BoundField DataField="FecSolicitud" HeaderText="FECHA SOLICITUD" DataFormatString="{0:dd/MM/yyyy}" />
-                    <asp:BoundField DataField="DNIsolicitante" HeaderText="DNI" />
-                    <asp:BoundField DataField="NombreSolicitante" HeaderText="NOMBRE SOLICITANTE" />
-                    <asp:BoundField DataField="EstadoSolicitud" HeaderText="ESTADO" />
-                    <asp:TemplateField HeaderText="VERIFICAR ESTADO">
-                        <ItemTemplate>
-                            <asp:CheckBox ID="CheckBox1" runat="server" />
-                        </ItemTemplate>
-                    </asp:TemplateField>
-                </Columns>
-                <FooterStyle BackColor="White" ForeColor="#000066" />
-                <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White" />
-                <PagerStyle BackColor="White" ForeColor="#000066" HorizontalAlign="Left" />
-                <RowStyle ForeColor="#000066" />
-                <SelectedRowStyle BackColor="#669999" Font-Bold="True" ForeColor="White" />
-                <SortedAscendingCellStyle BackColor="#F1F1F1" />
-                <SortedAscendingHeaderStyle BackColor="#007DBB" />
-                <SortedDescendingCellStyle BackColor="#CAC9C9" />
-                <SortedDescendingHeaderStyle BackColor="#00547E" />
-            </asp:GridView>
+            <div class="auto-style23">
+                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" Height="214px" Width="1139px">
+                    <Columns>
+                        <asp:BoundField DataField="ID_Solicitud" HeaderText="ID SOLICITUD" />
+                        <asp:BoundField DataField="ID_Tramite" HeaderText="ID TRAMITE" />
+                        <asp:BoundField DataField="FecSolicitud" DataFormatString="{0:dd/MM/yyyy}" HeaderText="FECHA SOLICITUD" />
+                        <asp:BoundField DataField="DNIsolicitante" HeaderText="DNI" />
+                        <asp:BoundField DataField="NombreSolicitante" HeaderText="NOMBRE SOLICITANTE" />
+                        <asp:BoundField DataField="EstadoSolicitud" HeaderText="ESTADO" />
+                        <asp:TemplateField HeaderText="VERIFICAR ESTADO">
+                            <ItemTemplate>
+                                <asp:CheckBox ID="CheckBox1" runat="server" />
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                    </Columns>
+                    <FooterStyle BackColor="White" ForeColor="#000066" />
+                    <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White" />
+                    <PagerStyle BackColor="White" ForeColor="#000066" HorizontalAlign="Left" />
+                    <RowStyle ForeColor="#000066" />
+                    <SelectedRowStyle BackColor="#669999" Font-Bold="True" ForeColor="White" />
+                    <SortedAscendingCellStyle BackColor="#F1F1F1" />
+                    <SortedAscendingHeaderStyle BackColor="#007DBB" />
+                    <SortedDescendingCellStyle BackColor="#CAC9C9" />
+                    <SortedDescendingHeaderStyle BackColor="#00547E" />
+                </asp:GridView>
+            </div>
         </asp:Panel>
     </form>
 </body>

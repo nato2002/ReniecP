@@ -67,7 +67,7 @@ namespace LfServiceReniecCliente.PSReniec.Consultas
 
                     DataSet resultado = obj.BuscarEstadoSolicitud(regdetsol);
 
-                    GridView1.DataSource = resultado.Tables["Solicitud"];
+                    GridView1.DataSource = resultado.Tables[0];
                     GridView1.DataBind();
                 }
                 else if (cboestado.Text == "--Elegir Estado--")

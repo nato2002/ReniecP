@@ -201,8 +201,8 @@ namespace WcfServiceReniec
             DataSet DST = new DataSet();
             SqlDataAdapter DA = new SqlDataAdapter("listarEstado", con);
             DA.SelectCommand.CommandType = CommandType.StoredProcedure;
-            DA.SelectCommand.Parameters.Add("@BUSCAR", SqlDbType.Int).Value = regdetsol.Estado;
-            DA.Fill(DST, "Solicitud");
+            DA.SelectCommand.Parameters.Add("@BUSCAR", SqlDbType.VarChar).Value = regdetsol.Estado;
+            DA.Fill(DST);
             return DST;
         }
 
