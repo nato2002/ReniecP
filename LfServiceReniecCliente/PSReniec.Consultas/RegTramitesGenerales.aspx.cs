@@ -47,6 +47,9 @@ namespace LfServiceReniecCliente.PSReniec.Consultas
 
             cboestado.Items.Clear();
 
+            // Agregar el elemento "--ELEGIR ESTADO--" al DropDownList
+            cboestado.Items.Add("--ELEGIR ESTADO--");
+
             foreach (string estado in estadosSolicitud)
             {
                 cboestado.Items.Add(estado);
@@ -70,7 +73,7 @@ namespace LfServiceReniecCliente.PSReniec.Consultas
                     GridView1.DataSource = resultado.Tables[0];
                     GridView1.DataBind();
                 }
-                else if (cboestado.Text == "--Elegir Estado--")
+                else if (cboestado.Text == "--ELEGIR ESTADO--")
                 {
                     int solicitudId = int.Parse(txtid.Text);
                     RegSolicitud regdetsol = new RegSolicitud();
