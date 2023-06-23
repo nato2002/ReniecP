@@ -1,16 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Data.SqlClient;
 using System.Data;
-using LfServiceReniecCliente.ServiceReference1;
 using System.Windows.Forms;
-using System.Web.Services.Description;
-using WcfServiceReniec;
-using RegSolicitud = LfServiceReniecCliente.ServiceReference1.RegSolicitud;
 
 namespace LfServiceReniecCliente.PSReniec.Consultas
 {
@@ -59,6 +51,7 @@ namespace LfServiceReniecCliente.PSReniec.Consultas
 
         private void buscar()
         {
+
             try
             {
                 if (txtid.Text == "")
@@ -81,7 +74,6 @@ namespace LfServiceReniecCliente.PSReniec.Consultas
 
                     DataSet resultado = obj.BuscarSolicitudID(regdetsol);
 
-                    // Mostrar los resultados en el GridView
                     GridView1.DataSource = resultado.Tables["Solicitud"];
                     GridView1.DataBind();
                 }
@@ -98,6 +90,20 @@ namespace LfServiceReniecCliente.PSReniec.Consultas
             txtid.Text = string.Empty;
             cboestado.ClearSelection();
             BindRegRecordsInGrid();
+        }
+
+        protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            if (e.CommandName == "ActualizarEstado")
+            {
+                int rowIndex = Convert.ToInt32(e.CommandArgument);
+
+                int solicitudId = Convert.ToInt32(GridView1.DataKeys[rowIndex].Value);
+
+                obj.ActualizarEstadoSolicitud(solicitudId);
+
+                BindRegRecordsInGrid();
+            }
         }
     }
 }

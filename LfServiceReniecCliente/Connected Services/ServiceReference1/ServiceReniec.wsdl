@@ -87,6 +87,12 @@
   <wsdl:message name="IServiceReniec_EstadoSolicitud_OutputMessage">
     <wsdl:part name="parameters" element="tns:EstadoSolicitudResponse" />
   </wsdl:message>
+  <wsdl:message name="IServiceReniec_ActualizarEstadoSolicitud_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarEstadoSolicitud" />
+  </wsdl:message>
+  <wsdl:message name="IServiceReniec_ActualizarEstadoSolicitud_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarEstadoSolicitudResponse" />
+  </wsdl:message>
   <wsdl:portType name="IServiceReniec">
     <wsdl:operation name="validaruser">
       <wsdl:input wsaw:Action="http://tempuri.org/IServiceReniec/validaruser" message="tns:IServiceReniec_validaruser_InputMessage" />
@@ -139,6 +145,10 @@
     <wsdl:operation name="EstadoSolicitud">
       <wsdl:input wsaw:Action="http://tempuri.org/IServiceReniec/EstadoSolicitud" message="tns:IServiceReniec_EstadoSolicitud_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IServiceReniec/EstadoSolicitudResponse" message="tns:IServiceReniec_EstadoSolicitud_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarEstadoSolicitud">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceReniec/ActualizarEstadoSolicitud" message="tns:IServiceReniec_ActualizarEstadoSolicitud_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceReniec/ActualizarEstadoSolicitudResponse" message="tns:IServiceReniec_ActualizarEstadoSolicitud_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IServiceReniec" type="tns:IServiceReniec">
@@ -253,6 +263,15 @@
     </wsdl:operation>
     <wsdl:operation name="EstadoSolicitud">
       <soap:operation soapAction="http://tempuri.org/IServiceReniec/EstadoSolicitud" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarEstadoSolicitud">
+      <soap:operation soapAction="http://tempuri.org/IServiceReniec/ActualizarEstadoSolicitud" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

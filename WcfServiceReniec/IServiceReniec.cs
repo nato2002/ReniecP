@@ -52,5 +52,8 @@ namespace WcfServiceReniec
 
         [OperationContract]
         string[] EstadoSolicitud();
+
+        [OperationContract]
+        void ActualizarEstadoSolicitud(int solicitudId);
     }
 }

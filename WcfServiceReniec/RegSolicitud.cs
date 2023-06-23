@@ -17,28 +17,27 @@ namespace WcfServiceReniec
             [DataMember]
             public int SolicitudId
             {
-                get => s_Solid;
-                set => s_Solid = value;
+                get { return s_Solid; }
+                set { s_Solid = value; }
             }
             [DataMember]
             public int Ciudadanoid
             {
-                get => s_Ciudadanoid;
-                set => s_Ciudadanoid = value;
+                get { return s_Ciudadanoid; }
+                set { s_Ciudadanoid = value; }
             }
             [DataMember]
             public DateTime S_fecha
             {
-                get => s_fecha;
-                set => s_fecha = value;
+                get { return s_fecha; }
+                set { s_fecha = value; }
             }
-
 
             [DataMember]
             public string Estado
             {
-                get => estado;
-                set => estado = value;
+               get { return estado; }
+               set { estado = value; }
             }
     }
 }

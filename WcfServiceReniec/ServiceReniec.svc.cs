@@ -248,5 +248,19 @@ namespace WcfServiceReniec
 
             return estadosList.ToArray();
         }
+
+        public void ActualizarEstadoSolicitud(int solicitudId)
+        {
+            if (con.State == ConnectionState.Closed)
+            {
+                con.Open();
+            }
+
+            SqlCommand cmd = new SqlCommand("UPDATE Solicitud SET EstadoSolicitud = 1 WHERE ID_Solicitud = @SolicitudId", con);
+            cmd.Parameters.AddWithValue("@SolicitudId", solicitudId);
+            cmd.ExecuteNonQuery();
+
+            con.Close();
+        }
     }
 }
