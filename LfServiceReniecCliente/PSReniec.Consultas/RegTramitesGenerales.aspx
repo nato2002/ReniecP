@@ -59,6 +59,7 @@
         }
         .auto-style23 {
             text-align: center;
+            width: 1300px;
         }
     </style>
 </head>
@@ -108,8 +109,7 @@
                 <td class="auto-style15">
                     &nbsp;</td>
                 <td class="auto-style20">
-                    <asp:Image ID="btnlistar" runat="server" Height="61px" ImageUrl="~/img/boton.png" Width="315px" />
-                </td>
+                    &nbsp;</td>
             </tr>
             <tr>
                 <td class="auto-style21">
@@ -168,7 +168,7 @@
                 <td class="auto-style19">&nbsp;</td>
             </tr>
         </table>
-        <asp:Panel ID="Panel3" runat="server" Height="219px" Width="1265px">
+        <asp:Panel ID="Panel3" runat="server" Height="219px" Width="1302px">
             <div class="auto-style23">
                 <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" Height="214px" Width="1139px">
                     <Columns>
