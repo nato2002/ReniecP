@@ -9,6 +9,8 @@ using System.Data;
 using LfServiceReniecCliente.ServiceReference1;
 using System.Windows.Forms;
 using System.Web.Services.Description;
+using WcfServiceReniec;
+using RegSolicitud = LfServiceReniecCliente.ServiceReference1.RegSolicitud;
 
 namespace LfServiceReniecCliente.PSReniec.Consultas
 {
@@ -41,15 +43,13 @@ namespace LfServiceReniecCliente.PSReniec.Consultas
 
         private void LlenarDDL()
         {
-            //RegEstado[] estados = obj.EstadoSolicitud();
-
-            //string[] estadosSolicitud = estados.Select(e => e.EstadoSolicitud).ToArray();
+            string[] estadosSolicitud = obj.EstadoSolicitud();
 
             cboestado.Items.Clear();
 
-            //foreach (string estado in estadosSolicitud)
+            foreach (string estado in estadosSolicitud)
             {
-              //  cboestado.Items.Add(estado);
+                cboestado.Items.Add(estado);
             }
         }
 

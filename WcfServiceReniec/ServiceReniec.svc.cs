@@ -231,6 +231,7 @@ namespace WcfServiceReniec
             {
                 con.Open();
             }
+
             SqlCommand cmd = new SqlCommand("SELECT EstadoSolicitud FROM EstadoSolicitud", con);
             SqlDataReader reader = cmd.ExecuteReader();
 
