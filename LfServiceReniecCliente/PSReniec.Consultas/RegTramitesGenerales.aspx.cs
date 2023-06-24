@@ -3,6 +3,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
 using System.Windows.Forms;
+using WcfServiceReniec;
 
 namespace LfServiceReniecCliente.PSReniec.Consultas
 {
