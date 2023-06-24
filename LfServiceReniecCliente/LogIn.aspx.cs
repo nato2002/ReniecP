@@ -8,6 +8,7 @@ using System.Web.UI.WebControls;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Data;
+using WcfServiceReniec;
 
 namespace LfServiceReniecCliente
 {

@@ -18,6 +18,10 @@ namespace WcfServiceReniec
         string contrasenna= string.Empty;
         string cargo= string.Empty;
 
+        public ConsultaLogin()
+        {
+        }
+
         public ConsultaLogin(string usuario, string contrasenna)
         {
             this.usuario = usuario;
