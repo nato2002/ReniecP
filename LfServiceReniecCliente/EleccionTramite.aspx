@@ -11,19 +11,100 @@
 <body>
     <form id="form1" runat="server">
         <header>
-            <img src="img/renieclogo.png"/>
-            <h1 class="titulo">Eliga un Trámite</h1>
-            <h2 class="subtitulo">Consulta el Estado de Tramite</h2>
-            <h3 class="subtitulo">DNI/DNIe Y Ficha Registral</h3>
+            <h1 class="titulo">Servicios de Trámite</h1>
+            <img src="img/renieclogo.png"/>           
         </header>
         <div class="seccion-PanelDatos">
             <div style="font-family:Arial;font-size:1.7em;">
-                <asp:Label runat="server" Text="Rodrigo Diaz" CssClass="labelNombre"></asp:Label>
+                <asp:Label runat="server" Text="Duplicado de DNI/DNIe" CssClass="labelNombre"></asp:Label>               
+            &nbsp;</div>
+
+
+            <div class="button">
+                <asp:Button runat="server" Text="Realizar Trámite" CssClass="span" />
             </div>
-            <div>
-                <asp:Button runat="server" CssClass="btnCerrar" Text="Cerrar"/>
-            </div>
+
+
+
         </div>
+
+        <div class="seccion-PanelDatos">
+            <div style="font-family:Arial;font-size:1.7em;">
+                <asp:Label runat="server" Text="Rectificacion de Domicilio" CssClass="labelNombre"></asp:Label>
+            </div>
+            <br />
+            <div class="button">
+                <asp:Button runat="server" Text="Realizar Trámite" CssClass="span" />
+            </div>
+
+        </div>
+
+        <div class="seccion-PanelDatos">
+            <div style="font-family:Arial;font-size:1.7em;">
+                <asp:Label runat="server" Text="Rectificacion del Estado Civil" CssClass="labelNombre"></asp:Label>
+            </div>
+            <br />
+            <div class="button">
+                <asp:Button runat="server" Text="Realizar Trámite" CssClass="span" />
+            </div>
+
+        </div>
+
+        <div class="seccion-PanelDatos">
+            <div style="font-family:Arial;font-size:1.7em;">
+                <asp:Label runat="server" Text="Certificado de Inscripcion (C4)" CssClass="labelNombre"></asp:Label>
+            </div>
+            <br />
+            <div class="button">
+                <asp:Button runat="server" Text="Realizar Trámite" CssClass="span" />
+            </div>
+
+        </div>
+
+        <div class="seccion-PanelDatos">
+            <div style="font-family:Arial;font-size:1.7em;">
+                <asp:Label runat="server" Text="Copias certificadas de Actas/Partidas" CssClass="labelNombre"></asp:Label>
+            </div>
+            <br />
+            <div class="button">
+                <asp:Button runat="server" Text="Realizar Trámite" CssClass="span" />
+            </div>
+
+        </div>
+
+        <div class="seccion-PanelDatos">
+            <div style="font-family:Arial;font-size:1.7em;">
+                <asp:Label runat="server" Text="Validacion de copiasd certificadas" CssClass="labelNombre"></asp:Label>
+            </div>
+            <br />
+            <div class="button">
+                <asp:Button runat="server" Text="Realizar Trámite" CssClass="span" />
+            </div>
+
+        </div>
+
+        <div class="seccion-PanelDatos">
+            <div style="font-family:Arial;font-size:1.7em;">
+                <asp:Label runat="server" Text="Acceso a la informacion pública" CssClass="labelNombre"></asp:Label>
+            </div>
+            <br />
+            <div class="button">
+                <asp:Button runat="server" Text="Realizar Trámite" CssClass="span" />
+            </div>
+
+        </div>
+
+        <div class="seccion-PanelDatos">
+            <div style="font-family:Arial;font-size:1.7em;">
+                <asp:Label runat="server" Text="Asignar/Cambiar domicilio electrónico" CssClass="labelNombre"></asp:Label>
+            </div>
+            <br />
+            <div class="button">
+                <asp:Button runat="server" Text="Realizar Trámite" CssClass="span" />
+            </div>
+
+        </div>
+
     </form>
 </body>
 </html>

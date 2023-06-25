@@ -16,9 +16,18 @@ img {
 .titulo {
     color: white;
     display: inline;
-    margin-top: 0;
+
+    margin-left:291px;
     text-decoration: underline;
     font-family: Arial;
+}
+
+.imagen {
+    display: inline;
+    margin-left: 500px;
+    padding: 10px 10px;
+    text-decoration: underline;
+
 }
 
 .subtitulo {
@@ -30,7 +39,7 @@ img {
 .seccion-PanelDatos {
     display: flex;
     border-style: solid;
-    margin: 2em 10em;
+    margin: 5em 11em;
     padding: 2em 2em;
     column-count: 2;
     align-items: center;
@@ -41,4 +50,30 @@ img {
     margin-left: 50%;
     width: 10em;
     height: 3em;
+}
+.button {
+    border: 0;
+    background-image: linear-gradient( 150deg, #9500ff, #09f, #00DDFF );
+    border-radius: 8px;
+    margin-left: 10px;
+    color: #fff;
+    display: flex;
+    margin-left: 630px;
+    font-size: 20px;
+    padding: 4px;
+    cursor: pointer;
+    transition: .3s;
+}
+.button .span{
+    background-color: #111;
+    color: white;
+    padding: 19px 30px;   
+    border-radius: 6px;
+    transition: .3s;
+}
+.button .span:hover {
+        background: none;
+    }
+.button:active{
+    transform: scale(1.1);
 }
