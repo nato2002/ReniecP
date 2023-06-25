@@ -78,6 +78,7 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <Content Include="Discapacidad.aspx" />
+    <Content Include="EleccionTramite.aspx" />
     <Content Include="img\borrar.png" />
     <Content Include="img\boton.png" />
     <Content Include="img\lapiz.png" />
@@ -103,6 +104,13 @@
     </Compile>
     <Compile Include="Discapacidad.aspx.designer.cs">
       <DependentUpon>Discapacidad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EleccionTramite.aspx.cs">
+      <DependentUpon>EleccionTramite.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EleccionTramite.aspx.designer.cs">
+      <DependentUpon>EleccionTramite.aspx</DependentUpon>
     </Compile>
     <Compile Include="ListaSedes.aspx.cs">
       <DependentUpon>ListaSedes.aspx</DependentUpon>
