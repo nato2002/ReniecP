@@ -12,7 +12,7 @@
     <form id="form1" runat="server">
         <header>
             <img src="img/renieclogo.png"/>
-            <h1 class="titulo">Servicios en Linea</h1>
+            <h1 class="titulo">Eliga un Trámite</h1>
             <h2 class="subtitulo">Consulta el Estado de Tramite</h2>
             <h3 class="subtitulo">DNI/DNIe Y Ficha Registral</h3>
         </header>

@@ -82,6 +82,7 @@
     <Content Include="img\borrar.png" />
     <Content Include="img\boton.png" />
     <Content Include="img\lapiz.png" />
+    <Content Include="img\renieclogo.png" />
     <Content Include="img\logo.png" />
     <Content Include="ListaSedes.aspx" />
     <Content Include="PerfilUser.aspx" />
