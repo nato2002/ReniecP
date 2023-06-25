@@ -90,6 +90,7 @@
     <Content Include="RegistrarSedes.aspx" />
     <Content Include="RegistrarUser.aspx" />
     <Content Include="LogIn.aspx" />
+    <Content Include="Style\estilos.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
