@@ -16,9 +16,8 @@ img {
 .titulo {
     color: white;
     display: inline;
-
-    margin-left:291px;
-    text-decoration: underline;
+    margin-left: 291px;
+    
     font-family: Arial;
 }
 
@@ -75,5 +74,27 @@ img {
         background: none;
     }
 .button:active{
+    transform: scale(1.1);
+}
+
+.panel {
+    border:0;
+    background-image: linear-gradient( 120deg, #808080, #111, #9500ff );
+    display: flex;
+    border-style: solid;
+    margin: 5em 11em;
+    padding: 2em 2em;
+}
+.panel .span {
+    background-color: #111;
+    color: white;
+    padding: 19px 30px;
+    border-radius: 6px;
+    transition: .3s;
+}
+.panel .span:hover {
+    background: none;
+}
+.panel:active {
     transform: scale(1.1);
 }

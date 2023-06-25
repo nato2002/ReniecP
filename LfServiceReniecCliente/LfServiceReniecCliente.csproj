@@ -81,6 +81,7 @@
     <Content Include="EleccionTramite.aspx" />
     <Content Include="img\borrar.png" />
     <Content Include="img\boton.png" />
+    <Content Include="img\dnianimado.png" />
     <Content Include="img\lapiz.png" />
     <Content Include="img\dni.png" />
     <Content Include="img\logo.png" />
