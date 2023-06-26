@@ -59,13 +59,20 @@ namespace LfServiceReniecCliente
         }
         private void SaveRegDetails()
         {
-            RegSede regDet = new RegSede();
-            regDet.Nombre = txtnombre.Text.Trim();
-            regDet.Direccion = txtdireccion.Text.Trim();
+            try
+            {
+                RegSede regDet = new RegSede();
+                regDet.Nombre = txtnombre.Text.Trim();
+                regDet.Direccion = txtdireccion.Text.Trim();
 
-            lblStatus.Text = obj.InsertUserRegDetails(regDet);
-            ClearControls();
-            BindRegRecordsInGrid();
+                lblStatus.Text = obj.InsertUserRegDetails(regDet);
+                ClearControls();
+                BindRegRecordsInGrid();
+            }
+            catch (Exception ex) 
+            {
+                Console.WriteLine("No se Pudo Registrar por: "+ex.Message);
+            }
         }
 
         protected void btnCancel_Click(object sender, EventArgs e)

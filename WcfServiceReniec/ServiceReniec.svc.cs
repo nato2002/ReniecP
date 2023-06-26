@@ -66,25 +66,37 @@ namespace WcfServiceReniec
         public string InsertUserRegDetails(RegSede regdet)
         {
             string Status;
-            if (con.State == ConnectionState.Closed)
+            try
             {
-                con.Open();
+                if (con.State == ConnectionState.Closed)
+                {
+                    con.Open();
+                }
+
+                SqlCommand cmd = new SqlCommand("INSERT INTO Sedes(nombre, direccion) VALUES (@nombre, @direccion)", con);
+                cmd.Parameters.AddWithValue("@nombre", regdet.Nombre);
+                cmd.Parameters.AddWithValue("@direccion", regdet.Direccion);
+
+                int result = cmd.ExecuteNonQuery();
+                if (result == 1)
+                {
+                    Status = regdet.Nombre + " Se registró con éxito";
+                }
+                else
+                {
+                    Status = regdet.Nombre + " No se pudo registrar";
+                }
+            }
+            catch (Exception )
+            {
+                // Handle the exception or log the error message
+                Status = "Error al registrar: ";
+            }
+            finally
+            {
+                con.Close();
             }
 
-            SqlCommand cmd = new SqlCommand("insert into Sedes(nombre,direccion) values(@nombre,@direccion)", con);
-            cmd.Parameters.AddWithValue("@nombre", regdet.Nombre);
-            cmd.Parameters.AddWithValue("@direccion", regdet.Direccion);
-
-            int result = cmd.ExecuteNonQuery();
-            if (result == 1)
-            {
-                Status = regdet.Nombre  + " se Registro con exito";
-            }
-            else
-            {
-                Status = regdet.Nombre  + " No se pudo Registrar";
-            }
-            con.Close();
             return Status;
         }
 

@@ -99,3 +99,58 @@ img {
 .panel:active {
     transform: scale(1.1);
 }
+.buttonagg {
+    border: 0;
+    background-image: linear-gradient( 150deg, #004370, #09f, #ff6a00 );
+    border-radius: 8px;
+    color: #fff;
+    display: flex;
+    font-size: 20px;
+    padding: 4px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.buttonagg .span {
+    background-color: #111;
+    color: white;
+    padding: 19px 30px;
+    border-radius: 6px;
+    transition: .3s;
+}
+
+.buttonagg .span:hover {
+    background: none;
+}
+
+.buttonagg:active {
+    transform: scale(1.1);
+}
+
+.buttoncancelar {
+    border: 0;
+    background-image: linear-gradient( 150deg, #ff6a00, #ff0000, #808080 );
+    border-radius: 8px;
+    color: #fff;
+    display: flex;
+    font-size: 20px;
+    padding: 4px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.buttoncancelar .span {
+    background-color: #111;
+    color: white;
+    padding: 19px 30px;
+    border-radius: 6px;
+    transition: .3s;
+}
+
+    .buttoncancelar .span:hover {
+        background: none;
+    }
+
+.buttoncancelar:active {
+    transform: scale(1.1);
+}
