@@ -256,7 +256,7 @@ namespace WcfServiceReniec
                 con.Open();
             }
 
-            SqlCommand cmd = new SqlCommand("UPDATE Solicitud SET EstadoSolicitud = 1 WHERE ID_Solicitud = @SolicitudId", con);
+            SqlCommand cmd = new SqlCommand("UPDATE Solicitud SET EstadoSolicitud = 2 WHERE ID_Solicitud = @SolicitudId", con);
             cmd.Parameters.AddWithValue("@SolicitudId", solicitudId);
             cmd.ExecuteNonQuery();
 

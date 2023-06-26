@@ -4,6 +4,7 @@ using System.Web.UI.WebControls;
 using System.Data;
 using System.Windows.Forms;
 using WcfServiceReniec;
+using CheckBox = System.Web.UI.WebControls.CheckBox;
 
 namespace LfServiceReniecCliente.PSReniec.Consultas
 {
@@ -93,18 +94,20 @@ namespace LfServiceReniecCliente.PSReniec.Consultas
             BindRegRecordsInGrid();
         }
 
-        protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
+        protected void CheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            if (e.CommandName == "ActualizarEstado")
+            CheckBox checkbox = (CheckBox)sender;
+            GridViewRow row = (GridViewRow)checkbox.NamingContainer;
+            int solicitudId = Convert.ToInt32(row.Cells[0].Text); // ID_Solicitud está en la primera columna (índice 0)
+
+            if (checkbox.Checked)
             {
-                int rowIndex = Convert.ToInt32(e.CommandArgument);
-
-                int solicitudId = Convert.ToInt32(GridView1.DataKeys[rowIndex].Value);
-
+                // Actualizar el estado de la solicitud
                 obj.ActualizarEstadoSolicitud(solicitudId);
-
-                BindRegRecordsInGrid();
             }
+
+            // Actualizar los datos en el GridView
+            BindRegRecordsInGrid();
         }
     }
 }
