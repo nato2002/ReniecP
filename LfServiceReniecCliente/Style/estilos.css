@@ -10,7 +10,7 @@ header {
 
 img {
     float: left;
-    margin: 1em 1em;
+    /*margin: 1em 1em;*/
 }
 
 .titulo {
@@ -38,15 +38,17 @@ img {
 .seccion-PanelDatos {
     display: flex;
     border-style: solid;
-    margin: 5em 11em;
+    margin: 3em 15em 1em 22em;
     padding: 2em 2em;
     column-count: 2;
     align-items: center;
+
+    justify-content: space-between;
 }
 
 .btnCerrar {
     border-style: none;
-    margin-left: 50%;
+    
     width: 10em;
     height: 3em;
 }
@@ -54,10 +56,9 @@ img {
     border: 0;
     background-image: linear-gradient( 150deg, #9500ff, #09f, #00DDFF );
     border-radius: 8px;
-    margin-left: 10px;
     color: #fff;
     display: flex;
-    margin-left: 630px;
+    
     font-size: 20px;
     padding: 4px;
     cursor: pointer;

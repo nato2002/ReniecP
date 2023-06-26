@@ -79,9 +79,17 @@
     </None>
     <Content Include="Discapacidad.aspx" />
     <Content Include="EleccionTramite.aspx" />
+    <Content Include="img\ACCESO A LA INFORMACION PUBLICA.jpg" />
+    <Content Include="img\ACTA NACI.png" />
     <Content Include="img\borrar.png" />
     <Content Include="img\boton.png" />
+    <Content Include="img\C4.jpg" />
+    <Content Include="img\cambiar-el-domicilio.jpg" />
+    <Content Include="img\COPIAS CERTIFICADAS.jpg" />
+    <Content Include="img\DNI DUPLICADO.png" />
     <Content Include="img\dnianimado.png" />
+    <Content Include="img\DOMICILIO ELECTRONICO.png" />
+    <Content Include="img\ESTADO CIVIL.jpg" />
     <Content Include="img\lapiz.png" />
     <Content Include="img\dni.png" />
     <Content Include="img\logo.png" />

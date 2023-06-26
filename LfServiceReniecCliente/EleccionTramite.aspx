@@ -11,6 +11,12 @@
         .auto-style1 {
             height: 174px;
         }
+        .auto-style2 {
+            height: 90px;
+            width: 157px;
+            
+            
+        }
     </style>
 </head>
 <body>
@@ -26,10 +32,12 @@
         </header>
         <div class="seccion-PanelDatos">
             <div style="font-family:Arial;font-size:1.7em;">
-                <asp:Label runat="server" Text="Duplicado de DNI/DNIe" CssClass="labelNombre"></asp:Label>                           
+                <asp:Label runat="server" Text="Duplicado de DNI/DNIe" CssClass="labelNombre" Font-Size="XX-Large"></asp:Label>                           
             </div>
 
-            <asp:Image ID="Image1" runat="server" Height="100px" ImageUrl="https://png.pngtree.com/png-vector/20220218/ourmid/pngtree-document-identification-png-image_4392943.png" Width="118px" />
+            <div>                       
+                <img src="img/DNI DUPLICADO.png" class="auto-style2"  />
+            </div>
 
             <div class="button">
                 <asp:Button runat="server" Text="Realizar Trámite" CssClass="span" />
@@ -43,7 +51,10 @@
             <div style="font-family:Arial;font-size:1.7em;">
                 <asp:Label runat="server" Text="Rectificacion de Domicilio" CssClass="labelNombre"></asp:Label>
             </div>
-            <br />
+
+            <div>                       
+                <img src="img/cambiar-el-domicilio.jpg" class="auto-style2"  />
+            </div>
             <div class="button">
                 <asp:Button runat="server" Text="Realizar Trámite" CssClass="span" />
             </div>
@@ -54,7 +65,10 @@
             <div style="font-family:Arial;font-size:1.7em;">
                 <asp:Label runat="server" Text="Rectificacion del Estado Civil" CssClass="labelNombre"></asp:Label>
             </div>
-            <br />
+            
+            <div>                       
+                <img src="img/ESTADO CIVIL.jpg" class="auto-style2"  />
+            </div>
             <div class="button">
                 <asp:Button runat="server" Text="Realizar Trámite" CssClass="span" />
             </div>
@@ -65,7 +79,10 @@
             <div style="font-family:Arial;font-size:1.7em;">
                 <asp:Label runat="server" Text="Certificado de Inscripcion (C4)" CssClass="labelNombre"></asp:Label>
             </div>
-            <br />
+            
+            <div>                       
+                <img src="img/C4.jpg" class="auto-style2"  />
+            </div>
             <div class="button">
                 <asp:Button runat="server" Text="Realizar Trámite" CssClass="span" />
             </div>
@@ -76,7 +93,10 @@
             <div style="font-family:Arial;font-size:1.7em;">
                 <asp:Label runat="server" Text="Copias certificadas de Actas/Partidas" CssClass="labelNombre"></asp:Label>
             </div>
-            <br />
+            
+            <div>                       
+                <img src="img/COPIAS CERTIFICADAS.jpg" class="auto-style2"  />
+            </div>
             <div class="button">
                 <asp:Button runat="server" Text="Realizar Trámite" CssClass="span" />
             </div>
@@ -85,9 +105,12 @@
 
         <div class="seccion-PanelDatos">
             <div style="font-family:Arial;font-size:1.7em;">
-                <asp:Label runat="server" Text="Validacion de copiasd certificadas" CssClass="labelNombre"></asp:Label>
+                <asp:Label runat="server" Text="Validacion de copias certificadas" CssClass="labelNombre"></asp:Label>
             </div>
-            <br />
+            
+            <div>                       
+                <img src="img/ACTA NACI.png" class="auto-style2"  />
+            </div>
             <div class="button">
                 <asp:Button runat="server" Text="Realizar Trámite" CssClass="span" />
             </div>
@@ -98,7 +121,10 @@
             <div style="font-family:Arial;font-size:1.7em;">
                 <asp:Label runat="server" Text="Acceso a la informacion pública" CssClass="labelNombre"></asp:Label>
             </div>
-            <br />
+            
+            <div>                       
+                <img src="img/ACCESO A LA INFORMACION PUBLICA.jpg" class="auto-style2"  />
+            </div>
             <div class="button">
                 <asp:Button runat="server" Text="Realizar Trámite" CssClass="span" />
             </div>
@@ -109,7 +135,10 @@
             <div style="font-family:Arial;font-size:1.7em;">
                 <asp:Label runat="server" Text="Asignar/Cambiar domicilio electrónico" CssClass="labelNombre"></asp:Label>
             </div>
-            <br />
+            
+            <div>                       
+                <img src="img/DOMICILIO ELECTRONICO.png" class="auto-style2"  />
+            </div>
             <div class="button">
                 <asp:Button runat="server" Text="Realizar Trámite" CssClass="span" />
             </div>
