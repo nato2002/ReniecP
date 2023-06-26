@@ -29,14 +29,7 @@ namespace LfServiceReniecCliente
 
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
-            if (btnSubmit.Text == "Modificar")
-            {
-                UpdateRegDetails();
-            }
-            else
-            {
-                SaveRegDetails();
-            }
+           
         }
         private void UpdateRegDetails()
         {
@@ -54,7 +47,7 @@ namespace LfServiceReniecCliente
         {
             txtnombre.Text = string.Empty;
             txtdireccion.Text = string.Empty;
-            btnSubmit.Text = "Agregar";
+            btnSubmit.Text = "    Agregar";
             txtnombre.Focus();
         }
         private void SaveRegDetails()
@@ -108,13 +101,31 @@ namespace LfServiceReniecCliente
             {
                 txtnombre.Text = ds.Tables[0].Rows[0]["nombre"].ToString();
                 txtdireccion.Text = ds.Tables[0].Rows[0]["direccion"].ToString();
-                btnSubmit.Text = "Modificar";
+                btnSubmit.Text = "   Modificar";
             }
         }
 
         protected void LinkButton2_Click(object sender, EventArgs e)
         {
             Response.Redirect("Discapacidad.aspx");
+        }
+
+        protected void btnSubmit_Click1(object sender, EventArgs e)
+        {
+            if (btnSubmit.Text == "   Modificar")
+            {
+                UpdateRegDetails();
+            }
+            else
+            {
+                SaveRegDetails();
+            }
+        }
+
+        protected void btnCancel_Click1(object sender, EventArgs e)
+        {
+            ClearControls();
+            lblStatus.Text = string.Empty;
         }
     }
     }

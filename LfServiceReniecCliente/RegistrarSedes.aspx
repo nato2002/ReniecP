@@ -85,17 +85,17 @@
                     <br />
                     <br />
                     <div>
-                    <asp:Button ID="btnSubmit" runat="server" CssClass="buttonagg" Font-Size="Large" ForeColor="White" Height="48px" Text="     Agregar" Width="117px" />
-                    </div>&nbsp;<div><asp:Button ID="btnCancel" runat="server" CssClass="buttoncancelar" Font-Size="Large" ForeColor="White" Height="48px" Text="    Cancelar" Width="116px" />
+                    <asp:Button ID="btnSubmit" runat="server" CssClass="buttonagg" Font-Size="Large" ForeColor="White" Height="48px" Text="     Agregar" Width="117px" OnClick="btnSubmit_Click1" />
+                    </div>&nbsp;<div><asp:Button ID="btnCancel" runat="server" CssClass="buttoncancelar" Font-Size="Large" ForeColor="White" Height="48px" Text="    Cancelar" Width="116px" OnClick="btnCancel_Click1" />
                 </div></td>
             </tr>
             <tr>
                 <td class="auto-style27">
-                    &nbsp;</td>
+                    <asp:Label ID="lblStatus" runat="server" Font-Bold="True" ForeColor="#FF6600" style="color: #FF3300"></asp:Label>
+                </td>
                 <td class="auto-style4">
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:Label ID="lblStatus" runat="server" style="color: #FF3300" Font-Bold="True" ForeColor="#FF6600"></asp:Label>
-                </td>
+                    </td>
             </tr>
             <tr>
                 <td class="auto-style21">
