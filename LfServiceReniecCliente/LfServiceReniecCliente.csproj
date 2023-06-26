@@ -122,7 +122,14 @@
     <Content Include="PerfilUser.aspx" />
     <Content Include="Inicio.aspx" />
     <Content Include="ProcesoTramite.aspx" />
-    <Content Include="RealizarTramite.aspx" />
+    <Content Include="Tramites\RealizarAsignacionCorreo.aspx" />
+    <Content Include="Tramites\RealizarBucarDNI.aspx" />
+    <Content Include="Tramites\RealizarValidacionActas.aspx" />
+    <Content Include="Tramites\RealizarCopiasCertificadasActas.aspx" />
+    <Content Include="Tramites\RealizarTramiteCertificadoC4.aspx" />
+    <Content Include="Tramites\RealizarTramiteRectificacionEstadoCivil.aspx" />
+    <Content Include="Tramites\RealizarTramiteRectificacionDomicilio.aspx" />
+    <Content Include="Tramites\RealizarTramiteDuplicadoDNI.aspx" />
     <Content Include="RegistrarSedes.aspx" />
     <Content Include="RegistrarUser.aspx" />
     <Content Include="LogIn.aspx" />
@@ -157,12 +164,68 @@
       <DependentUpon>ProcesoTramite.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RealizarTramite.aspx.cs">
-      <DependentUpon>RealizarTramite.aspx</DependentUpon>
+    <Compile Include="Tramites\RealizarAsignacionCorreo.aspx.cs">
+      <DependentUpon>RealizarAsignacionCorreo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="RealizarTramite.aspx.designer.cs">
-      <DependentUpon>RealizarTramite.aspx</DependentUpon>
+    <Compile Include="Tramites\RealizarAsignacionCorreo.aspx.designer.cs">
+      <DependentUpon>RealizarAsignacionCorreo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tramites\RealizarBucarDNI.aspx.cs">
+      <DependentUpon>RealizarBucarDNI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tramites\RealizarBucarDNI.aspx.designer.cs">
+      <DependentUpon>RealizarBucarDNI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tramites\RealizarValidacionActas.aspx.cs">
+      <DependentUpon>RealizarValidacionActas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tramites\RealizarValidacionActas.aspx.designer.cs">
+      <DependentUpon>RealizarValidacionActas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tramites\RealizarCopiasCertificadasActas.aspx.cs">
+      <DependentUpon>RealizarCopiasCertificadasActas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tramites\RealizarCopiasCertificadasActas.aspx.designer.cs">
+      <DependentUpon>RealizarCopiasCertificadasActas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tramites\RealizarTramiteCertificadoC4.aspx.cs">
+      <DependentUpon>RealizarTramiteCertificadoC4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tramites\RealizarTramiteCertificadoC4.aspx.designer.cs">
+      <DependentUpon>RealizarTramiteCertificadoC4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tramites\RealizarTramiteRectificacionEstadoCivil.aspx.cs">
+      <DependentUpon>RealizarTramiteRectificacionEstadoCivil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tramites\RealizarTramiteRectificacionEstadoCivil.aspx.designer.cs">
+      <DependentUpon>RealizarTramiteRectificacionEstadoCivil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tramites\RealizarTramiteRectificacionDomicilio.aspx.cs">
+      <DependentUpon>RealizarTramiteRectificacionDomicilio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tramites\RealizarTramiteRectificacionDomicilio.aspx.designer.cs">
+      <DependentUpon>RealizarTramiteRectificacionDomicilio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tramites\RealizarTramiteDuplicadoDNI.aspx.cs">
+      <DependentUpon>RealizarTramiteDuplicadoDNI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tramites\RealizarTramiteDuplicadoDNI.aspx.designer.cs">
+      <DependentUpon>RealizarTramiteDuplicadoDNI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tramites\Plantilla.Master.cs">
+      <DependentUpon>Plantilla.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tramites\Plantilla.Master.designer.cs">
+      <DependentUpon>Plantilla.Master</DependentUpon>
     </Compile>
     <Compile Include="RegistrarSedes.aspx.cs">
       <DependentUpon>RegistrarSedes.aspx</DependentUpon>
@@ -207,8 +270,12 @@
     <None Include="Connected Services\ServiceReference1\ServiceReniec3.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\ServiceReference1\ServiceReniec4.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
     <Content Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <Content Include="Tramites\Plantilla.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

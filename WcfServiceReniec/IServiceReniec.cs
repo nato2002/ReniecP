@@ -40,6 +40,6 @@ namespace WcfServiceReniec
         [OperationContract]
         string ColocarProceso(Tramite tramite);
         [OperationContract]
-        string Get(string url);
+        string Get(string url, string abc);
     }
 }

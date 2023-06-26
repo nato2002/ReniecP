@@ -44,6 +44,7 @@ h3 {
 p {
     padding: 3em;
     font-weight: bold;
+    width: 33%;
     flex-basis: 33%;
 }
 
@@ -67,6 +68,21 @@ a {
     color: black;
 }
 
-.btn {
-    height: 5em;
+.btn-secondary{
+    margin-top:2em;
+}
+
+
+.btn{
+    order: 6;
+}
+
+.btn-success{
+    order: 6;
+    height: 3em;
+}
+
+.Mensaje{
+    font-weight:bold;
+    font-size:3em;
 }

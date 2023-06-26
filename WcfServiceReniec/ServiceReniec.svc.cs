@@ -180,8 +180,9 @@ namespace WcfServiceReniec
             cmd.Parameters.AddWithValue("@APELLIDOS", tramite.Apellidos);
             cmd.Parameters.AddWithValue("@LocalT", tramite.Localtramite);
             cmd.Parameters.AddWithValue("@LocalE", tramite.Localentrega);
+            cmd.Parameters.AddWithValue("@Operacion", tramite.Cambio);
             int result = cmd.ExecuteNonQuery();
-            if (result == 1)
+            if (result > 0)
             {
                 Message = "Tu Tramite Se realizo correctamente";
             }
@@ -218,6 +219,7 @@ namespace WcfServiceReniec
             return Datos;
         }
 
+
         public string ColocarProceso(Tramite tramite)
         {
             string Message;
@@ -241,12 +243,25 @@ namespace WcfServiceReniec
             con.Close();
             return Message;
         }
-        public string Get(string dni)
+        public string Get(string dni,string abc)
         {
             ApiConsultaDni api = new ApiConsultaDni();
             string Message = "";
             dynamic r = api.Get("https://dniruc.apisperu.com/api/v1/dni/"+dni+"?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImRpYXpyb2RyaWdvZGNAZ21haWwuY29tIn0.hQoAQUcRj2yp9aWfXYPu8Eg40bxnRJnp3HACNMQBZL8");
-            return Message = r.nombres.ToString();
+            if (abc == "nombres")
+            {
+                return Message = r.nombres.ToString();
+            }
+            else if(abc == "apellidoPaterno")
+            {
+                return Message = r.apellidoPaterno.ToString();
+            }
+            else if (abc == "apellidoMaterno")
+            {
+                return Message = r.apellidoMaterno.ToString();
+            }
+            return Message;
         }
+        
     }
 }

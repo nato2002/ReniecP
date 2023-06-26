@@ -16,7 +16,8 @@ namespace WcfServiceReniec
         string localtramite = string.Empty;
         string localentrega = string.Empty;
         string estadotramite = string.Empty;
-        public Tramite(int dni)
+        string cambio = string.Empty;
+        /*public Tramite(int dni)
         {
             this.dni = dni;
         }
@@ -33,7 +34,7 @@ namespace WcfServiceReniec
             this.apellidos = apellidos;
             this.localtramite = localtramite;
             this.localentrega = localentrega;
-        }
+        }*/
         [DataMember]
         public int Idtramite
         {
@@ -81,6 +82,12 @@ namespace WcfServiceReniec
         {
             get { return estadotramite; }
             set { estadotramite = value; }
+        }
+        [DataMember]
+        public string Cambio
+        {
+            get { return this.cambio; }
+            set { cambio = value; }
         }
     }
 }

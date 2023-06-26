@@ -199,6 +199,179 @@ namespace LfServiceReniecCliente.ServiceReference1 {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Tramite", Namespace="http://schemas.datacontract.org/2004/07/WcfServiceReniec")]
+    [System.SerializableAttribute()]
+    public partial class Tramite : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ApellidosField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CambioField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int DniField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string EstadotramiteField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdtramiteField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string LocalentregaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string LocaltramiteField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NombresField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int TipotramiteField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Apellidos {
+            get {
+                return this.ApellidosField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ApellidosField, value) != true)) {
+                    this.ApellidosField = value;
+                    this.RaisePropertyChanged("Apellidos");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Cambio {
+            get {
+                return this.CambioField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CambioField, value) != true)) {
+                    this.CambioField = value;
+                    this.RaisePropertyChanged("Cambio");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Dni {
+            get {
+                return this.DniField;
+            }
+            set {
+                if ((this.DniField.Equals(value) != true)) {
+                    this.DniField = value;
+                    this.RaisePropertyChanged("Dni");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Estadotramite {
+            get {
+                return this.EstadotramiteField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EstadotramiteField, value) != true)) {
+                    this.EstadotramiteField = value;
+                    this.RaisePropertyChanged("Estadotramite");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Idtramite {
+            get {
+                return this.IdtramiteField;
+            }
+            set {
+                if ((this.IdtramiteField.Equals(value) != true)) {
+                    this.IdtramiteField = value;
+                    this.RaisePropertyChanged("Idtramite");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Localentrega {
+            get {
+                return this.LocalentregaField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.LocalentregaField, value) != true)) {
+                    this.LocalentregaField = value;
+                    this.RaisePropertyChanged("Localentrega");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Localtramite {
+            get {
+                return this.LocaltramiteField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.LocaltramiteField, value) != true)) {
+                    this.LocaltramiteField = value;
+                    this.RaisePropertyChanged("Localtramite");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Nombres {
+            get {
+                return this.NombresField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NombresField, value) != true)) {
+                    this.NombresField = value;
+                    this.RaisePropertyChanged("Nombres");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Tipotramite {
+            get {
+                return this.TipotramiteField;
+            }
+            set {
+                if ((this.TipotramiteField.Equals(value) != true)) {
+                    this.TipotramiteField = value;
+                    this.RaisePropertyChanged("Tipotramite");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.IServiceReniec")]
     public interface IServiceReniec {
@@ -244,6 +417,30 @@ namespace LfServiceReniecCliente.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceReniec/DeleteUserRegDetails", ReplyAction="http://tempuri.org/IServiceReniec/DeleteUserRegDetailsResponse")]
         System.Threading.Tasks.Task<bool> DeleteUserRegDetailsAsync(LfServiceReniecCliente.ServiceReference1.RegSede regdet);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceReniec/Tramite", ReplyAction="http://tempuri.org/IServiceReniec/TramiteResponse")]
+        string Tramite([System.ServiceModel.MessageParameterAttribute(Name="tramite")] LfServiceReniecCliente.ServiceReference1.Tramite tramite1);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceReniec/Tramite", ReplyAction="http://tempuri.org/IServiceReniec/TramiteResponse")]
+        System.Threading.Tasks.Task<string> TramiteAsync(LfServiceReniecCliente.ServiceReference1.Tramite tramite);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceReniec/VerProcesoTramite", ReplyAction="http://tempuri.org/IServiceReniec/VerProcesoTramiteResponse")]
+        string[] VerProcesoTramite(LfServiceReniecCliente.ServiceReference1.Tramite tramite);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceReniec/VerProcesoTramite", ReplyAction="http://tempuri.org/IServiceReniec/VerProcesoTramiteResponse")]
+        System.Threading.Tasks.Task<string[]> VerProcesoTramiteAsync(LfServiceReniecCliente.ServiceReference1.Tramite tramite);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceReniec/ColocarProceso", ReplyAction="http://tempuri.org/IServiceReniec/ColocarProcesoResponse")]
+        string ColocarProceso(LfServiceReniecCliente.ServiceReference1.Tramite tramite);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceReniec/ColocarProceso", ReplyAction="http://tempuri.org/IServiceReniec/ColocarProcesoResponse")]
+        System.Threading.Tasks.Task<string> ColocarProcesoAsync(LfServiceReniecCliente.ServiceReference1.Tramite tramite);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceReniec/Get", ReplyAction="http://tempuri.org/IServiceReniec/GetResponse")]
+        string Get(string url, string abc);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceReniec/Get", ReplyAction="http://tempuri.org/IServiceReniec/GetResponse")]
+        System.Threading.Tasks.Task<string> GetAsync(string url, string abc);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -327,6 +524,38 @@ namespace LfServiceReniecCliente.ServiceReference1 {
         
         public System.Threading.Tasks.Task<bool> DeleteUserRegDetailsAsync(LfServiceReniecCliente.ServiceReference1.RegSede regdet) {
             return base.Channel.DeleteUserRegDetailsAsync(regdet);
+        }
+        
+        public string Tramite(LfServiceReniecCliente.ServiceReference1.Tramite tramite1) {
+            return base.Channel.Tramite(tramite1);
+        }
+        
+        public System.Threading.Tasks.Task<string> TramiteAsync(LfServiceReniecCliente.ServiceReference1.Tramite tramite) {
+            return base.Channel.TramiteAsync(tramite);
+        }
+        
+        public string[] VerProcesoTramite(LfServiceReniecCliente.ServiceReference1.Tramite tramite) {
+            return base.Channel.VerProcesoTramite(tramite);
+        }
+        
+        public System.Threading.Tasks.Task<string[]> VerProcesoTramiteAsync(LfServiceReniecCliente.ServiceReference1.Tramite tramite) {
+            return base.Channel.VerProcesoTramiteAsync(tramite);
+        }
+        
+        public string ColocarProceso(LfServiceReniecCliente.ServiceReference1.Tramite tramite) {
+            return base.Channel.ColocarProceso(tramite);
+        }
+        
+        public System.Threading.Tasks.Task<string> ColocarProcesoAsync(LfServiceReniecCliente.ServiceReference1.Tramite tramite) {
+            return base.Channel.ColocarProcesoAsync(tramite);
+        }
+        
+        public string Get(string url, string abc) {
+            return base.Channel.Get(url, abc);
+        }
+        
+        public System.Threading.Tasks.Task<string> GetAsync(string url, string abc) {
+            return base.Channel.GetAsync(url, abc);
         }
     }
 }
