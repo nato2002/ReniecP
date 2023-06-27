@@ -19,6 +19,7 @@ namespace LfServiceReniecCliente.PSReniec.Consultas
                 BindRegRecordsInGrid();
                 LlenarDDL();
             }
+            SetCheckBoxStatus();
         }
 
         private void BindRegRecordsInGrid()
@@ -98,16 +99,32 @@ namespace LfServiceReniecCliente.PSReniec.Consultas
         {
             CheckBox checkbox = (CheckBox)sender;
             GridViewRow row = (GridViewRow)checkbox.NamingContainer;
-            int solicitudId = Convert.ToInt32(row.Cells[0].Text); // ID_Solicitud está en la primera columna (índice 0)
+            int solicitudId = Convert.ToInt32(row.Cells[0].Text); 
 
             if (checkbox.Checked)
             {
-                // Actualizar el estado de la solicitud
                 obj.ActualizarEstadoSolicitud(solicitudId);
             }
 
-            // Actualizar los datos en el GridView
             BindRegRecordsInGrid();
+        }
+
+        private void SetCheckBoxStatus()
+        {
+            foreach (GridViewRow row in GridView1.Rows)
+            {
+                string estadoSolicitud = Convert.ToString(row.Cells[5].Text);
+                CheckBox checkbox = (CheckBox)row.FindControl("CheckBox1");
+
+                if (estadoSolicitud == "Completada")
+                {
+                    checkbox.Checked = true;
+                }
+                else
+                {
+                    checkbox.Checked = false;
+                }
+            }
         }
     }
 }
