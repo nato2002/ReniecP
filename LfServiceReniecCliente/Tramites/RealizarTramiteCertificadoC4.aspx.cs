@@ -41,8 +41,8 @@ namespace LfServiceReniecCliente.Tramites
                 tramite.Dni = int.Parse(txtDNISolicitante.Value);
                 tramite.Nombres = txtNombreSolicitante.Value;
                 tramite.Apellidos = txtApellidoSolicitante.Value;
-                tramite.Localentrega = cbLocalEntrega.Value;
-                tramite.Localtramite = cbLocalTramite.Value;
+                tramite.Localentrega = cbLocalEntrega.Text;
+                tramite.Localtramite = cbLocalTramite.Text;
                 tramite.Cambio = "Solictud de Certificado C4";
                 string mensaje = cliente.Tramite(tramite);
                 labelmensaje.Text = mensaje + ", Dirijase a la sede seleccionada para validar su huella y posteriormente la entrega de su documento.";

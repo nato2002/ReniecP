@@ -28,8 +28,8 @@ namespace LfServiceReniecCliente.Tramites
                 tramite.Nombres = txtNombre.Value;
                 tramite.Apellidos = txtApellido.Value;
                 tramite.Localentrega = "Virtual";
-                tramite.Localtramite = cbLocalTramite.Value;
-                tramite.Cambio = "Solicitud de rectificacion Estado Civil " + cbEstadoCivil.Value;
+                tramite.Localtramite = cbLocalTramite.Text;
+                tramite.Cambio = "Solicitud de rectificacion Estado Civil " + cbEstadoCivil.Text;
                 string mensaje = cliente.Tramite(tramite);
                 labelmensaje.Text = mensaje+", Se evaluara su cambio de Estado Civil.";
                 txtDNI.Value = "";

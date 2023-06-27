@@ -35,14 +35,13 @@ namespace LfServiceReniecCliente.Tramites
         protected void btnRealizar_Click(object sender, EventArgs e)
         {
             Tramite tramite = new Tramite();
-            try
-            {
+            
                 tramite.Tipotramite = 1;
                 tramite.Dni = int.Parse(txtDNI.Value);
                 tramite.Nombres = txtNombre.Value;
                 tramite.Apellidos = txtApellido.Value;
-                tramite.Localentrega = cbLocalEntrega.Value;
-                tramite.Localtramite = cbLocalTramite.Value;
+                tramite.Localentrega = "Virtual";
+            tramite.Localtramite = "Sede Piura"; 
                 tramite.Cambio = "Solictud de duplicado de DNI";
                 string mensaje = cliente.Tramite(tramite);
                 labelmensaje.Text = mensaje + ", Dirijase a la sede seleccionada para validar su huella y posteriormente la entrega de su documento.";
@@ -50,11 +49,7 @@ namespace LfServiceReniecCliente.Tramites
                 txtNombre.Value = "";
                 txtApellido.Value = "";
                 cbLocalEntrega.SelectedIndex = 0;
-            }
-            catch (Exception ex)
-            {
-                labelmensaje.Text = "No se pudo Realizar el tramite";
-            }
+            
         }
     }
 }

@@ -19,19 +19,19 @@
             </p>
             <p style="order:4;display: flex; flex-direction: column; align-items: center;">
                 Local Tramite
-                <select name="name" class="form-select" id="cbLocalTramite" runat="server">
-                    <option value="">Virtual</option>
-                </select>
+                <asp:DropDownList ID="cbLocalTramite" runat="server" CssClass="form-select">
+                    <asp:ListItem Text="Virual" Value="Virtual"></asp:ListItem>
+                </asp:DropDownList>
             </p>
             <p style="order:5;display: flex; flex-direction: column; align-items: center;">
                 Rectificacion de Estado Civil
                 <br>
-                <select name="name" class="form-select" id="cbEstadoCivil" runat="server">
-                    <option value="Soltero(a)">Soltero(a)</option>
-                    <option value="Casado(a)">Casado(a)</option>
-                    <option value="Divorciado(a)">Divorciado(a)</option>
-                    <option value="Viudo(a)">Viudo(a)</option>
-                </select>
+                <asp:DropDownList ID="cbEstadoCivil" runat="server" CssClass="form-select">
+                    <asp:ListItem Text="Soltero(a)" Value="Soltero(a)"></asp:ListItem>
+                    <asp:ListItem Text="Casado(a)" Value="Casado(a)"></asp:ListItem>
+                    <asp:ListItem Text="Divorciado(a)" Value="Divorciado(a)"></asp:ListItem>
+                    <asp:ListItem Text="Viudo(a)" Value="Viudo(a)"></asp:ListItem>
+                </asp:DropDownList>
             </p>
             <asp:Button ID="btnRealizar" runat="server" Text="REALIZAR TRAMITE" CssClass="btn btn-success" OnClick="btnRealizar_Click"/>
         </main>

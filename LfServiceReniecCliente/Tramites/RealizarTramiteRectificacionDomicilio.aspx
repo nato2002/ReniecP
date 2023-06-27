@@ -19,9 +19,9 @@
             </p>
             <p style="order:3;display: flex; flex-direction: column; align-items: center;">
                 Local Tramite
-                <select name="name" class="form-select" id="cbLocalTramite" runat="server">
-                    <option value="Virtual">Virtual</option>
-                </select>
+                <asp:DropDownList ID="cbLocalTramite" runat="server" CssClass="form-select">
+                    <asp:ListItem Text="Virual" Value="Virtual"></asp:ListItem>
+                </asp:DropDownList>
             </p>
             <p style="order:4;display: flex; flex-direction: column; align-items: center;">
                 Rectificacion de Domicilio

@@ -21,14 +21,13 @@
         </p>
         <p style="order:4;display: flex; flex-direction: column; align-items: center;">
             Local Tramite
-            <select name="name" class="form-select" id="cbLocalTramite" runat="server">
-                <option value="">Virtual</option>
-            </select>
+            <asp:DropDownList ID="cbLocalTramite" runat="server" CssClass="form-select">
+                <asp:ListItem Text="Virtual" Value="Virtual"></asp:ListItem>
+            </asp:DropDownList>
         </p>
         <p style="order:5;display: flex; flex-direction: column; align-items: center;">
             Local Entrega
-            <select name="name" class="form-select" id="cbLocalEntrega" runat="server">
-            </select>
+            <asp:DropDownList ID="cbLocalEntrega" runat="server" CssClass="form-select"></asp:DropDownList>
         </p>
         <asp:Button ID="btnRealizar" runat="server" Text="REALIZAR TRAMITE" CssClass="btn btn-success" OnClick ="btnRealizar_Click"/>
         </main>

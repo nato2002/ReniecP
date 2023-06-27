@@ -437,10 +437,10 @@ namespace LfServiceReniecCliente.ServiceReference1 {
         System.Threading.Tasks.Task<string> ColocarProcesoAsync(LfServiceReniecCliente.ServiceReference1.Tramite tramite);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceReniec/Get", ReplyAction="http://tempuri.org/IServiceReniec/GetResponse")]
-        string Get(string url, string abc);
+        string Get(string dni, string abc);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceReniec/Get", ReplyAction="http://tempuri.org/IServiceReniec/GetResponse")]
-        System.Threading.Tasks.Task<string> GetAsync(string url, string abc);
+        System.Threading.Tasks.Task<string> GetAsync(string dni, string abc);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -550,12 +550,12 @@ namespace LfServiceReniecCliente.ServiceReference1 {
             return base.Channel.ColocarProcesoAsync(tramite);
         }
         
-        public string Get(string url, string abc) {
-            return base.Channel.Get(url, abc);
+        public string Get(string dni, string abc) {
+            return base.Channel.Get(dni, abc);
         }
         
-        public System.Threading.Tasks.Task<string> GetAsync(string url, string abc) {
-            return base.Channel.GetAsync(url, abc);
+        public System.Threading.Tasks.Task<string> GetAsync(string dni, string abc) {
+            return base.Channel.GetAsync(dni, abc);
         }
     }
 }

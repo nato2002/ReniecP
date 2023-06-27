@@ -66,7 +66,7 @@ namespace LfServiceReniecCliente.Tramites
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlSelect cbLocalTramite;
+        protected global::System.Web.UI.WebControls.DropDownList cbLocalTramite;
 
         /// <summary>
         /// Control cbLocalEntrega.
@@ -75,7 +75,7 @@ namespace LfServiceReniecCliente.Tramites
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlSelect cbLocalEntrega;
+        protected global::System.Web.UI.WebControls.DropDownList cbLocalEntrega;
 
         /// <summary>
         /// Control btnRealizar.

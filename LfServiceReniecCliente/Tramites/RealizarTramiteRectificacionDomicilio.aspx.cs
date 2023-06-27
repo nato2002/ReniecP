@@ -25,7 +25,7 @@ namespace LfServiceReniecCliente.Tramites
                 tramite.Nombres = txtNombre.Value;
                 tramite.Apellidos = txtApellido.Value;
                 tramite.Localentrega = "Virtual";
-                tramite.Localtramite = cbLocalTramite.Value;
+                tramite.Localtramite = cbLocalTramite.Text;
                 tramite.Cambio = "Solicitud de rectificacion de Domicilio";
                 string mensaje = cliente.Tramite(tramite);
                 labelmensaje.Text = mensaje + "Se cambio su Domicilio correctamente";

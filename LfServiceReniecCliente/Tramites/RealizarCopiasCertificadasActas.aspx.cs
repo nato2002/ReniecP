@@ -15,19 +15,22 @@ namespace LfServiceReniecCliente.Tramites
         SqlConnection con = new SqlConnection("Server=serveproyectos.database.windows.net; Database=RENIEC; User Id=admin01; Password=Admin123;");
         protected void Page_Load(object sender, EventArgs e)
         {
-            con.Open();
-            string selectQuery = "select nombre from Sedes";
-            using (SqlCommand command = new SqlCommand(selectQuery, con))
+            if (!IsPostBack)
             {
-                using (SqlDataReader reader = command.ExecuteReader())
+                con.Open();
+                string selectQuery = "select nombre from Sedes";
+                using (SqlCommand command = new SqlCommand(selectQuery, con))
                 {
-                    while (reader.Read())
+                    using (SqlDataReader reader = command.ExecuteReader())
                     {
-                        string valor = reader.GetString(0);
-                        cbLocalEntrega.Items.Add(valor);
+                        while (reader.Read())
+                        {
+                            string valor = reader.GetString(0);
+                            cbLocalEntrega.Items.Add(valor);
+                        }
                     }
-                }
 
+                }
             }
 
         }
@@ -40,8 +43,8 @@ namespace LfServiceReniecCliente.Tramites
                 tramite.Dni = int.Parse(txtDNI.Value);
                 tramite.Nombres = txtNombre.Value;
                 tramite.Apellidos = txtApellido.Value;
-                tramite.Localentrega = cbLocalEntrega.Value;
-                tramite.Localtramite = cbLocalTramite.Value;
+                tramite.Localentrega = cbLocalEntrega.Text;
+                tramite.Localtramite = cbLocalTramite.Text;
                 tramite.Cambio = "Solictud Certificado de Actas";
                 string mensaje = cliente.Tramite(tramite);
                 labelmensaje.Text = mensaje + ", Dirijase a la sede seleccionada para validar su huella y posteriormente la entrega de su documento.";

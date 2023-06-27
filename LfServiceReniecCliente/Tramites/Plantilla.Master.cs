@@ -16,7 +16,7 @@ namespace LfServiceReniecCliente.Tramites
 
         protected void btnVolver_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Inicio.aspx");
+            Response.Redirect("/Login.aspx");
         }
     }
 }
