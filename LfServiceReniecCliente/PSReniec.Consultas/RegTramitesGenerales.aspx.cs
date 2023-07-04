@@ -113,7 +113,6 @@ namespace LfServiceReniecCliente.PSReniec.Consultas
             }
 
             BindRegRecordsInGrid();
-            //SetCheckBoxStatus();
         }
 
         private void SetCheckBoxStatus()
