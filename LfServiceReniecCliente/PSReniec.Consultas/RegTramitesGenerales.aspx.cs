@@ -5,6 +5,7 @@ using System.Data;
 using System.Windows.Forms;
 using WcfServiceReniec;
 using CheckBox = System.Web.UI.WebControls.CheckBox;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace LfServiceReniecCliente.PSReniec.Consultas
 {
@@ -34,6 +35,7 @@ namespace LfServiceReniecCliente.PSReniec.Consultas
         {
             buscar();
             SetCheckBoxStatus();
+            BindRegRecordsInGrid();
         }
 
 
@@ -110,7 +112,7 @@ namespace LfServiceReniecCliente.PSReniec.Consultas
                 obj.ActualizarEstadoSolicitud(solicitudId);
             }
 
-            //BindRegRecordsInGrid();
+            BindRegRecordsInGrid();
             //SetCheckBoxStatus();
         }
 
@@ -128,6 +130,19 @@ namespace LfServiceReniecCliente.PSReniec.Consultas
                 else
                 {
                     checkbox.Checked = false;
+                }
+            }
+        }
+
+        protected void GridView1_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+            if (e.Row.RowType == DataControlRowType.DataRow)
+            {
+                CheckBox checkBox = e.Row.FindControl("CheckBox1") as CheckBox;
+                if (checkBox != null)
+                {
+                    checkBox.CheckedChanged += CheckBox_CheckedChanged;
+                    checkBox.AutoPostBack = true;
                 }
             }
         }

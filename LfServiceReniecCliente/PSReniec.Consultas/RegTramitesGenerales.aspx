@@ -170,7 +170,7 @@
         </table>
         <asp:Panel ID="Panel3" runat="server" Height="219px" Width="1302px">
             <div class="auto-style23">
-                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" Height="214px" Width="1139px">
+                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" Height="214px" Width="1139px" OnRowDataBound="GridView1_RowDataBound">
                     <Columns>
                         <asp:BoundField DataField="ID_Solicitud" HeaderText="ID SOLICITUD" />
                         <asp:BoundField DataField="ID_Tramite" HeaderText="ID TRAMITE" />
