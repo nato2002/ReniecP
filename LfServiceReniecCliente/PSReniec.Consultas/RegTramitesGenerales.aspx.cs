@@ -19,7 +19,6 @@ namespace LfServiceReniecCliente.PSReniec.Consultas
                 BindRegRecordsInGrid();
                 LlenarDDL();
             }
-            SetCheckBoxStatus();
         }
 
         private void BindRegRecordsInGrid()
@@ -28,11 +27,13 @@ namespace LfServiceReniecCliente.PSReniec.Consultas
             ds = obj.GetRegSolDetails();
             GridView1.DataSource = ds.Tables["Solicitud"]; ;
             GridView1.DataBind();
+            SetCheckBoxStatus();
         }
 
         protected void btnconsultar_Click(object sender, EventArgs e)
         {
             buscar();
+            SetCheckBoxStatus();
         }
 
 
@@ -86,6 +87,8 @@ namespace LfServiceReniecCliente.PSReniec.Consultas
                 MessageBox.Show("El registro de solicitud no fue encontrado: " + ex.Message, "Busqueda y Listado Solicitud", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
 
+            SetCheckBoxStatus();
+
         }
 
         protected void Button2_Click(System.Object sender, System.EventArgs e)
@@ -93,20 +96,22 @@ namespace LfServiceReniecCliente.PSReniec.Consultas
             txtid.Text = string.Empty;
             cboestado.ClearSelection();
             BindRegRecordsInGrid();
+            SetCheckBoxStatus();
         }
 
         protected void CheckBox_CheckedChanged(object sender, EventArgs e)
         {
             CheckBox checkbox = (CheckBox)sender;
             GridViewRow row = (GridViewRow)checkbox.NamingContainer;
-            int solicitudId = Convert.ToInt32(row.Cells[0].Text); 
+            int solicitudId = Convert.ToInt32(row.Cells[0].Text);
 
             if (checkbox.Checked)
             {
                 obj.ActualizarEstadoSolicitud(solicitudId);
             }
 
-            BindRegRecordsInGrid();
+            //BindRegRecordsInGrid();
+            //SetCheckBoxStatus();
         }
 
         private void SetCheckBoxStatus()
